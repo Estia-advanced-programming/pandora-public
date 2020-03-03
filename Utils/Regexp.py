@@ -35,7 +35,9 @@ def GetTstp(rec):
     return re.findall(re_tstp, rec)[0]
 
 def GetValues(rec, f_id):
-    re_values = re.compile("^" + f_id + ",T=(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?),.*$", re.M)
+    #print(rec)
+    #print("^" + f_id + ",T=(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?),.*$")
+    re_values = re.compile("^" + f_id + ",T=(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?)\|(.*?),*.*$", re.M)
     tab = re.findall(re_values, rec)
     if len(tab) > 0:
         return tab[0]
