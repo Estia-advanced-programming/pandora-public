@@ -1,0 +1,14 @@
+flight id:a01
+flight code:F-16A
+origin:US
+date:2011-06-01
+from:kutaisi
+to:gudauta
+motor(s):1
+mass aircraft:19518
+mass fuel:19518
+lift coef:2.2203235305245417
+drag coef:0.01657331436821066
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306895862.44,7.1683515,5.0890243,14042.651367999999,-1.1,3.0,223.3,2389662.3468104,-580556.3177904,-1.0,410.1848250306768,88622.95785391737,295.917267838131,0.07454996671916682,3.7666095348157196,89.19999999999999,0.6335792716063007

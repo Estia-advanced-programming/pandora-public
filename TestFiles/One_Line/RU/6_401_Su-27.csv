@@ -1,0 +1,14 @@
+flight id:401
+flight code:Su-27
+origin:RU
+date:2011-06-01
+from:sochi-adler
+to:beslan
+motor(s):2
+mass aircraft:17500.032952
+mass fuel:17500.032952
+lift coef:1.3276531002791723
+drag coef:0.012475794761808172
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894155.05,1.879829,6.9106471,2186.33,-59.8,5.2,199.1,285687.22,-13495.28,-1.0,137.15964005761558,27124065.522527065,27124065.522527065,21.808056952543865,7.86097653485709,24712.923443888874,89.0,48.35683679691023

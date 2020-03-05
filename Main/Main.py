@@ -33,8 +33,8 @@ if __name__ == '__main__':
     if not os.path.exists(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER):
         os.mkdir(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER)
         
-    if not os.path.exists(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION):
-        os.mkdir(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION)
+    if not os.path.exists(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1]):
+        os.mkdir(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1])
     
     
     ## parse acmi file
@@ -52,6 +52,8 @@ if __name__ == '__main__':
     records = r.GetRecords(s)
     for f_id, f_name in flights:
         f_name = f_name.split(" ")[0]
+        if f_name in ["A-10A"]:
+            continue
         print("creating file for " + f_id + "_" + f_name)
         fg.GenerateFile(f_id, f_name, records, start_tstp)
         pass

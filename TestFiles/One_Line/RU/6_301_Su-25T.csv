@@ -1,0 +1,14 @@
+flight id:301
+flight code:Su-25T
+origin:RU
+date:2011-06-01
+from:kobuleti
+to:sochi-adler
+motor(s):2
+mass aircraft:11495.835648
+mass fuel:11495.835648
+lift coef:1.1776856990315037
+drag coef:0.011020666513337473
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306896235.34,5.1328909,4.8574423,15.23,-0.0,3.2,122.0,565076.63,-220935.25,-1.0,25.04875553438995,86458.86368723174,86458.86368723174,22.417215977193315,7.666385811553913,23225.916980778675,86.70000000000002,34.05049290416761

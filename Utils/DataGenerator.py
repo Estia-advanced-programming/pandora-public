@@ -293,9 +293,15 @@ def GetEnginePower2(names, dico, meta):
     for i in range(0, meta['nb_motor']):
         names.append("engine_" + str(i))
         engines.append("engine_" + str(i))
-        Px = smooth(Tx * (vx+air_x), 10, "bartlett")
-        Py = smooth(Ty * (vy+air_y), 10, "bartlett")
-        Pz = smooth(Tz * (vz+air_z), 10, "bartlett")
+        try:
+            Px = smooth(Tx * (vx+air_x), 10, "bartlett")
+            Py = smooth(Ty * (vy+air_y), 10, "bartlett")
+            Pz = smooth(Tz * (vz+air_z), 10, "bartlett")
+        except:
+            Px = smooth(Tx * (vx+air_x), 2, "bartlett")
+            Py = smooth(Ty * (vy+air_y), 2, "bartlett")
+            Pz = smooth(Tz * (vz+air_z), 2, "bartlett")
+            
         val = np.sqrt(Px*Px + Py*Py + Pz*Pz)
         dico['engine_' + str(i)] = np.array(val) / meta['nb_motor']
     
@@ -335,7 +341,10 @@ def GetTemperatureCockpit(dico, col = "temperature_in"):
     '''
     degree
     '''
-    dico[col] = smooth(np.array([c.T_COCKPIT + random.uniform(-c.T_NOISE, c.T_NOISE) for x in range(0, len(dico['longitude']))]), 10, "flat")
+    try:
+        dico[col] = smooth(np.array([c.T_COCKPIT + random.uniform(-c.T_NOISE, c.T_NOISE) for x in range(0, len(dico['longitude']))]), 10, "flat")
+    except:
+        dico[col] = smooth(np.array([c.T_COCKPIT + random.uniform(-c.T_NOISE, c.T_NOISE) for x in range(0, len(dico['longitude']))]), 2, "flat")
     return dico
     
 
@@ -344,7 +353,10 @@ def GetPressureCockpit(dico, col = "pressure_in"):
     '''
     Pa
     '''
-    dico[col] = smooth(np.array([c.PRESSURE + random.uniform(-c.PRESSURE_NOISE, c.PRESSURE_NOISE) for x in range(0, len(dico['longitude']))]), 10, "flat")
+    try:
+        dico[col] = smooth(np.array([c.PRESSURE + random.uniform(-c.PRESSURE_NOISE, c.PRESSURE_NOISE) for x in range(0, len(dico['longitude']))]), 10, "flat")
+    except:
+        dico[col] = smooth(np.array([c.PRESSURE + random.uniform(-c.PRESSURE_NOISE, c.PRESSURE_NOISE) for x in range(0, len(dico['longitude']))]), 2, "flat")
     return dico
 
 
@@ -352,7 +364,10 @@ def GetHeartRate(dico, col = "heart_rate"):
     '''
     BPM
     '''
-    dico[col] = smooth(np.array([c.BPM + random.uniform(-c.BPM_NOISE, c.BPM_NOISE) for x in range(0, len(dico['longitude']))]), 10, "flat")
+    try:
+        dico[col] = smooth(np.array([int(c.BPM + random.uniform(-c.BPM_NOISE, c.BPM_NOISE)) for x in range(0, len(dico['longitude']))]), 10, "flat")
+    except:
+        dico[col] = smooth(np.array([int(c.BPM + random.uniform(-c.BPM_NOISE, c.BPM_NOISE)) for x in range(0, len(dico['longitude']))]), 2, "flat")
     return dico
 
 
@@ -361,7 +376,10 @@ def GetHumidityCockpit(dico, col = "humidity_in"):
     '''
     %
     '''
-    dico[col] = smooth(np.array([c.HUMIDITY + random.uniform(-c.HUMIDITY_NOISE, c.HUMIDITY_NOISE) for x in range(0, len(dico['longitude']))]), 10, "flat")
+    try:
+        dico[col] = smooth(np.array([c.HUMIDITY + random.uniform(-c.HUMIDITY_NOISE, c.HUMIDITY_NOISE) for x in range(0, len(dico['longitude']))]), 10, "flat")
+    except:
+        dico[col] = smooth(np.array([c.HUMIDITY + random.uniform(-c.HUMIDITY_NOISE, c.HUMIDITY_NOISE) for x in range(0, len(dico['longitude']))]), 2, "flat")
     return dico
 
 
@@ -371,7 +389,10 @@ def GetOxygenMask(dico, col = "oxygen_mask"):
     %
     '''
     alt = MToKFT(dico['altitude'])
-    dico[col] = smooth(c.OXYGEN_A + c.OXYGEN_B * alt + random.uniform(-c.OXYGEN_NOISE, c.OXYGEN_NOISE), 10, "flat")
+    try:
+        dico[col] = smooth(c.OXYGEN_A + c.OXYGEN_B * alt + random.uniform(-c.OXYGEN_NOISE, c.OXYGEN_NOISE), 10, "flat")
+    except:
+        dico[col] = smooth(c.OXYGEN_A + c.OXYGEN_B * alt + random.uniform(-c.OXYGEN_NOISE, c.OXYGEN_NOISE), 2, "flat")
     dico[col][dico[col] > 100] = 100 - random.random()
     return dico
 

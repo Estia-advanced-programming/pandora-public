@@ -82,17 +82,31 @@ def LogDico(f, names, dico):
     '''
     
     s = ""
-    names.insert(0, "timestamp")
     # header line
-    for n in names:
-        s += n + ","
-    s = s[0:len(s)-1] + "\n"
+    if c.CURRENT_CONDITION[0] != c.MISSING_COLNAMES[0]:
+        for n in names:
+            s += n + ","
+        s = s[0:len(s)-1] + "\n"
     
     # values
-    for i in range(0, len(dico[names[0]])):
+    the_range = range(0, len(dico[names[0]]))
+    
+    if c.CURRENT_CONDITION[0] == c.ONE_LINE[0]:
+        the_range = random.sample(the_range, 1)
+    elif c.CURRENT_CONDITION[0] == c.TWO_LINES[0]:
+        the_range = random.sample(the_range, 2)
+    elif c.CURRENT_CONDITION[0] == c.THREE_LINES[0]:
+        the_range = random.sample(the_range, 3)
+    elif c.CURRENT_CONDITION[0] == c.REVERSE[0]:
+        the_range = range(len(dico[names[0]])-1, -1, -1)
+        
+    for i in the_range:
         for n in names:
             s += str(dico[n][i]) + ","
         s = s[0:len(s)-1] + "\n"
+        
+    if c.CURRENT_CONDITION[0] == c.ASCII[0]:
+        s = s.replace(".", "⋅")
     f.write(s)
   
   
@@ -214,8 +228,8 @@ def GenerateFile(f_id, f_name, records, start_tstp):
         GetPower = GetRUPower
         GetPressure = GetRUPressure
      
-    if not os.path.exists(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION + "\\" + f_type):
-        os.mkdir(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION + "\\" + f_type)
+    if not os.path.exists(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1] + "\\" + f_type):
+        os.mkdir(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1] + "\\" + f_type)
     
        
     ## Header
@@ -233,10 +247,6 @@ def GenerateFile(f_id, f_name, records, start_tstp):
     meta["surface_m2"] = dg.GetSurface(f_name)
     
         
-    
-    f = open(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION + "\\" + f_type + "\\" + f_id + "_" + f_name + ".csv", "w+")
-    head = GetHeader(f_id, f_name, start_tstp, meta)
-    f.write(head)
     
     
     ## Values
@@ -302,9 +312,57 @@ def GenerateFile(f_id, f_name, records, start_tstp):
     dico['pressure_in'] = GetPressure(dico['pressure_in'])
     dico['oxygen_mask'] = GetPercentage(dico['oxygen_mask'])
     
-    LogDico(f, names, dico)
     
     
-    f.close()
+    names.insert(0, "timestamp")
+    
+    f = None 
+    head = GetHeader(f_id, f_name, start_tstp, meta)
+    
+    if c.CURRENT_CONDITION[0] == c.NORMAL[0]:
+        f = open(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1] + "\\" + f_type + "\\" + str(c.num_condition) + "_" + f_id + "_" + f_name + ".csv", "w+")
+        f.write(head)
+        LogDico(f, names, dico)
+        f.close()
+        return
+    
+    elif c.CURRENT_CONDITION[0] == c.MISSING_HEADER[0]:
+        f = open(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1] + "\\" + f_type + "\\" + str(c.num_condition) + "_" + f_id + "_" + f_name + ".csv", "w+")
+        #f.write(head)
+        LogDico(f, names, dico)
+        f.close()
+        return
+    
+    elif c.CURRENT_CONDITION[0] == c.INCOMPLETE_HEADER[0]:
+        tab = head.split('\n')
+        for cur in range(0, len(tab)):
+            t2 = [x for i,x in enumerate(tab) if i != cur]
+            s = "\n".join(t2)
+            f = open(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1] + "\\" + f_type + "\\" + str(c.num_condition) + "_" + str(cur) + f_id + "_" + f_name + ".csv", "w+")
+            f.write(head)
+            LogDico(f, names, dico)
+            f.close()
+        return
+
+    elif c.CURRENT_CONDITION[0] == c.MISSING_COLUMN[0]:
+        for removed in range(0, len(names)):
+            print(str(removed) + " / " + str(len(names)))
+            names2 = list(names)
+            names2.pop(removed)
+            dico2 = {}
+            for cur in names2:
+                dico2[cur] = dico[cur]
+            f = open(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1] + "\\" + f_type + "\\" + str(c.num_condition) + "_" + str(removed) + f_id + "_" + f_name + ".csv", "w+")
+            f.write(head)
+            LogDico(f, names2, dico2)
+            f.close()
+        return
+    
+    else:
+        f = open(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1] + "\\" + f_type + "\\" + str(c.num_condition) + "_" + f_id + "_" + f_name + ".csv", "w+", encoding='utf-8')
+        f.write(head)
+        LogDico(f, names, dico)
+        f.close()
+        return
 
   

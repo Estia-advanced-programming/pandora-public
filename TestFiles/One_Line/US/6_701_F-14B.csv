@@ -1,0 +1,14 @@
+flight id:701
+flight code:F-14B
+origin:US
+date:2011-06-01
+from:kobuleti
+to:anapa-vityazevo
+motor(s):2
+mass aircraft:44040
+mass fuel:44040
+lift coef:1.3582186375634022
+drag coef:0.017830377164784177
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894700.09,1.9892535,6.954633,71.55512039999999,0.0,0.1,132.7,964644.87995,-26517.3893,-1.0,29.139616978596646,37.2446767118266,37.2446767118266,303.3122825523929,0.07372481696274467,3.6513935192496905,87.1,0.3397443531242921

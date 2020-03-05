@@ -1,0 +1,14 @@
+flight id:101
+flight code:MiG-29A
+origin:RU
+date:2011-06-01
+from:vaziani
+to:krasnodar center
+motor(s):2
+mass aircraft:10922.041768
+mass fuel:10922.041768
+lift coef:1.604765498192893
+drag coef:0.011066253455886965
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306896201.76,1.9411272,6.521576,403.92,0.4,3.5,58.8,293155.03,-56422.05,-1.0,79.65143845530373,3067080.3404896306,3067080.3404896306,20.08239654676988,7.359111105813292,24037.68867264653,95.0,32.44056678671103

@@ -2,4 +2,14 @@
 	{"speed": [0, 0, 0, 0]
 	, "direction": [0, 180, 190, 200]
 	}
+  ,
+  "..\\Samples\\10_normal_flights.txt.acmi": 
+	{"speed": [10, 21, 50, 60]
+	, "direction": [291, 291, 83, 280]
+	}
+  ,
+  "..\\Samples\\10_meteo_bad_flights.txt.acmi": 
+	{"speed": [6, 12, 10, 14]
+	, "direction": [328, 328, 36, 57]
+	}
 }

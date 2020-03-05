@@ -1,0 +1,14 @@
+flight id:201
+flight code:MiG-23MLD
+origin:RU
+date:2011-06-01
+from:anapa-vityazevo
+to:batumi
+motor(s):1
+mass aircraft:10550.096328
+mass fuel:10550.096328
+lift coef:1.9060340730520209
+drag coef:0.012773573396515615
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306893909.79,9.0777199,3.9231276,4578.13,-18.2,14.9,336.6,902698.31,-285738.88,-1.0,306.6562364902705,279494549.00290877,23.401184556060493,7.114366566391865,24666.43584002522,95.10000000000002,67.20021549190253

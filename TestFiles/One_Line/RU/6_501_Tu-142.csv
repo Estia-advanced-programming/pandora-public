@@ -1,0 +1,14 @@
+flight id:501
+flight code:Tu-142
+origin:RU
+date:2011-06-01
+from:krymsk
+to:mineralnyevody
+motor(s):4
+mass aircraft:96000.025248
+mass fuel:96000.025248
+lift coef:1.5098032749390164
+drag coef:0.017311591591697872
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,engine_1,engine_2,engine_3,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894767.44,6.044061,4.2441083,17.46,0.0,1.3,280.2,646914.19,-281455.09,-1.0,7.509381813010235,78269.04431638512,78269.04431638512,78269.04431638512,78269.04431638512,27.17426744213421,7.70439818285945,25177.279949762014,88.60000000000001,32.03981163372567

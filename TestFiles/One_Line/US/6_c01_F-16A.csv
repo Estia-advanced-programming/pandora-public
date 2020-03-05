@@ -1,0 +1,14 @@
+flight id:c01
+flight code:F-16A
+origin:US
+date:2011-06-01
+from:soganlug
+to:krymsk
+motor(s):1
+mass aircraft:19518
+mass fuel:19518
+lift coef:2.2203235305245417
+drag coef:0.01657331436821066
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894281.92,8.1130812,4.7951341,13602.001747600001,-79.8,7.7,132.3,2656541.6860592,-655343.9514171999,-1.0,561.7125680234841,72005.65171007765,298.1445761122635,0.0764311784963902,3.557893739893915,89.4,0.664872660885908

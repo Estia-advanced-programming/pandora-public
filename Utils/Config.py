@@ -19,13 +19,30 @@ from Utils import DataGenerator as dg
 # where is the script being run
 PATH_RESOURCES = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
 # the acmi file to parse
-ACMI_FILE = "..\\Samples\\Tacview-20191108-113901-DCS-MOHICAN_AI_final.txt2.acmi"
-#ACMI_FILE = "..\\Samples\\Tacview-20200303-233831-DCS-TESTDIM.txt.acmi"
+ACMI_FILE = "..\\Samples\\10_normal_flights.txt.acmi"
+# ACMI_FILE = "..\\Samples\\10_meteo_bad__flights.txt.acmi"
 
 # the folder in which writing the resulting test files
 OUT_FOLDER = "..\\TestFiles"
+
 # sub folder (NORMAL, MISSING_COL, etc)
-CURRENT_CONDITION = "Normal"
+NORMAL = [0, "Normal"]
+BAD_WEATHER = [1,"Bad_Weather"]
+MISSING_COLUMN = [2, "Missing_Column"]
+MISSING_HEADER = [3, "Missing_Header"]
+INCOMPLETE_HEADER = [4, "Incomplete_Header"]
+MISSING_COLNAMES = [5, "Missing_Colnames"]
+ONE_LINE = [6, "One_Line"]
+TWO_LINES = [7, "Two_Lines"]
+THREE_LINES = [8, "Three_Lines"]
+REVERSE = [9, "Reverse"]
+BIG_INT = [10, "Big_Int"]
+ASCII = [11, "Ascii"]
+
+CURRENT_CONDITION = REVERSE
+num_condition = CURRENT_CONDITION[0]
+
+
 
 US_AIRCRAFTS = ["F-14B", "F-14A", "F-15C", "F-15E", "F-16A"]
 

@@ -1,0 +1,14 @@
+flight id:601
+flight code:F-14A
+origin:US
+date:2011-06-01
+from:krasnodar center
+to:nalchik
+motor(s):2
+mass aircraft:41780
+mass fuel:41780
+lift coef:1.9650056483374456
+drag coef:0.010121101720646569
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894043.33,1.8858926,6.921631,15266.470304800001,-45.8,-0.6,281.2,938622.7990647999,-40177.9540416,-1.0,286.4018972603584,20552.604571053722,20552.604571053722,299.4781179666647,0.07172915215360633,3.8254408962653894,86.0,0.615809144087085
