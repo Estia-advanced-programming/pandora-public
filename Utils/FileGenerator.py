@@ -31,26 +31,56 @@ def GetRUDistance(m):
     return m
 
 def GetUSTemp(deg):
-    return deg + 273.15
+    return dg.DegToK(deg)
 def GetRUTemp(deg):
     return deg
 
-def GetUSSurface(mm):
-    return mm / 0.092903
-def GetRUSurface(mm):
-    return mm
+def GetUSSurface(m2):
+    return dg.M2ToFt2(m2)
+def GetRUSurface(m2):
+    return m2
     
+def GetUSPercentage(P):
+    return P / 100
+def GetRUPercentage(P):
+    return P
+
+def GetUSSpeed(ms):
+    return dg.MSToMPH(ms)
+def GetRUSpeed(ms):
+    return ms
+
+def GetUSPower(w):
+    return dg.WToHP(w)
+def GetRUPower(w):
+    return w
+
+def GetUSPressure(pa):
+    return dg.PatoPSI(pa)
+def GetRUPressure(pa):
+    return pa
+
 GetDate = None
 GetMass = None
 GetDistance = None
 GetTemp = None
 GetSurface = None
-
+GetPercentage = None
+GetSpeed = None
+GetPower = None
+GetPressure = None
 
 
 
 
 def LogDico(f, names, dico):
+    '''
+        Once everything is ready, call this function to automatically log everything in dico according to name in f
+        f: the file (already opened for writing)
+        names: array with header column names
+        dico: dic of arrays (all the same length)
+    '''
+    
     s = ""
     names.insert(0, "timestamp")
     # header line
@@ -70,6 +100,11 @@ def LogDico(f, names, dico):
 
 
 def GetHeader(f_id, f_name, start_tstp, meta):
+    '''
+        Take care of writing the header part
+        Return a string (the header)
+    '''
+    
     res = ""
     
     start_city = random.choice(c.CITIES)
@@ -79,8 +114,10 @@ def GetHeader(f_id, f_name, start_tstp, meta):
     travel_date = start_tstp.strftime("%Y-%m-%d")
     
     
+    
     res += "flight id:" + f_id
     res += "\n" + "flight code:" + f_name
+    res += "\n" + "origin:" + str(meta['origin'])
     #res += "\n" + "company:" + c.COMPANY
     res += "\n" + "date:" + travel_date
     res += "\n" + "from:" + start_city
@@ -100,6 +137,11 @@ def GetHeader(f_id, f_name, start_tstp, meta):
 
 
 def GetDico(records, names, f_id, start_tstp):
+    '''
+        Parse the ACMI file values and take care of missing date
+        Create also the timestamp column according to the start_tstp previously parsed
+    '''
+    
     dico = {}
     dico['timestamp'] = []
     for n in names:
@@ -141,23 +183,6 @@ def GetDico(records, names, f_id, start_tstp):
 
 
 
-def GetEnginePower(names, dico, meta):
-    
-    
-    dx = np.diff(dico['longitude']) / np.diff(dico['timestamp'])
-    dy = np.diff(dico['latitude']) / np.diff(dico['timestamp'])
-    dz = np.diff(dico['altitude']) / np.diff(dico['timestamp'])
-    speed = np.sqrt(dx**2 + dy**2 + dz**2)
-    accel = np.diff(speed) / np.diff(np.diff(dico['timestamp']))
-    
-    W = meta['mass'] * c.g
-    Ro = (c.p0 * c.M / c.R * c.T0) * (1- c.L * dico['altitude'] / c.T0) ^ (c.g * c.M / (c.R * c.L) - 1)
-    D = 0.5 * Ro * (speed+dico['air_speed']) * (speed+dico['air_speed']) * meta['surface'] * meta['drag']
-    L = 0.5 * Ro * (speed+dico['air_speed']) * (speed+dico['air_speed']) * meta['surface'] * meta['lift']
-    T = meta['mass'] * accel - W - D - L
-    for i in range(0, meta['nb_motor']):
-        names.append("engine" + str(i))
-        dico['engine' + str(i)] = []
         
         
         
@@ -173,6 +198,10 @@ def GenerateFile(f_id, f_name, records, start_tstp):
         GetDistance = GetUSDistance
         GetTemp = GetUSTemp
         GetSurface = GetUSSurface
+        GetPercentage = GetUSPercentage
+        GetSpeed = GetUSSpeed
+        GetPower = GetUSPower
+        GetPressure = GetUSPressure
     else:
         f_type = "RU"
         GetDate = GetRUDate
@@ -180,6 +209,10 @@ def GenerateFile(f_id, f_name, records, start_tstp):
         GetDistance = GetRUDistance
         GetTemp = GetRUTemp
         GetSurface = GetRUSurface
+        GetPercentage = GetRUPercentage
+        GetSpeed = GetRUSpeed
+        GetPower = GetRUPower
+        GetPressure = GetRUPressure
      
     if not os.path.exists(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION + "\\" + f_type):
         os.mkdir(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION + "\\" + f_type)
@@ -187,13 +220,17 @@ def GenerateFile(f_id, f_name, records, start_tstp):
        
     ## Header
     meta = {}
+    meta['origin'] = f_type
     meta['nb_motor'] = dg.GetMotor(f_name)
     meta["drag_coef"] = dg.GetDragCoef(f_name)
     meta["lift_coef"] = dg.GetLiftCoef(f_name)
-    meta["mass"] = GetMass(dg.GetMass(f_name))
-    meta["mass fuel"] = GetMass(dg.GetMassFuel(f_name))
-    meta['surface'] = GetSurface(dg.GetSurface(f_name))
-    
+    meta["mass"] = GetMass(dg.GetMass(f_name))          # from lbs
+    meta["mass fuel"] = GetMass(dg.GetMassFuel(f_name)) # from lbs
+    meta['surface'] = GetSurface(dg.GetSurface(f_name)) # from m2
+    # for computations only
+    meta["mass_kg"] = dg.LbsToKg(dg.GetMass(f_name))
+    meta["mass_fuel_kg"] = dg.LbsToKg(dg.GetMassFuel(f_name))
+    meta["surface_m2"] = dg.GetSurface(f_name)
     
         
     
@@ -203,30 +240,67 @@ def GenerateFile(f_id, f_name, records, start_tstp):
     
     
     ## Values
+    #        [degree,     degree,     m,          degree,    degree, deg, m,    m,  degree]
     names = ["longitude", "latitude", "altitude", "roll", "pitch", "yaw", "u", "v", "heading"]
     dico = GetDico(records, names, f_id, start_tstp)
     
-    # generate air speed
-    dico['air_speed'] = np.array([1 for x in dico['timestamp']])
+    # get speed
+    # m / s
+    #names.append("speed_uv")
+    dico['vx'], dico['vy'], dico['vz'], dico['speed_uv'] = dg.GetSpeedUV(dico)
+    
+    # generate air speed 
+    # m / s
+    names.append("air_speed")
+    dico['air_x'], dico['air_y'], dico['air_z'], dico['air_speed'] = dg.GetAirSpeed(dico)
+
     # then compute engine(s) power
-    #names, dico = GetEnginePower(names, dico, meta)
+    # W
+    engines, names, dico = dg.GetEnginePower2(names, dico, meta)
+    
+    
+    # COCKPIT
+    
+    # celsius
+    col = "temperature_in"
+    names.append(col)
+    dico = dg.GetTemperatureCockpit(dico, col)
+
+    # % (e.g., 70)
+    col = "humidity_in"
+    names.append(col)
+    dico = dg.GetHumidityCockpit(dico, col)
+    
+    # Pa
+    col = "pressure_in"
+    names.append(col)
+    dico = dg.GetPressureCockpit(dico, col)
+    
+    # BPM
+    col = "heart_rate"
+    names.append(col)
+    dico = dg.GetHeartRate(dico, col)
+    
+    # % (e.g., 70)
+    col = "oxygen_mask"
+    names.append(col)
+    dico = dg.GetOxygenMask(dico, col)
+    
     
     ## convert values if necessary
-    # longitude: degree
-    # latitude: degree
-    # altitude: m
-    # roll: degree
-    # pitch: degree
-    # yaw: degree
-    # u: m
-    # v: m
-    # heading: degree
+    ## use agnostic function (so check them again!)
     dico['altitude'] = GetDistance(dico['altitude'])
     dico['u'] = GetDistance(dico['u'])
     dico['v'] = GetDistance(dico['v'])
-    # mass: lbs
-    # mass fuel: lbs
-    # date: 
+    
+    dico['air_speed'] = GetSpeed(dico['air_speed'])
+    for e in engines:
+        dico[e] = GetPower(dico[e])
+    
+    dico['temperature_in'] = GetTemp(dico['temperature_in'])
+    dico['humidity_in'] = GetPercentage(dico['humidity_in'])
+    dico['pressure_in'] = GetPressure(dico['pressure_in'])
+    dico['oxygen_mask'] = GetPercentage(dico['oxygen_mask'])
     
     LogDico(f, names, dico)
     

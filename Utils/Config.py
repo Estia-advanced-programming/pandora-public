@@ -1,6 +1,8 @@
 '''
 Created on 3 Mar 2020
-
+    
+    All hard-coded values 
+    
 @author: w.delamare
 '''
 
@@ -8,13 +10,18 @@ import os
 
 from Utils import DataGenerator as dg
 
-'''
-FILES AND DIRECTORIES
-'''
+
+
+############################################
+# FILES AND DIRECTORIES
+############################################
+
 # where is the script being run
 PATH_RESOURCES = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
 # the acmi file to parse
 ACMI_FILE = "..\\Samples\\Tacview-20191108-113901-DCS-MOHICAN_AI_final.txt2.acmi"
+#ACMI_FILE = "..\\Samples\\Tacview-20200303-233831-DCS-TESTDIM.txt.acmi"
+
 # the folder in which writing the resulting test files
 OUT_FOLDER = "..\\TestFiles"
 # sub folder (NORMAL, MISSING_COL, etc)
@@ -22,22 +29,92 @@ CURRENT_CONDITION = "Normal"
 
 US_AIRCRAFTS = ["F-14B", "F-14A", "F-15C", "F-15E", "F-16A"]
 
-'''
-CONST
-'''
+
+
+############################################
+# FORMULAE CONSTANTS
+############################################
 
 g = 9.81
-
 p0 = 101325
 T0 = 288.15
-L = 0.0065
+L = -0.0065
 R = 8.31447
 M = 0.0289654
 
-'''
-VALUES
-'''
-# aircrafts
+
+
+
+
+############################################
+# GENERATED DATA VALUES
+############################################
+
+
+# asked google
+DRAGS = [x*0.01 for x in range(1, 2, 1)]
+DRAG_FACTOR = 0.01
+
+# https://aviation.stackexchange.com/questions/46518/what-is-the-typical-value-of-maximum-lift-coefficient-for-aerobatic-aircraft
+LIFTS = [x * 0.1 for x in range(10, 20, 1)]
+LIFT_FACTOR = 0.4
+
+# kg
+MASS = [x for x in range(10000, 20000, 500)]
+MASS_FACTOR = 1000 
+
+# https://en.wikipedia.org/wiki/Wing_loading
+# same for drag (asked Philippe)
+# m^2
+WING_AREA = [x for x in range(20, 25, 1)]
+WING_FACTOR = 1
+
+# m
+AIR_LEVELS = [dg.FtToM(x) for x in [-1000, 1600, 6600, 26000]]
+
+# m
+EARTH_RADIUS = 6371 * 1000
+
+# C
+T_COCKPIT = 25
+# https://www.researchgate.net/publication/276074552_Simulation_for_temperature_control_of_a_military_aircraft_cockpit_to_avoid_pilot%27s_thermal_stress
+# > +10 deg (sometimes > +45 deg) compared to ambient temp.
+T_NOISE = 15
+T_EVENT = +20
+
+
+# https://www.google.com/search?client=firefox-b-d&q=heart+rate+data+bpm+fighter+jet+pilot
+BPM = 90
+BPM_NOISE = 20
+BPM_EVENT = +40
+
+
+# http://www.diva-portal.org/smash/get/diva2:1082610/FULLTEXT01.pdf
+PRESSURE = 25000
+PRESSURE_NOISE = 5000
+PRESSURE_EVENT = -10000
+ 
+
+# https://www.ncbi.nlm.nih.gov/books/NBK234096/
+# relative humidity in %
+HUMIDITY = 7.5
+HUMIDITY_NOISE = 2
+
+
+# http://www.iosrjournals.org/iosr-jmce/papers/ICRTEM/ME/Volume-7/MECH-25.pdf?id=7622
+OXYGEN_A = 30
+OXYGEN_B = 70 / 30
+OXYGEN_NOISE = 5
+
+
+
+
+
+
+
+############################################
+# DICTIONARIES
+############################################
   
 # dico_aircrafts = {
 #     "F-14B": {"mass": 44040, "fuel": 16200, "motor": 2}
@@ -54,8 +131,6 @@ VALUES
 
 
 dico_aircrafts = "boop"
-dico_air_speed = "boop"
-current_air_speed = "boop"
 
 def InitDicoAircrafts():
     global dico_aircrafts
@@ -82,14 +157,23 @@ def InitDicoAircrafts():
   
 
 
+## AIR SPEED
+
+dico_air_speed = "boop"
+current_air_speed = "boop"
 
 def InitAirSpeed():
     global dico_air_speed, current_air_speed
-    f = open(PATH_RESOURCES + "\\..\\Data\\aircrafts", "r")
+    f = open(PATH_RESOURCES + "\\..\\Data\\air_speed", "r")
     dico_air_speed = eval(f.read())
+    print(dico_air_speed)
     f.close() 
     ## to change after getting some few files
-    current_air_speed = dico_air_speed['default']
+    if ACMI_FILE in dico_air_speed:
+        current_air_speed = dico_air_speed[ACMI_FILE]
+    else:
+        current_air_speed = dico_air_speed['default']
+    
     
     
 # random cities for a little bit of realism
@@ -114,26 +198,6 @@ CITIES = [
     , "kobuleti"
     , "batumi"
     ]
-# asked google
-DRAGS = [x*0.01 for x in range(5, 45, 1)]
-# https://aviation.stackexchange.com/questions/46518/what-is-the-typical-value-of-maximum-lift-coefficient-for-aerobatic-aircraft
-LIFTS = [x * 0.1 for x in range(10, 20, 1)]
-# a little bit of noise 
-DRAG_FACTOR = 10.0
-LIFT_FACTOR = 4.0
-
-MASS = [x for x in range(45000, 70000, 1000)]
-MASS_FACTOR = 1000 
-
-# https://en.wikipedia.org/wiki/Wing_loading
-# same for drag (asked Philippe)
-WING_AREA = [x for x in range(100, 400, 20)]
-WING_FACTOR = 50
-
-AIR_LEVELS = [33, 1600, 6600, 26000]
-
-
-
 
 
 

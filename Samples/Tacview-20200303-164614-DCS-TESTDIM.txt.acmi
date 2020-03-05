@@ -12,9 +12,9 @@ FileVersion=2.2
 40000002,T=2.987465|7.0833075|2000|371700|11557,Type=Navaid+Static+Bullseye,Color=Red,Coalition=Allies
 #0
 0,Category=CAS
-102,T=5.0182217|5.2219826|1997.6||0.3|173.6|551807.19|-181332.17|168.1,Type=Air+FixedWing,Name=A-10C,Group=Nouveau Groupe d'Avions #003,Color=Red,Coalition=Allies,Country=ru,Debug=wsType[1.1.6.58]
-202,T=4.5619487|5.1182477|22.83||-0.1|156|515777.84|-196332.05|150.8,Type=Air+FixedWing,Name=F-14A,Group=Nouveau Groupe d'Avions #001,Color=Blue,Coalition=Enemies,Country=us,Debug=wsType[1.1.1.5]
-302,T=5.1251678|4.8682252|15.19|||359.6|564328.81|-219798.34|354,Type=Air+FixedWing,Name=F-117A,Group=Nouveau Groupe d'Avions,Color=Blue,Coalition=Enemies,Country=us,Debug=wsType[1.1.6.37]
+102,T=5.0182217|5.2219826|1997.6||0.3|173.6|551807.19|-181332.17|168.1,Type=Air+FixedWing,Name=F-16A,Group=Nouveau Groupe d'Avions #003,Color=Red,Coalition=Allies,Country=ru,Debug=wsType[1.1.6.58]
+202,T=4.5619487|5.1182477|22.83||-0.1|156|515777.84|-196332.05|150.8,Type=Air+FixedWing,Name=F-14B,Group=Nouveau Groupe d'Avions #001,Color=Blue,Coalition=Enemies,Country=us,Debug=wsType[1.1.1.5]
+302,T=5.1251678|4.8682252|15.19|||359.6|564328.81|-219798.34|354,Type=Air+FixedWing,Name=F-16A,Group=Nouveau Groupe d'Avions,Color=Blue,Coalition=Enemies,Country=us,Debug=wsType[1.1.6.37]
 402,T=4.862427|5.2352655|1997.99||3.7|176.6|539007.63|-181065.55|171.1,Type=Air+FixedWing,Name=Su-25T,Pilot=LeStef64,Group=Nouveau Groupe d'Avions #002,Color=Red,Coalition=Allies,Country=ru,Debug=wsType[1.1.6.54],Importance=1,IAS=161.6,Throttle=0.86,Afterburner=0,AirBrakes=0,Flaps=0,LandingGear=0,Tailhook=0,FuelWeight=3775,FuelWeight2=0,HDM=164.8
 #0.11
 402,T=4.8624424|5.2350789|||3.9||539010.88|-181086.17|
