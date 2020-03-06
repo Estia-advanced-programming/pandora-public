@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Version",
+      "setup": "",
+      "run": "java -jar target/pandora.jar -v",
+      "input": "",
+      "output": "^[pP]andora@\\d+.\\d+.\\d+",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Help",
+      "setup": "",
+      "run": "java -jar target/pandora.jar -h",
+      "input": "",
+      "output": ".*",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}

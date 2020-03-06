@@ -1,0 +1,28 @@
+[ { "name"       : "-f flightDuration on fl12"
+  , "optionLine" : "-f flightDuration"
+  , "testFile"   : "flightReport_fl12.frd"}
+
+, { "name"       : "--feature flightDuration on fl12"
+  , "optionLine" : "--feature flightDuration"
+  , "testFile"   : "flightReport_fl12.frd"}
+
+, { "name"       : "full report fl12"
+  , "optionLine" : "-f flightDuration"
+  , "testFile"   : "flightReport_fl12.frd"}
+
+, { "name"       : "no flight record"
+  , "optionLine" : ""
+  , "testFile"   : ""}
+
+, { "name"       : "Invalid source path"
+  , "optionLine" : ""
+  , "testFile"   : "NotAvalidPath"}
+
+, { "name"       : "Missing argument"
+  , "optionLine" : "-f"
+  , "testFile"   : ""}
+
+, { "name"       : "unrecognized option"
+  , "optionLine" : "-t"
+  , "testFile"   : ""}
+]

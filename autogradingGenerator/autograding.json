@@ -1,0 +1,94 @@
+{
+  "tests": [
+    {
+      "name": "Version",
+      "setup": "",
+      "run": "java -jar target/pandora.jar -v",
+      "input": "",
+      "output": "^[pP]andora@\\d+.\\d+.\\d+",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Help",
+      "setup": "",
+      "run": "java -jar target/pandora.jar -h",
+      "input": "",
+      "output": ".*",
+      "comparison": "regex",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "-f flightDuration on fl12",
+      "setup": "mkdir -p __autograding/-f_flightDuration_on_fl12 ",
+      "run": "java -jar referencePandora.jar -f flightDuration flightReport_fl12.frd &> __autograding/-f_flightDuration_on_fl12/expected ;\njava -jar pandora.jar -f flightDuration flightReport_fl12.frd &> __autograding/-f_flightDuration_on_fl12/output   ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/-f_flightDuration_on_fl12/expected __autograding/-f_flightDuration_on_fl12/output &> __autograding/-f_flightDuration_on_fl12/diff ;\ncat __autograding/-f_flightDuration_on_fl12/diff ;\n",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "--feature flightDuration on fl12",
+      "setup": "mkdir -p __autograding/--feature_flightDuration_on_fl12 ",
+      "run": "java -jar referencePandora.jar --feature flightDuration flightReport_fl12.frd &> __autograding/--feature_flightDuration_on_fl12/expected ;\njava -jar pandora.jar --feature flightDuration flightReport_fl12.frd &> __autograding/--feature_flightDuration_on_fl12/output   ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/--feature_flightDuration_on_fl12/expected __autograding/--feature_flightDuration_on_fl12/output &> __autograding/--feature_flightDuration_on_fl12/diff ;\ncat __autograding/--feature_flightDuration_on_fl12/diff ;\n",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "full report fl12",
+      "setup": "mkdir -p __autograding/full_report_fl12 ",
+      "run": "java -jar referencePandora.jar -f flightDuration flightReport_fl12.frd &> __autograding/full_report_fl12/expected ;\njava -jar pandora.jar -f flightDuration flightReport_fl12.frd &> __autograding/full_report_fl12/output   ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/full_report_fl12/expected __autograding/full_report_fl12/output &> __autograding/full_report_fl12/diff ;\ncat __autograding/full_report_fl12/diff ;\n",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "no flight record",
+      "setup": "mkdir -p __autograding/no_flight_record ",
+      "run": "java -jar referencePandora.jar   &> __autograding/no_flight_record/expected ;\njava -jar pandora.jar   &> __autograding/no_flight_record/output   ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/no_flight_record/expected __autograding/no_flight_record/output &> __autograding/no_flight_record/diff ;\ncat __autograding/no_flight_record/diff ;\n",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Invalid source path",
+      "setup": "mkdir -p __autograding/Invalid_source_path ",
+      "run": "java -jar referencePandora.jar  NotAvalidPath &> __autograding/Invalid_source_path/expected ;\njava -jar pandora.jar  NotAvalidPath &> __autograding/Invalid_source_path/output   ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Invalid_source_path/expected __autograding/Invalid_source_path/output &> __autograding/Invalid_source_path/diff ;\ncat __autograding/Invalid_source_path/diff ;\n",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Missing argument",
+      "setup": "mkdir -p __autograding/Missing_argument ",
+      "run": "java -jar referencePandora.jar -f  &> __autograding/Missing_argument/expected ;\njava -jar pandora.jar -f  &> __autograding/Missing_argument/output   ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Missing_argument/expected __autograding/Missing_argument/output &> __autograding/Missing_argument/diff ;\ncat __autograding/Missing_argument/diff ;\n",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "unrecognized option",
+      "setup": "mkdir -p __autograding/unrecognized_option ",
+      "run": "java -jar referencePandora.jar -t  &> __autograding/unrecognized_option/expected ;\njava -jar pandora.jar -t  &> __autograding/unrecognized_option/output   ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/unrecognized_option/expected __autograding/unrecognized_option/output &> __autograding/unrecognized_option/diff ;\ncat __autograding/unrecognized_option/diff ;\n",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}

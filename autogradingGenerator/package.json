@@ -1,0 +1,18 @@
+{
+  "name": "jsongenerator",
+  "version": "1.0.0",
+  "description": "generate autograding.json file from own hadoc description",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.mjs"
+  },
+  "author": "dhmmasson",
+  "license": "MIT",
+  "dependencies": {
+    "json-beautify": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0"
+  }
+}
