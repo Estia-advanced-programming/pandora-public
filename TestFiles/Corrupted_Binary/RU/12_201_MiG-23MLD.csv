@@ -1,0 +1,12 @@
+flight id:201
+flight code:MiG-23MLD
+origin:RU
+date:2011-06-01
+from:kobuleti
+to:gudauta
+motor(s):1
+mass aircraft:10550.096328
+mass fuel:10550.096328
+lift coef:1.9060340730520209
+drag coef:0.012773573396515615
+

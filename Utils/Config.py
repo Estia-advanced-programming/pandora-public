@@ -38,8 +38,9 @@ THREE_LINES = [8, "Three_Lines"]
 REVERSE = [9, "Reverse"]
 BIG_INT = [10, "Big_Int"]
 ASCII = [11, "Ascii"]
+CORRUPTED_BINARY = [12, 'Corrupted_Binary']
 
-CURRENT_CONDITION = REVERSE
+CURRENT_CONDITION = CORRUPTED_BINARY
 num_condition = CURRENT_CONDITION[0]
 
 

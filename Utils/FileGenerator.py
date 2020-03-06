@@ -12,6 +12,7 @@ from _datetime import timedelta
 from Utils import Config as c
 from Utils import Regexp as r
 from Utils import DataGenerator as dg
+import struct
 
 
 
@@ -107,6 +108,14 @@ def LogDico(f, names, dico):
         
     if c.CURRENT_CONDITION[0] == c.ASCII[0]:
         s = s.replace(".", "⋅")
+
+    if c.CURRENT_CONDITION[0] == c.CORRUPTED_BINARY[0]:
+        # f.write(struct.pack(str(len(s)) + "B", *s))
+        s = s.replace("\n", "\r")
+        return
+    
+    
+    
     f.write(s)
   
   
@@ -357,7 +366,7 @@ def GenerateFile(f_id, f_name, records, start_tstp):
             LogDico(f, names2, dico2)
             f.close()
         return
-    
+
     else:
         f = open(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER + "\\" + c.CURRENT_CONDITION[1] + "\\" + f_type + "\\" + str(c.num_condition) + "_" + f_id + "_" + f_name + ".csv", "w+", encoding='utf-8')
         f.write(head)
