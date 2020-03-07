@@ -1,23 +1,13 @@
-# test-generator
-Scripts to generate test files
+# Pandora
 
-### Consider 2 data sets (2 ACMI files)
-- normal flights
-- bad weather flights
+This is the main repository for the Pandora project. It is a hub for all the information needed to complete the Advanced Programming Assignement. You may find here:
+* The [Wiki] presenting the project, the specifications, as well as some project management information.
+* The released version of the pandora project. It is a jar of the latest version developed by the Teacher team.
+* Flight records
+* An issue tracker, where you can open issues if there are :
+  * [Bugs][BugTracking] in the released version ( see [here][BugDefinition] as to what is a bug)
+  * Problems in the [wiki][wiki]/docs provided  
 
-### Output:
-- header
-- csv (timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask)
-
-### Generated problems
-- missing column
-- missing header
-- incomplete header
-- missing colnames
-- csv with only 1 line
-- csv with only 2 lines
-- csv with only 3 lines
-- csv in reverse order
-- ascii 'dot' replaced with middle dot (. / ⋅)
-- corrupted binary (\n to \r)
-
+[BugTracking]: ./issues
+[BugDefinition]: ./wiki
+[Wiki]: ./wiki
