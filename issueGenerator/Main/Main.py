@@ -29,15 +29,27 @@ output_json = "../TestFilesJSON/"
 
 
 def DisplayMDMilestones():
+    
+    dico_nb = {}
+    for issue in d.issues:
+        if issue['milestone'] not in dico_nb:
+            dico_nb[issue['milestone']] = 0
+        dico_nb[issue['milestone']] += 1
+        
     s = ""
     i = 0
     for m in d.milestones:
         s += "* **Milestone "+ str(i) + "** : " + m['title'] + "\n    * Description: " + m['description'] + "\n"
+        s += "    * Number of issues: " + str(dico_nb[i]) + "\n"
         i += 1
     print(s)
     
     
 if __name__ == '__main__':
+    
+    DisplayMDMilestones()
+    exit(0)
+    
     g = Github(git_token)
     repo = g.get_repo(git_repo)
     
