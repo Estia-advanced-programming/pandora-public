@@ -8,6 +8,6 @@ This is the main repository for the Pandora project. It is a hub for all the inf
   * [Bugs][BugTracking] in the released version ( see [here][BugDefinition] as to what is a bug)
   * Problems in the [wiki][wiki]/docs provided  
 
-[BugTracking]: ./issues
-[BugDefinition]: ./wiki
-[Wiki]: ./wiki
+[BugTracking]: https://github.com/Estia-advanced-programming/pandora-public/issues
+[BugDefinition]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Contributing
+[Wiki]: https://github.com/Estia-advanced-programming/pandora-public/wiki
