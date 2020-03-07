@@ -27,6 +27,16 @@ dico_to_log = {}
 output_json = "../TestFilesJSON/"
 
 
+
+def DisplayMDMilestones():
+    s = ""
+    i = 0
+    for m in d.milestones:
+        s += "* **Milestone "+ str(i) + "** : " + m['title'] + "\n    * Description: " + m['description'] + "\n"
+        i += 1
+    print(s)
+    
+    
 if __name__ == '__main__':
     g = Github(git_token)
     repo = g.get_repo(git_repo)
@@ -69,3 +79,6 @@ if __name__ == '__main__':
         f = open(output_json + "milestone_" + str(k), "w+")
         f.write(str(v))
         f.close()
+        
+        
+    DisplayMDMilestones()
