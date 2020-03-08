@@ -5,7 +5,7 @@ const testDescription = "./hadoc.json" ;
 const rootFolderTestSuite = "./testSuite/" ;
 const target = "../dist/autograding.json" ;
 const referencePandora = "referencePandora.jar" ;
-let autogradingTests = { tests: [] } ;
+
 
 fs.readdir( "./milestones", ( err, filenames ) => {
     for( const filename of filenames )
@@ -16,7 +16,7 @@ fs.readdir( "./milestones", ( err, filenames ) => {
 } )
 
 
-fs.readFile( staticDescription, "utf8", parseStatic ) ;
+//fs.readFile( staticDescription, "utf8", parseStatic ) ;
 function parseStatic( err, jsonString ) {
   if( err ) throw err ;
   autogradingTests = JSON.parse( jsonString ) || { tests: [] } ;
@@ -30,13 +30,13 @@ function parseStatic( err, jsonString ) {
  * @param  {Strign} jsonString json string
  */
 function parseHadoc( jsonString, output ) {
-
+  console.log( output )
   const hadocTests = JSON.parse( jsonString ) ;
-
+  let autogradingTests = { tests: [] } ;
   for ( const test of hadocTests ) {
     autogradingTests.tests.push( new AutoGradingTest( test ) ) ;
   }
-  fs.writeFile( target, jsonPrint( autogradingTests, null, 2, 80 ), "utf8", console.log ) ;
+  fs.writeFile( output, jsonPrint( autogradingTests, null, 2, 80 ), "utf8", console.log ) ;
 }
 
 class AutoGradingTest {
@@ -46,8 +46,8 @@ class AutoGradingTest {
     this.name = name ;
     this.setup = `\
 mkdir -p ${ destFolder } ; \
-ls testSuite/records | xargs -R1 -I fileName java -jar target/referencePandora.jar ${ optionLine } fileName &>> ${ destFolder }/expected ; \
-ls testSuite/records | xargs -R1 -I fileName java -jar target/pandora.jar ${ optionLine } fileName &>>  ${ destFolder }/output` ;
+ls testSuite/${testFile} | xargs -R1 -I fileName java -jar target/referencePandora.jar ${ optionLine } fileName &>> ${ destFolder }/expected ; \
+ls testSuite/${testFile} | xargs -R1 -I fileName java -jar target/pandora.jar ${ optionLine } fileName &>>  ${ destFolder }/output` ;
     this.run = `\
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output ;
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output &>> __autograding/result.txt` ;

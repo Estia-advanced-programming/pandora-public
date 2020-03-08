@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Flight Closeness ",
+      "setup": "mkdir -p __autograding/Flight_Closeness_ ; ls testSuite/multi | xargs -R1 -I fileName java -jar target/referencePandora.jar -o closeFlight fileName &>> __autograding/Flight_Closeness_/expected ; ls testSuite/multi | xargs -R1 -I fileName java -jar target/pandora.jar -o closeFlight fileName &>>  __autograding/Flight_Closeness_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Flight_Closeness_/expected __autograding/Flight_Closeness_/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Flight_Closeness_/expected __autograding/Flight_Closeness_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Flight Closeness (Same origin)",
+      "setup": "mkdir -p __autograding/Flight_Closeness_(Same_origin) ; ls testSuite/multi | xargs -R1 -I fileName java -jar target/referencePandora.jar -o closeFlightSameOri fileName &>> __autograding/Flight_Closeness_(Same_origin)/expected ; ls testSuite/multi | xargs -R1 -I fileName java -jar target/pandora.jar -o closeFlightSameOri fileName &>>  __autograding/Flight_Closeness_(Same_origin)/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Flight_Closeness_(Same_origin)/expected __autograding/Flight_Closeness_(Same_origin)/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Flight_Closeness_(Same_origin)/expected __autograding/Flight_Closeness_(Same_origin)/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Flight Closeness (Different origin)",
+      "setup": "mkdir -p __autograding/Flight_Closeness_(Different_origin) ; ls testSuite/multi | xargs -R1 -I fileName java -jar target/referencePandora.jar -o closeFlightDiffOri fileName &>> __autograding/Flight_Closeness_(Different_origin)/expected ; ls testSuite/multi | xargs -R1 -I fileName java -jar target/pandora.jar -o closeFlightDiffOri fileName &>>  __autograding/Flight_Closeness_(Different_origin)/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Flight_Closeness_(Different_origin)/expected __autograding/Flight_Closeness_(Different_origin)/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Flight_Closeness_(Different_origin)/expected __autograding/Flight_Closeness_(Different_origin)/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
