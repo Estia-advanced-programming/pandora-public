@@ -17,9 +17,18 @@ from github.Label import Label
 
 from dotenv import load_dotenv
 
+'''
+To run the script outside Eclipse
+(otherwise import pbms)
+'''
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+os.chdir(SCRIPT_DIR)
+
 from Resources import Data as d
 
-load_dotenv("../Resources/.env")
+#load_dotenv("../Resources/.env")
 
 
 file_feature = None
@@ -29,13 +38,13 @@ output_json = "../TestFilesJSON/"
 
 
 def DisplayMDMilestones():
-    
+
     dico_nb = {}
     for issue in d.issues:
         if issue['milestone'] not in dico_nb:
             dico_nb[issue['milestone']] = 0
         dico_nb[issue['milestone']] += 1
-        
+
     s = ""
     i = 0
     for m in d.milestones:
@@ -43,14 +52,14 @@ def DisplayMDMilestones():
         s += "    * Number of issues: " + str(dico_nb[i]) + "\n"
         i += 1
     print(s)
-  
-  
+
+
 def PrintHelp():
     print('python Main.py -t <git_token> -r <git_repo> [-v]')
     print("-t --token: mandatory (default: env variable)")
     print("-r --repo: mandatory (default: 'Estia-advanced-programming/weekendtest-team3'")
     print("v: verbose - optional (print Milestones in md format + test files json)")
-    
+
 
 # make sure we have the correct links between d.milestones and milestones from github
 def GetMilestone(m_nb, milestones):
@@ -61,8 +70,8 @@ def GetMilestone(m_nb, milestones):
     # nothing found?
     print("A problem occured: could not find milestone " + m_nb)
     sys.exit(1)
-    
-    
+
+
 # python Main.py -t <git_token> -r <git_repo> [-v]
 def main(argv):
     git_token = os.getenv("GIT_TOKEN")
@@ -84,29 +93,29 @@ def main(argv):
             git_repo = arg
         elif opt in ("-v",):
             verbose = True
-    
-    
-    
+
+
+
     g = Github(git_token)
     repo = g.get_repo(git_repo)
-    
+
     for label in d.labels:
         try:
             repo.create_label(name = label["name"], color=label['color'], description="")
         except:
             pass
     labels = repo.get_labels()
-    
+
     for milestone in d.milestones:
         try:
-            repo.create_milestone(title = milestone['title'], state = milestone['state'], description = milestone['description'])   
+            repo.create_milestone(title = milestone['title'], state = milestone['state'], description = milestone['description'])
         except:
             pass
 
     gmilestones = repo.get_milestones(state='all')
-    
+
     g_issues = repo.get_issues(state='all')
-    
+
     i_names = []
     for gi in g_issues:
         i_names.append(gi.title)
@@ -115,7 +124,7 @@ def main(argv):
         if issue['title'] not in i_names:
             val = repo.create_issue(title = issue['title'], body = issue['body'], milestone=GetMilestone(issue['milestone'], gmilestones), labels=issue['labels'])
             print("creating " + val.title)
-        
+
         if verbose:
             optionLine = ""
             # "**CLI Output Name**: -o flightDuration\n\n"
@@ -125,19 +134,17 @@ def main(argv):
                 if issue['milestone'] not in dico_to_log:
                     dico_to_log[issue['milestone']] = []
                 dico_to_log[issue['milestone']].append({"name" : issue['title'], "optionLine":optionLine, "testFile": d.milestones[issue['milestone']]['file']})
-    
-    if verbose:        
+
+    if verbose:
         for k,v in dico_to_log.items():
             print("create file for milestone " + str(k))
             f = open(output_json + "milestone_" + str(k), "w+")
             f.write(str(v))
             f.close()
-    
+
     if verbose:
         DisplayMDMilestones()
-        
-    
+
+
 if __name__ == '__main__':
     main(sys.argv[1:])
-        
-        

@@ -17,5 +17,5 @@ runs:
   image: 'Dockerfile'
   args:
     - /Main/Main.py
-    - -t {{ inputs.token }}
+    - -t ${{ inputs.token }}
     - -r ${{ inputs.destination-repo }}
