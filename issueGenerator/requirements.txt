@@ -1,2 +1,2 @@
 pyGithub==1.46
-python-dotenv=0.12.0
+python-dotenv==0.12.0
