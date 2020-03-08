@@ -26,21 +26,21 @@ ACMI_FILE = "..\\Samples\\10_normal_flights.txt.acmi"
 OUT_FOLDER = "..\\TestFiles"
 
 # sub folder (NORMAL, MISSING_COL, etc)
-NORMAL = [0, "Normal"]
-BAD_WEATHER = [1,"Bad_Weather"]
-MISSING_COLUMN = [2, "Missing_Column"]
-MISSING_HEADER = [3, "Missing_Header"]
-INCOMPLETE_HEADER = [4, "Incomplete_Header"]
-MISSING_COLNAMES = [5, "Missing_Colnames"]
-ONE_LINE = [6, "One_Line"]
-TWO_LINES = [7, "Two_Lines"]
-THREE_LINES = [8, "Three_Lines"]
-REVERSE = [9, "Reverse"]
-BIG_INT = [10, "Big_Int"]
-ASCII = [11, "Ascii"]
-CORRUPTED_BINARY = [12, 'Corrupted_Binary']
+NORMAL = [0, "Normal", "..\\Samples\\10_normal_flights.txt.acmi"]
+BAD_WEATHER = [1,"Bad_Weather", "..\\Samples\\10_meteo_bad__flights.txt.acmi"]
+MISSING_COLUMN = [2, "Missing_Column", "..\\Samples\\10_normal_flights.txt.acmi"]
+MISSING_HEADER = [3, "Missing_Header", "..\\Samples\\10_normal_flights.txt.acmi"]
+INCOMPLETE_HEADER = [4, "Incomplete_Header", "..\\Samples\\10_normal_flights.txt.acmi"]
+MISSING_COLNAMES = [5, "Missing_Colnames", "..\\Samples\\10_normal_flights.txt.acmi"]
+ONE_LINE = [6, "One_Line", "..\\Samples\\10_normal_flights.txt.acmi"]
+TWO_LINES = [7, "Two_Lines", "..\\Samples\\10_normal_flights.txt.acmi"]
+THREE_LINES = [8, "Three_Lines", "..\\Samples\\10_normal_flights.txt.acmi"]
+REVERSE = [9, "Reverse", "..\\Samples\\10_normal_flights.txt.acmi"]
+BIG_INT = [10, "Big_Int", "..\\Samples\\10_normal_flights.txt.acmi"]
+ASCII = [11, "Ascii", "..\\Samples\\10_normal_flights.txt.acmi"]
+CORRUPTED_BINARY = [12, 'Corrupted_Binary', "..\\Samples\\10_normal_flights.txt.acmi"]
 
-CURRENT_CONDITION = CORRUPTED_BINARY
+CURRENT_CONDITION = NORMAL
 num_condition = CURRENT_CONDITION[0]
 
 

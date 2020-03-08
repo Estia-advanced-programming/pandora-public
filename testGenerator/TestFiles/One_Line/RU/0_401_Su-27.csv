@@ -1,0 +1,14 @@
+flight id:401
+flight code:Su-27
+origin:RU
+date:2011-06-01
+from:kutaisi
+to:gelendzhik
+motor(s):2
+mass aircraft:17500.032952
+mass fuel:17500.032952
+lift coef:1.3276531002791723
+drag coef:0.012475794761808172
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894005.71,1.9808891,7.0471119,5340.58,-47.0,4.6,222.9,-1.0,325.9836195988345,87775475.92050308,87775475.92050308,23.30138544029617,7.085487765055252,23750.168003138373,86.89999999999999,69.72946074926779
