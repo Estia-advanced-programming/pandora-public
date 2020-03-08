@@ -1,0 +1,23 @@
+# action.yml
+name: 'Update Issue'
+description: 'Automatically create issues for students'
+inputs:
+  destination-repo:  # id of input
+    description: >
+      The repository to populate with issues.
+    required: true
+    default: ${{ github.repository }}
+  token:
+    description: >
+      GitHub token used to create the issues. By default,
+      this uses the repository token provided by GitHub Actions.
+    default: ${{ github.token }}
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - -t {{ inputs.token }}
+    - -r ${{ inputs.destination-repo }}
