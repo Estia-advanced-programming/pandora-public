@@ -6,7 +6,7 @@ ADD Main /Main
 # Copy ressources folder
 ADD Ressources /Ressources
 
-RUN pip install pystrich
+RUN pip install -r Requirements.txt
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT [ "python", "./Main/Main.py" ]
+ENTRYPOINT [ "python" ]

@@ -2,7 +2,7 @@
 name: 'Update Issue'
 description: 'Automatically create issues for students'
 inputs:
-  destination-repo:  # id of input
+  destination-repo:
     description: >
       The repository to populate with issues.
     required: true
@@ -11,13 +11,11 @@ inputs:
     description: >
       GitHub token used to create the issues. By default,
       this uses the repository token provided by GitHub Actions.
-    default: ${{ github.token }}
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+    default:  ${{ secrets.GITHUB_TOKEN }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - Main/Main.py
     - -t {{ inputs.token }}
     - -r ${{ inputs.destination-repo }}
