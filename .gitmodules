@@ -4,3 +4,6 @@
 [submodule "source"]
 	path = source
 	url = https://dhmmasson@github.com/Estia-advanced-programming/pandora-template.git
+[submodule "autograding"]
+	path = autograding
+	url = https://dhmmasson@github.com/Estia-advanced-programming/autograding.git
