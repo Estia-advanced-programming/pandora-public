@@ -74,8 +74,8 @@ def GetMilestone(m_nb, milestones):
 
 # python Main.py -t <git_token> -r <git_repo> [-v]
 def main(argv):
-    git_token = os.getenv("GIT_TOKEN")
-    git_repo = "Estia-advanced-programming/t2"
+    git_token = os.getenv("INPUT_TOKEN")
+    git_repo = os.getenv("GITHUB_REPOSITORY")
     verbose = False
 
     try:
@@ -94,7 +94,8 @@ def main(argv):
         elif opt in ("-v",):
             verbose = True
 
-
+    print( git_token )
+    print( git_repo )
 
     g = Github(git_token)
     repo = g.get_repo(git_repo)
