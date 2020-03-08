@@ -2,9 +2,9 @@
 FROM python:3-alpine
 
 # Copy source folder
-ADD Main /Main
+COPY Main/Main.py /Main/Main.py
 # Copy ressources folder
-ADD Resources /Resources
+COPY Resources/Main.py /Resources/Main.py
 ADD requirements.txt /requirements.txt
 
 RUN pip install -r requirements.txt
