@@ -132,9 +132,9 @@ def main(argv):
             tab = re.findall(re.compile("CLI Output Name.*(\-o .*?)\s\s", re.DOTALL), issue['body'])
             if len(tab) > 0:
                 optionLine = tab[0]
-                if issue['milestone'] not in dico_to_log:
-                    dico_to_log[issue['milestone']] = []
-                dico_to_log[issue['milestone']].append({"name" : issue['title'], "optionLine":optionLine, "testFile": d.milestones[issue['milestone']]['file']})
+            if issue['milestone'] not in dico_to_log:
+                dico_to_log[issue['milestone']] = []
+            dico_to_log[issue['milestone']].append({"name" : issue['title'], "optionLine":optionLine, "testFile": d.milestones[issue['milestone']]['file']})
 
     if verbose:
         for k,v in dico_to_log.items():

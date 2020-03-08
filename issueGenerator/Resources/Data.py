@@ -167,7 +167,7 @@ issues = [
     ,{
         "title": "Average Altitude"
         , "body" : "" +
-                "**CLI Output Name**: -o avgALT\n" +
+                "**CLI Output Name**: -o avgAlt\n" +
                 "**Input**: a flight record file\n\n" +
                 "**Print**: the average altitude (m) during the flight\n"
         , "labels" : ['reporting']
@@ -176,7 +176,7 @@ issues = [
     ,{
         "title": "Max Altitude"
         , "body" : ""+
-                "**CLI Output Name**: -o maxALT\n\n"+
+                "**CLI Output Name**: -o maxAlt\n\n"+
                 "**Input**: a flight record file\n\n"+
                 "**Print**: the maximum altitude (m) during the flight\n"
         , "labels" : ['reporting']
