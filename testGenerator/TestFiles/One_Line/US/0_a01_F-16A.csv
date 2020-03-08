@@ -1,0 +1,14 @@
+flight id:a01
+flight code:F-16A
+origin:US
+date:2011-06-01
+from:krasnodar center
+to:anapa-vityazevo
+motor(s):1
+mass aircraft:19518
+mass fuel:19518
+lift coef:2.2203235305245417
+drag coef:0.01657331436821066
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894820.35,6.1266648,5.4980662,6653.54352,-0.0,3.9,88.6,-1.0,387.58987319554956,153868.8581716247,300.34693568415224,0.07014054084913876,3.7247645975527517,87.8,0.42875552350789237

@@ -324,6 +324,8 @@ def GenerateFile(f_id, f_name, records, start_tstp):
     
     
     names.insert(0, "timestamp")
+    names.remove("u")
+    names.remove("v")
     
     f = None 
     head = GetHeader(f_id, f_name, start_tstp, meta)
