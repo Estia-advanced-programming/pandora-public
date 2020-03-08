@@ -5,6 +5,7 @@ FROM python:3-alpine
 ADD Main /Main
 # Copy ressources folder
 ADD Resources /Resources
+ADD Requirement.txt /Requirement.txt 
 
 RUN pip install -r Requirements.txt
 
