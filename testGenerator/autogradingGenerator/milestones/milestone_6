@@ -1,0 +1,8 @@
+[
+   {
+      "name":"Average Altitude",
+      "optionLine":"-o avgALT",
+      "testFile":"mono"
+   }
+
+]

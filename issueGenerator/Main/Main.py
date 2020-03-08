@@ -79,7 +79,7 @@ def main(argv):
     verbose = False
 
     try:
-        opts, args = getopt.getopt(argv,"ht:r:",["token=","repo="])
+        opts, args = getopt.getopt(argv,"ht:r:v",["token=","repo="])
     except getopt.GetoptError:
         PrintHelp()
         sys.exit(2)

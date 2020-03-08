@@ -7,6 +7,15 @@ const target = "../dist/autograding.json" ;
 const referencePandora = "referencePandora.jar" ;
 let autogradingTests = { tests: [] } ;
 
+fs.readdir( "./milestones", ( err, filenames ) => {
+    for( const filename of filenames )
+      fs.readFile( "./milestones/"+filename, "utf8", (err,jsonString) => {
+      if( err ) throw err ;
+      parseHadoc( jsonString, "testSuite/"+filename)
+    } ) ;
+} )
+
+
 fs.readFile( staticDescription, "utf8", parseStatic ) ;
 function parseStatic( err, jsonString ) {
   if( err ) throw err ;
@@ -20,8 +29,7 @@ function parseStatic( err, jsonString ) {
  * @param  {Error} err
  * @param  {Strign} jsonString json string
  */
-function parseHadoc( err, jsonString ) {
-  if( err ) throw err ;
+function parseHadoc( jsonString, output ) {
 
   const hadocTests = JSON.parse( jsonString ) ;
 
@@ -38,8 +46,8 @@ class AutoGradingTest {
     this.name = name ;
     this.setup = `\
 mkdir -p ${ destFolder } ; \
-java -jar target/${ referencePandora } ${ optionLine } ${ sourceFile } &> ${ destFolder }/expected ; \
-java -jar target/pandora.jar ${ optionLine } ${ sourceFile } &> ${ destFolder }/output` ;
+ls testSuite/records | xargs -R1 -I fileName java -jar target/referencePandora.jar ${ optionLine } fileName &>> ${ destFolder }/expected ; \
+ls testSuite/records | xargs -R1 -I fileName java -jar target/pandora.jar ${ optionLine } fileName &>>  ${ destFolder }/output` ;
     this.run = `\
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output ;
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output &>> __autograding/result.txt` ;
