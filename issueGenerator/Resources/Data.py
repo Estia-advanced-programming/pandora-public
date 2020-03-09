@@ -17,6 +17,19 @@ labels = [
     ]
 
 
+mapping_milestones = {
+    "1" : 0
+    , "2" : 1
+    , "3": 2
+    , "4": 3
+    , "5": 4
+    , "6": 5
+    , "7": 6
+    , "8": 7
+    , "0": 8
+    }
+
+
 milestones = [
     {
         "title": "Milestone 1: Mono RU Flight Description",
@@ -75,7 +88,7 @@ milestones = [
     }
     ,
     {
-        "title": "Initiation to Git",
+        "title": "Milestone 0: Initiation to Git",
         "state":'open',
         "description":"Learn about Git and the Pandora project",
         "file": "none"
@@ -167,7 +180,7 @@ issues = [
     ,{
         "title": "Average Altitude"
         , "body" : "" +
-                "**CLI Output Name**: -o avgAlt\n" +
+                "**CLI Output Name**: -o avgAlt\n\n" +
                 "**Input**: a flight record file\n\n" +
                 "**Print**: the average altitude (m) during the flight\n"
         , "labels" : ['reporting']
