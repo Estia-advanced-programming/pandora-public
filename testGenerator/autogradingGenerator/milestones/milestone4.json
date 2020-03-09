@@ -20,122 +20,122 @@
       "testFile":"mono"
    },
    {
-      "name":"Average Air Speed (Take Off)",
+      "name":"Average Air Speed _Take Off_",
       "optionLine":"-o avgAirSpeedTakeOff",
       "testFile":"mono"
    },
    {
-      "name":"Max Air Speed (Take Off)",
+      "name":"Max Air Speed _Take Off_",
       "optionLine":"-o maxAirSpeedTakeOff",
       "testFile":"mono"
    },
    {
-      "name":"Average Engine Power (Take Off)",
+      "name":"Average Engine Power _Take Off_",
       "optionLine":"-o avgEnginePowerTakeOff",
       "testFile":"mono"
    },
    {
-      "name":"Max Engine Power (Take Off)",
+      "name":"Max Engine Power _Take Off_",
       "optionLine":"-o maxEnginePowerTakeOff",
       "testFile":"mono"
    },
    {
-      "name":"Average Air Speed (Cruise)",
+      "name":"Average Air Speed _Cruise_",
       "optionLine":"-o avgAirSpeedCruise",
       "testFile":"mono"
    },
    {
-      "name":"Max Air Speed (Cruise)",
+      "name":"Max Air Speed _Cruise_",
       "optionLine":"-o maxAirSpeedCruise",
       "testFile":"mono"
    },
    {
-      "name":"Average Engine Power (Cruise)",
+      "name":"Average Engine Power _Cruise_",
       "optionLine":"-o avgEnginePowerCruise",
       "testFile":"mono"
    },
    {
-      "name":"Max Engine Power (Cruise)",
+      "name":"Max Engine Power _Cruise_",
       "optionLine":"-o maxEnginePowerCruise",
       "testFile":"mono"
    },
    {
-      "name":"Average Air Speed (Landing)",
+      "name":"Average Air Speed _Landing_",
       "optionLine":"-o avgAirSpeedLanding",
       "testFile":"mono"
    },
    {
-      "name":"Max Air Speed (Landing)",
+      "name":"Max Air Speed _Landing_",
       "optionLine":"-o maxAirSpeedLanding",
       "testFile":"mono"
    },
    {
-      "name":"Average Engine Power (Landing)",
+      "name":"Average Engine Power _Landing_",
       "optionLine":"-o avgEnginePowerLanding",
       "testFile":"mono"
    },
    {
-      "name":"Max Engine Power (Landing)",
+      "name":"Max Engine Power _Landing_",
       "optionLine":"-o maxEnginePowerLanding",
       "testFile":"mono"
    },
    {
-      "name":"Flight Distance (Take Off)",
+      "name":"Flight Distance _Take Off_",
       "optionLine":"-o flightDistanceTakeOff",
       "testFile":"mono"
    },
    {
-      "name":"Average Acceleration (Take Off)",
+      "name":"Average Acceleration _Take Off_",
       "optionLine":"-o avgAccelerationTakeOff",
       "testFile":"mono"
    },
    {
-      "name":"Max Acceleration (Take Off)",
+      "name":"Max Acceleration _Take Off_",
       "optionLine":"-o maxAccelerationTakeOff",
       "testFile":"mono"
    },
    {
-      "name":"Wind Speed (Take Off)",
+      "name":"Wind Speed _Take Off_",
       "optionLine":"-o windSpeedTakeOff",
       "testFile":"mono"
    },
    {
-      "name":"Flight Distance (Cruise)",
+      "name":"Flight Distance _Cruise_",
       "optionLine":"-o flightDistanceCruise",
       "testFile":"mono"
    },
    {
-      "name":"Average Acceleration (Cruise)",
+      "name":"Average Acceleration _Cruise_",
       "optionLine":"-o avgAccelerationCruise",
       "testFile":"mono"
    },
    {
-      "name":"Max Acceleration (Cruise)",
+      "name":"Max Acceleration _Cruise_",
       "optionLine":"-o maxAccelerationCruise",
       "testFile":"mono"
    },
    {
-      "name":"Wind Speed (Cruise)",
+      "name":"Wind Speed _Cruise_",
       "optionLine":"-o windSpeedCruise",
       "testFile":"mono"
    },
    {
-      "name":"Flight Distance (Landing)",
+      "name":"Flight Distance _Landing_",
       "optionLine":"-o flightDistanceLanding",
       "testFile":"mono"
    },
    {
-      "name":"Average Acceleration (Landing)",
+      "name":"Average Acceleration _Landing_",
       "optionLine":"-o avgAccelerationLanding",
       "testFile":"mono"
    },
    {
-      "name":"Max Acceleration (Landing)",
+      "name":"Max Acceleration _Landing_",
       "optionLine":"-o maxAccelerationLanding",
       "testFile":"mono"
    },
    {
-      "name":"Wind Speed (Landing)",
+      "name":"Wind Speed _Landing_",
       "optionLine":"-o windSpeedLanding",
       "testFile":"mono"
    },

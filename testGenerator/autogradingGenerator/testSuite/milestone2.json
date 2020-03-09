@@ -3,7 +3,7 @@
     {
       "name": "Average Temperature",
       "setup": "mkdir -p __autograding/Average_Temperature ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgTemp testSuite/mono/fileName &>> __autograding/Average_Temperature/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgTemp testSuite/mono/fileName &>>  __autograding/Average_Temperature/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Temperature/expected __autograding/Average_Temperature/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Temperature/expected __autograding/Average_Temperature/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Temperature/expected __autograding/Average_Temperature/output ;\ncat __autograding/Average_Temperature/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Temperature/expected __autograding/Average_Temperature/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -13,7 +13,7 @@
     {
       "name": "Min Temperature",
       "setup": "mkdir -p __autograding/Min_Temperature ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o minTemp testSuite/mono/fileName &>> __autograding/Min_Temperature/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o minTemp testSuite/mono/fileName &>>  __autograding/Min_Temperature/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Min_Temperature/expected __autograding/Min_Temperature/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Min_Temperature/expected __autograding/Min_Temperature/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Min_Temperature/expected __autograding/Min_Temperature/output ;\ncat __autograding/Min_Temperature/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Min_Temperature/expected __autograding/Min_Temperature/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -23,7 +23,7 @@
     {
       "name": "Max Temperature",
       "setup": "mkdir -p __autograding/Max_Temperature ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgTemp testSuite/mono/fileName &>> __autograding/Max_Temperature/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgTemp testSuite/mono/fileName &>>  __autograding/Max_Temperature/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Temperature/expected __autograding/Max_Temperature/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Temperature/expected __autograding/Max_Temperature/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Temperature/expected __autograding/Max_Temperature/output ;\ncat __autograding/Max_Temperature/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Temperature/expected __autograding/Max_Temperature/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -33,7 +33,7 @@
     {
       "name": "Average Pressure",
       "setup": "mkdir -p __autograding/Average_Pressure ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgPressure testSuite/mono/fileName &>> __autograding/Average_Pressure/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgPressure testSuite/mono/fileName &>>  __autograding/Average_Pressure/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Pressure/expected __autograding/Average_Pressure/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Pressure/expected __autograding/Average_Pressure/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Pressure/expected __autograding/Average_Pressure/output ;\ncat __autograding/Average_Pressure/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Pressure/expected __autograding/Average_Pressure/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -43,7 +43,7 @@
     {
       "name": "Max Pressure",
       "setup": "mkdir -p __autograding/Max_Pressure ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxPressure testSuite/mono/fileName &>> __autograding/Max_Pressure/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxPressure testSuite/mono/fileName &>>  __autograding/Max_Pressure/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Pressure/expected __autograding/Max_Pressure/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Pressure/expected __autograding/Max_Pressure/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Pressure/expected __autograding/Max_Pressure/output ;\ncat __autograding/Max_Pressure/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Pressure/expected __autograding/Max_Pressure/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -53,7 +53,7 @@
     {
       "name": "Minimum Pressure",
       "setup": "mkdir -p __autograding/Minimum_Pressure ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o minPressure testSuite/mono/fileName &>> __autograding/Minimum_Pressure/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o minPressure testSuite/mono/fileName &>>  __autograding/Minimum_Pressure/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Minimum_Pressure/expected __autograding/Minimum_Pressure/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Minimum_Pressure/expected __autograding/Minimum_Pressure/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Minimum_Pressure/expected __autograding/Minimum_Pressure/output ;\ncat __autograding/Minimum_Pressure/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Minimum_Pressure/expected __autograding/Minimum_Pressure/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -63,7 +63,7 @@
     {
       "name": "Average Relative Humidity",
       "setup": "mkdir -p __autograding/Average_Relative_Humidity ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgHumidity testSuite/mono/fileName &>> __autograding/Average_Relative_Humidity/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgHumidity testSuite/mono/fileName &>>  __autograding/Average_Relative_Humidity/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Relative_Humidity/expected __autograding/Average_Relative_Humidity/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Relative_Humidity/expected __autograding/Average_Relative_Humidity/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Relative_Humidity/expected __autograding/Average_Relative_Humidity/output ;\ncat __autograding/Average_Relative_Humidity/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Relative_Humidity/expected __autograding/Average_Relative_Humidity/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -73,7 +73,7 @@
     {
       "name": "Max Relative Humidity",
       "setup": "mkdir -p __autograding/Max_Relative_Humidity ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxHumidity testSuite/mono/fileName &>> __autograding/Max_Relative_Humidity/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxHumidity testSuite/mono/fileName &>>  __autograding/Max_Relative_Humidity/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Relative_Humidity/expected __autograding/Max_Relative_Humidity/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Relative_Humidity/expected __autograding/Max_Relative_Humidity/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Relative_Humidity/expected __autograding/Max_Relative_Humidity/output ;\ncat __autograding/Max_Relative_Humidity/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Relative_Humidity/expected __autograding/Max_Relative_Humidity/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -83,7 +83,7 @@
     {
       "name": "Min Relative Humidity",
       "setup": "mkdir -p __autograding/Min_Relative_Humidity ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o minHumidity testSuite/mono/fileName &>> __autograding/Min_Relative_Humidity/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o minHumidity testSuite/mono/fileName &>>  __autograding/Min_Relative_Humidity/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Min_Relative_Humidity/expected __autograding/Min_Relative_Humidity/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Min_Relative_Humidity/expected __autograding/Min_Relative_Humidity/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Min_Relative_Humidity/expected __autograding/Min_Relative_Humidity/output ;\ncat __autograding/Min_Relative_Humidity/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Min_Relative_Humidity/expected __autograding/Min_Relative_Humidity/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -93,7 +93,7 @@
     {
       "name": "Average Heart Rate",
       "setup": "mkdir -p __autograding/Average_Heart_Rate ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgHeartRate testSuite/mono/fileName &>> __autograding/Average_Heart_Rate/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgHeartRate testSuite/mono/fileName &>>  __autograding/Average_Heart_Rate/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Heart_Rate/expected __autograding/Average_Heart_Rate/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Heart_Rate/expected __autograding/Average_Heart_Rate/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Heart_Rate/expected __autograding/Average_Heart_Rate/output ;\ncat __autograding/Average_Heart_Rate/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Heart_Rate/expected __autograding/Average_Heart_Rate/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -103,7 +103,7 @@
     {
       "name": "Max Heart Rate",
       "setup": "mkdir -p __autograding/Max_Heart_Rate ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxHeartRate testSuite/mono/fileName &>> __autograding/Max_Heart_Rate/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxHeartRate testSuite/mono/fileName &>>  __autograding/Max_Heart_Rate/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Heart_Rate/expected __autograding/Max_Heart_Rate/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Heart_Rate/expected __autograding/Max_Heart_Rate/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Heart_Rate/expected __autograding/Max_Heart_Rate/output ;\ncat __autograding/Max_Heart_Rate/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Heart_Rate/expected __autograding/Max_Heart_Rate/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -113,7 +113,7 @@
     {
       "name": "Min Heart Rate",
       "setup": "mkdir -p __autograding/Min_Heart_Rate ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o minHeartRate testSuite/mono/fileName &>> __autograding/Min_Heart_Rate/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o minHeartRate testSuite/mono/fileName &>>  __autograding/Min_Heart_Rate/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Min_Heart_Rate/expected __autograding/Min_Heart_Rate/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Min_Heart_Rate/expected __autograding/Min_Heart_Rate/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Min_Heart_Rate/expected __autograding/Min_Heart_Rate/output ;\ncat __autograding/Min_Heart_Rate/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Min_Heart_Rate/expected __autograding/Min_Heart_Rate/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -123,7 +123,7 @@
     {
       "name": "Average Oxygen Concentration",
       "setup": "mkdir -p __autograding/Average_Oxygen_Concentration ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgOxygen testSuite/mono/fileName &>> __autograding/Average_Oxygen_Concentration/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgOxygen testSuite/mono/fileName &>>  __autograding/Average_Oxygen_Concentration/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Oxygen_Concentration/expected __autograding/Average_Oxygen_Concentration/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Oxygen_Concentration/expected __autograding/Average_Oxygen_Concentration/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Oxygen_Concentration/expected __autograding/Average_Oxygen_Concentration/output ;\ncat __autograding/Average_Oxygen_Concentration/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Oxygen_Concentration/expected __autograding/Average_Oxygen_Concentration/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -133,7 +133,7 @@
     {
       "name": "Min Oxygen Concentration",
       "setup": "mkdir -p __autograding/Min_Oxygen_Concentration ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o minOxygen testSuite/mono/fileName &>> __autograding/Min_Oxygen_Concentration/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o minOxygen testSuite/mono/fileName &>>  __autograding/Min_Oxygen_Concentration/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Min_Oxygen_Concentration/expected __autograding/Min_Oxygen_Concentration/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Min_Oxygen_Concentration/expected __autograding/Min_Oxygen_Concentration/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Min_Oxygen_Concentration/expected __autograding/Min_Oxygen_Concentration/output ;\ncat __autograding/Min_Oxygen_Concentration/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Min_Oxygen_Concentration/expected __autograding/Min_Oxygen_Concentration/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -143,7 +143,7 @@
     {
       "name": "Max Oxygen Concentration",
       "setup": "mkdir -p __autograding/Max_Oxygen_Concentration ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxOxygen testSuite/mono/fileName &>> __autograding/Max_Oxygen_Concentration/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxOxygen testSuite/mono/fileName &>>  __autograding/Max_Oxygen_Concentration/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Oxygen_Concentration/expected __autograding/Max_Oxygen_Concentration/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Oxygen_Concentration/expected __autograding/Max_Oxygen_Concentration/output &>> __autograding/result.txt",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Oxygen_Concentration/expected __autograding/Max_Oxygen_Concentration/output ;\ncat __autograding/Max_Oxygen_Concentration/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Oxygen_Concentration/expected __autograding/Max_Oxygen_Concentration/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
