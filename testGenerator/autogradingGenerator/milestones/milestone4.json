@@ -188,5 +188,10 @@
       "name":"50% Oxygen Phase",
       "optionLine":"-o oxygenPhase",
       "testFile":"mono"
+   },
+   {
+      "name":"Milestone 3 Full Report",
+      "optionLine":"",
+      "testFile":"mono"
    }
 ]

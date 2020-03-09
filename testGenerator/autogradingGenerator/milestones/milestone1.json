@@ -1,12 +1,12 @@
 [
    {
       "name":"Average Altitude",
-      "optionLine":"-o avgALT",
+      "optionLine":"-o avgAlt\n**Input**: a flight record file",
       "testFile":"mono"
    },
    {
       "name":"Max Altitude",
-      "optionLine":"-o maxALT",
+      "optionLine":"-o maxAlt",
       "testFile":"mono"
    },
    {
