@@ -1,0 +1,67 @@
+[
+   {
+      "name":"Invalid Command Line Options",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Missing Command Line Parameters",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Not Implemented Handling",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Missing Files",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Encoding Problems",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Corrupted Files",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Missing Header",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Incomplete Header",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Missing Columns",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Missing Column Names",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Incorrect Timestamp Ordering",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Incorrect Input",
+      "optionLine":"",
+      "testFile":"all"
+   },
+   {
+      "name":"Milestone 5 Full Report",
+      "optionLine":"",
+      "testFile":"all"
+   }
+]

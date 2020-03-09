@@ -17,86 +17,171 @@ labels = [
     ]
 
 
+mapping_milestones = {
+    "1" : 0
+    , "2" : 1
+    , "3": 2
+    , "4": 3
+    , "5": 4
+    , "6": 5
+    , "7": 6
+    , "8": 7
+    , "0": 8
+    }
+
+
 milestones = [
     {
-        "title": "Mono RU Flight Description", 
-        "state":'open', 
+        "title": "Milestone 1: Mono RU Flight Description",
+        "state":'open',
         "description":"Provide basic descriptive summary data of a Russian fighter jet flight",
         "file": "mono"
     }
     ,
     {
-        "title": "Mono RU Cockpit Description", 
-        "state":'open', 
+        "title": "Milestone 2: Mono RU Cockpit Description",
+        "state":'open',
         "description":"Provide basic descriptive summary data of a Russian cockpit during a flight",
         "file": "mono"
     }
     ,
     {
-        "title": "Mono RU Flight Computation", 
-        "state":'open', 
+        "title": "Milestone 3: Mono RU Flight Computation",
+        "state":'open',
         "description":"Provide simple computed data about a Russian jet flight",
         "file": "mono"
     }
     ,
     {
-        "title": "Mono RU Flight Analysis", 
-        "state":'open', 
+        "title": "Milestone 4: Mono RU Flight Analysis",
+        "state":'open',
         "description":"Extract high-level information from data",
         "file": "mono"
     }
     ,
     {
-        "title": "File Handling", 
-        "state":'open', 
+        "title": "Milestone 5: File Handling",
+        "state":'open',
         "description":"Handle batch option and US fighter jet files",
         "file": "mono"
     }
     ,
     {
-        "title": "Error Management", 
-        "state":'open', 
+        "title": "Milestone 6: Error Management",
+        "state":'open',
         "description":"Handle Errors",
         "file": "all"
     }
     ,
     {
-        "title": "Multiple Flights Computations", 
-        "state":'open', 
+        "title": "Milestone 7: Multiple Flights Computations",
+        "state":'open',
         "description":"Perform computations using multiple flights data",
         "file": "multi"
     }
     ,
     {
-        "title": "Multiple Flights Analysis", 
-        "state":'open', 
+        "title": "Milestone 8: Multiple Flights Analysis",
+        "state":'open',
         "description":"Extract high-level information about multiple flights",
         "file": "multi"
     }
+    ,
+    {
+        "title": "Milestone 0: Initiation to Git",
+        "state":'open',
+        "description":"Learn about Git and the Pandora project",
+        "file": "none"
+    }
     ]
-
-
-
-
-
-
-
-
-
 
 # https://pygithub.readthedocs.io/en/latest/github_objects/Issue.html
 issues = [
-    
-    
-    
-	#region milestone 0 Mono RU Flight Description 
-
-    
+	#region Initiation
     {
+        "title": "Exercice 1: Project set up"
+        , "body" : "" +
+                   "# Description \n" +
+                   "\n" +
+                   "See the [wiki][wiki_Exercice1] to read more about this first exercice. \n" +
+                   "\n" +
+                   "# tasks : \n" +
+                   "- [ ] Updated the readme to list your team members\n" +
+                   "- [ ] Created a automated kanban project on github \n" +
+                   "- [ ] Moved all issues from the Milestone Initiation to Git into todo\n" +
+                   "- [ ] this Issue has been closed\n" +
+                   "\n" +
+                   "[wiki_Exercice1]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex1\n"
+        , "labels" : ['good first issue']
+        , "milestone" : 8
+    }
+    ,{
+        "title": "Exercice 2: Update team member information"
+        , "body" :  "" +
+                    "# Description \n" +
+                    "\n" +
+                    "In this exercice all member will edit the same file on their local repository to learn about conflict resolution. \n" +
+                    "See the [wiki][wiki_Exercice2] to read more about this first exercice. \n" +
+                    "\n" +
+                    "# Tasks\n" +
+                    "\n" +
+                    "- [ ] Member1 has modified `README.md` and created a commit locally\n" +
+                    "- [ ] Member2 has modified `README.md` and created a commit locally\n" +
+                    "- [ ] Member3 has modified `README.md` and created a commit locally\n" +
+                    "- [ ] Member1 has **push**ed their commit to the remote repository\n" +
+                    "- [ ] Member2 and 3 \n" +
+                    "      - have **Pull**ed the commit from member1\n" +
+                    "      - have **Merg**ed the modification into their local repository\n" +
+                    "      - have **Commit** the change locally \n" +
+                    "- [ ] Member2  *push* their commit to the remote repository\n" +
+                    "- [ ] Memberd3 \n" +
+                    "      - has **Pull**ed the commit from member2\n" +
+                    "      - has **Merg**ed the modification into their local repository\n" +
+                    "      - has **Commit** the change locally \n" +
+                    "- [ ] this Issue has been closed\n" +
+                    "[wiki_Exercice2]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex2\n"
+        , "labels" : ['good first issue']
+        , "milestone" : 8
+    }
+    ,{
+        "title": "Exercice 3: Branch"
+        , "body" :  "" +
+                    "# Description \n" +
+                    "\n" +
+                    "In this exercice you learn to create a branch for commiting your change before integrating it with the other. \n" +
+                    "\n" +
+                    "# Tasks \n" +
+                    "\n" +
+                    "- [ ] Member 1 has created a `dev_member1` branch locally and commited some change to it \n" +
+                    "- [ ] Member 2 has created a `dev_member2` branch locally and commited some change to it \n" +
+                    "- [ ] Member 3 has created a `dev_member3` branch locally and commited some change to it \n" +
+                    "* [ ] Member 1 has pushed its branch to the remote repository \n" +
+                    "* [ ] Member 2 has pushed its branch to the remote repository \n" +
+                    "* [ ] Member 3 has pushed its branch to the remote repository \n" +
+                    "- [ ] Member 1 has created a pull request and linked this issue to the pull request\n" +
+                    "- [ ] Member 2 has created a pull request and linked this issue to the pull request\n" +
+                    "- [ ] Member 3 has created a pull request and linked this issue to the pull request\n" +
+                    "* [ ] Member 2 and 3 comment on Member 1 pull request, \n" +
+                    "    - if the change is accepted, Merge the branch into master.  \n" +
+                    "* [ ] Member 2 pull request has been discussed\n" +
+                    "    - If there are conflicts, resolve them online, \n" +
+                    "    - if the change is accepted, Merge the branch into master.  \n" +
+                    "* [ ] Member 3 pull request has been discussed\n" +
+                    "    - If there are conflicts pull the change locally, merge them into `dev_member3`, push the new commit, and continue commenting and modifying until the pull request is accepted. \n" +
+                    "    - if the change is accepted, Merge the branch into master.  \n" +
+                    "- [ ] The issue have been closed\n" +
+                    "[wiki_Exercice3]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex3\n"
+        , "labels" : ['good first issue']
+        , "milestone" : 8
+    }
+    #endregion
+	#region milestone 0 Mono RU Flight Description
+
+    ,{
         "title": "Average Altitude"
-        , "body" : "" + 
-                "**CLI Output Name**: -o avgALT\n" + 
-                "**Input**: a flight record file\n\n" + 
+        , "body" : "" +
+                "**CLI Output Name**: -o avgAlt\n\n" +
+                "**Input**: a flight record file\n\n" +
                 "**Print**: the average altitude (m) during the flight\n"
         , "labels" : ['reporting']
         , "milestone" : 0
@@ -104,7 +189,7 @@ issues = [
     ,{
         "title": "Max Altitude"
         , "body" : ""+
-                "**CLI Output Name**: -o maxALT\n\n"+
+                "**CLI Output Name**: -o maxAlt\n\n"+
                 "**Input**: a flight record file\n\n"+
                 "**Print**: the maximum altitude (m) during the flight\n"
         , "labels" : ['reporting']
@@ -155,13 +240,13 @@ issues = [
         , "labels" : ['output']
         , "milestone" : 0
     }
-    
+
     #endregion
-    
-    
-    
+
+
+
     #region milestone 1 Mono RU Cockpit Description
-    
+
     ,{
         "title": "Average Temperature"
         , "body" : ""+
@@ -306,10 +391,10 @@ issues = [
         , "labels" : ['output']
         , "milestone" : 1
     }
-    
+
     #endregion
-    
-    
+
+
     #region milestone 2 Mono RU Flight Computation
     ,{
         "title": "Flight Duration"
@@ -392,9 +477,9 @@ issues = [
         , "labels" : ['output']
         , "milestone" : 2
     }
-    
+
     #endregion
-    
+
 
     #region milestone 3 Mono RU Flight Analysis
     ,{
@@ -433,9 +518,9 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
-    
-    
+
+
+
     ,{
         "title": "Average Air Speed (Take Off)"
         , "body" : ""+
@@ -472,7 +557,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Average Air Speed (Cruise)"
         , "body" : ""+
@@ -509,8 +594,8 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
-    
+
+
     ,{
         "title": "Average Air Speed (Landing)"
         , "body" : ""+
@@ -547,10 +632,10 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
-    
-    
-    
+
+
+
+
     ,{
         "title": "Flight Distance (Take Off)"
         , "body" : ""+
@@ -587,8 +672,8 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
-    
+
+
     ,{
         "title": "Flight Distance (Cruise)"
         , "body" : ""+
@@ -625,8 +710,8 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
-    
+
+
     ,{
         "title": "Flight Distance (Landing)"
         , "body" : ""+
@@ -663,8 +748,8 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
-    
+
+
     ,{
         "title": "Most Demanding Phase - Engine Power"
         , "body" : ""+
@@ -674,7 +759,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Most Demanding Phase - Stress"
         , "body" : ""+
@@ -684,7 +769,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Most Demanding Phase - Horizontal Acceleration"
         , "body" : ""+
@@ -694,7 +779,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Reaching 80% Max Altitude"
         , "body" : ""+
@@ -704,7 +789,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Reaching 80% Total Distance"
         , "body" : ""+
@@ -714,7 +799,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Altitude with Fastest Wind"
         , "body" : ""+
@@ -724,7 +809,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Altitude with Highest Aircraft Speed"
         , "body" : ""+
@@ -734,7 +819,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Noise of Temperature Sensors"
         , "body" : ""+
@@ -744,7 +829,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "Stressed Pilot"
         , "body" : ""+
@@ -754,7 +839,7 @@ issues = [
         , "labels" : ['analysis']
         , "milestone" : 3
     }
-    
+
     ,{
         "title": "50% Oxygen Phase"
         , "body" : ""+
@@ -773,9 +858,9 @@ issues = [
         , "labels" : ['output']
         , "milestone" : 3
     }
-    
+
     #endregion
-    
+
     #region milestone 4 File Handling
     ,{
         "title": "US files Parser"
@@ -827,7 +912,7 @@ issues = [
         "title": "Invalid Command Line Options"
         , "body" : ""+
             "**Description**: An option (-x or --xxxx) is not recognized\n\n"+
-            "**Output**: ERROR: Invalid Options -x (or --xxxx) is not recognized" 
+            "**Output**: ERROR: Invalid Options -x (or --xxxx) is not recognized"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -835,7 +920,7 @@ issues = [
         "title": "Missing Command Line Parameters"
         , "body" : ""+
             "**Description**: An option requires missing parameters (e.g., -o missing the feature identifier)\n\n"+
-            "**Output**: ERROR: Invalid Options -x (or --xxxx) is missing a parameter" 
+            "**Output**: ERROR: Invalid Options -x (or --xxxx) is missing a parameter"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -843,7 +928,7 @@ issues = [
         "title": "Not Implemented Handling"
         , "body" : ""+
             "**Description**: If an output is not implemented by the program\n\n"+
-            "**Output**: ERROR: Invalid Options -x (or --xxxx) has not been implemented yet" 
+            "**Output**: ERROR: Invalid Options -x (or --xxxx) has not been implemented yet"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -851,7 +936,7 @@ issues = [
         "title": "Missing Files"
         , "body" : ""+
             "**Description**: File(s) given as input are not found\n\n"+
-            "**Output**: ERROR: MISSING_FILE - file1 file2 file3 (in alphabetical order)" 
+            "**Output**: ERROR: MISSING_FILE - file1 file2 file3 (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -859,7 +944,7 @@ issues = [
         "title": "Encoding Problems"
         , "body" : ""+
             "**Description**: File(s) given as input are not correctly encoded\n\n"+
-            "**Output**: ERROR: ENCODING - file1 file2 file3 (in alphabetical order)" 
+            "**Output**: ERROR: ENCODING - file1 file2 file3 (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -867,7 +952,7 @@ issues = [
         "title": "Corrupted Files"
         , "body" : ""+
             "**Description**: Files cannot be open because of incorrect binary data\n\n"+
-            "**Output**: ERROR: CORRUPTED - file1 file2 file3 (in alphabetical order)" 
+            "**Output**: ERROR: CORRUPTED - file1 file2 file3 (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -875,7 +960,7 @@ issues = [
         "title": "Missing Header"
         , "body" : ""+
             "**Description**: Files have no header information\n\n"+
-            "**Output**: ERROR: MISSING_HEADER - file1 file2 file3 (in alphabetical order)" 
+            "**Output**: ERROR: MISSING_HEADER - file1 file2 file3 (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -883,7 +968,7 @@ issues = [
         "title": "Incomplete Header"
         , "body" : ""+
             "**Description**: The header is missing some information\n\n"+
-            "**Output**: ERROR: INCOMPLETE_HEADER - file1=[info1,info2] file2=[info3] file3=[info4] (in alphabetical order)" 
+            "**Output**: ERROR: INCOMPLETE_HEADER - file1=[info1,info2] file2=[info3] file3=[info4] (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -891,7 +976,7 @@ issues = [
         "title": "Missing Columns"
         , "body" : ""+
             "**Description**: Some required columns are not in the file\n\n"+
-            "**Output**: ERROR: MISSING_COLUMNS - file1=[col_name1,col_name2] file2=[col_name3] (in alphabetical order)" 
+            "**Output**: ERROR: MISSING_COLUMNS - file1=[col_name1,col_name2] file2=[col_name3] (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -899,7 +984,7 @@ issues = [
         "title": "Missing Column Names"
         , "body" : ""+
             "**Description**: The file does not contain the column names\n\n"+
-            "**Output**: ERROR: MISSING_COLNAMES - file1 file2 (in alphabetical order)" 
+            "**Output**: ERROR: MISSING_COLNAMES - file1 file2 (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -907,7 +992,7 @@ issues = [
         "title": "Incorrect Timestamp Ordering"
         , "body" : ""+
             "**Description**: The log file is not presenting data lines in a timely ordered way\n\n"+
-            "**Output**: ERROR: ORDERING - file1 file2 file3 (in alphabetical order)" 
+            "**Output**: ERROR: ORDERING - file1 file2 file3 (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -915,7 +1000,7 @@ issues = [
         "title": "Incorrect Input"
         , "body" : ""+
             "**Description**: The input (file(s) or folder(s)) is not the one expected\n\n"+
-            "**Output**: ERROR: INPUT_ERROR - input_name1 input_name2 (in alphabetical order)" 
+            "**Output**: ERROR: INPUT_ERROR - input_name1 input_name2 (in alphabetical order)"
         , "labels" : ['error']
         , "milestone" : 5
     }
@@ -929,7 +1014,7 @@ issues = [
         , "milestone" : 5
     }
     #endregion
-    
+
     #region milestone 6 Multiple Flights Computations
     ,{
         "title": "Total Cumulative Flight Duration"
@@ -1102,9 +1187,9 @@ issues = [
         , "labels" : ['output']
         , "milestone" : 6
     }
-    
+
     #endregion
-    
+
     #region milestone 7 Multiple Flights Analysis
     ,{
         "title": "Flight Closeness "

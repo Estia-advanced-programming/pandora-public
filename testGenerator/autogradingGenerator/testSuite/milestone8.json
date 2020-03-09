@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Flight Closeness ",
+      "setup": "mkdir -p __autograding/Flight_Closeness_ ; ls testSuite/multi | xargs -I fileName java -jar target/referencePandora.jar -o closeFlight testSuite/multi/fileName &>> __autograding/Flight_Closeness_/expected ; ls testSuite/multi | xargs -I fileName java -jar target/pandora.jar -o closeFlight testSuite/multi/fileName &>>  __autograding/Flight_Closeness_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Flight_Closeness_/expected __autograding/Flight_Closeness_/output ;\ncat __autograding/Flight_Closeness_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Flight_Closeness_/expected __autograding/Flight_Closeness_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}

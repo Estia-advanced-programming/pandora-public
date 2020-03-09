@@ -5,9 +5,18 @@ const testDescription = "./hadoc.json" ;
 const rootFolderTestSuite = "./testSuite/" ;
 const target = "../dist/autograding.json" ;
 const referencePandora = "referencePandora.jar" ;
-let autogradingTests = { tests: [] } ;
 
-fs.readFile( staticDescription, "utf8", parseStatic ) ;
+
+fs.readdir( "./milestones", ( err, filenames ) => {
+    for( const filename of filenames )
+      fs.readFile( "./milestones/"+filename, "utf8", (err,jsonString) => {
+      if( err ) throw err ;
+      parseHadoc( jsonString, "testSuite/"+filename)
+    } ) ;
+} )
+
+
+//fs.readFile( staticDescription, "utf8", parseStatic ) ;
 function parseStatic( err, jsonString ) {
   if( err ) throw err ;
   autogradingTests = JSON.parse( jsonString ) || { tests: [] } ;
@@ -20,15 +29,14 @@ function parseStatic( err, jsonString ) {
  * @param  {Error} err
  * @param  {Strign} jsonString json string
  */
-function parseHadoc( err, jsonString ) {
-  if( err ) throw err ;
-
+function parseHadoc( jsonString, output ) {
+  console.log( output )
   const hadocTests = JSON.parse( jsonString ) ;
-
+  let autogradingTests = { tests: [] } ;
   for ( const test of hadocTests ) {
     autogradingTests.tests.push( new AutoGradingTest( test ) ) ;
   }
-  fs.writeFile( target, jsonPrint( autogradingTests, null, 2, 80 ), "utf8", console.log ) ;
+  fs.writeFile( output, jsonPrint( autogradingTests, null, 2, 80 ), "utf8", console.log ) ;
 }
 
 class AutoGradingTest {
@@ -38,10 +46,11 @@ class AutoGradingTest {
     this.name = name ;
     this.setup = `\
 mkdir -p ${ destFolder } ; \
-java -jar target/${ referencePandora } ${ optionLine } ${ sourceFile } &> ${ destFolder }/expected ; \
-java -jar target/pandora.jar ${ optionLine } ${ sourceFile } &> ${ destFolder }/output` ;
+ls testSuite/${testFile} | xargs -I fileName java -jar target/referencePandora.jar ${ optionLine } testSuite/${testFile}/fileName &>> ${ destFolder }/expected ; \
+ls testSuite/${testFile} | xargs -I fileName java -jar target/pandora.jar ${ optionLine } testSuite/${testFile}/fileName &>>  ${ destFolder }/output` ;
     this.run = `\
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output ;
+cat ${ destFolder }/output >> __autograding/result.txt
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output &>> __autograding/result.txt` ;
     this.input = "" ;
     this.output = "identical" ;

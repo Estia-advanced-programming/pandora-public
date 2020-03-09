@@ -1,0 +1,394 @@
+{
+  "tests": [
+    {
+      "name": "Take Off Phase Detection",
+      "setup": "mkdir -p __autograding/Take_Off_Phase_Detection ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o takeOff testSuite/mono/fileName &>> __autograding/Take_Off_Phase_Detection/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o takeOff testSuite/mono/fileName &>>  __autograding/Take_Off_Phase_Detection/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Take_Off_Phase_Detection/expected __autograding/Take_Off_Phase_Detection/output ;\ncat __autograding/Take_Off_Phase_Detection/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Take_Off_Phase_Detection/expected __autograding/Take_Off_Phase_Detection/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Cruise Phase Detection",
+      "setup": "mkdir -p __autograding/Cruise_Phase_Detection ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o cruise testSuite/mono/fileName &>> __autograding/Cruise_Phase_Detection/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o cruise testSuite/mono/fileName &>>  __autograding/Cruise_Phase_Detection/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Cruise_Phase_Detection/expected __autograding/Cruise_Phase_Detection/output ;\ncat __autograding/Cruise_Phase_Detection/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Cruise_Phase_Detection/expected __autograding/Cruise_Phase_Detection/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Landing Phase Detection",
+      "setup": "mkdir -p __autograding/Landing_Phase_Detection ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o landing testSuite/mono/fileName &>> __autograding/Landing_Phase_Detection/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o landing testSuite/mono/fileName &>>  __autograding/Landing_Phase_Detection/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Landing_Phase_Detection/expected __autograding/Landing_Phase_Detection/output ;\ncat __autograding/Landing_Phase_Detection/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Landing_Phase_Detection/expected __autograding/Landing_Phase_Detection/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Ratio Distance",
+      "setup": "mkdir -p __autograding/Ratio_Distance ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o ratioDistance testSuite/mono/fileName &>> __autograding/Ratio_Distance/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o ratioDistance testSuite/mono/fileName &>>  __autograding/Ratio_Distance/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Ratio_Distance/expected __autograding/Ratio_Distance/output ;\ncat __autograding/Ratio_Distance/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Ratio_Distance/expected __autograding/Ratio_Distance/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Air Speed _Take Off_",
+      "setup": "mkdir -p __autograding/Average_Air_Speed__Take_Off_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgAirSpeedTakeOff testSuite/mono/fileName &>> __autograding/Average_Air_Speed__Take_Off_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgAirSpeedTakeOff testSuite/mono/fileName &>>  __autograding/Average_Air_Speed__Take_Off_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Air_Speed__Take_Off_/expected __autograding/Average_Air_Speed__Take_Off_/output ;\ncat __autograding/Average_Air_Speed__Take_Off_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Air_Speed__Take_Off_/expected __autograding/Average_Air_Speed__Take_Off_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Air Speed _Take Off_",
+      "setup": "mkdir -p __autograding/Max_Air_Speed__Take_Off_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxAirSpeedTakeOff testSuite/mono/fileName &>> __autograding/Max_Air_Speed__Take_Off_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxAirSpeedTakeOff testSuite/mono/fileName &>>  __autograding/Max_Air_Speed__Take_Off_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Air_Speed__Take_Off_/expected __autograding/Max_Air_Speed__Take_Off_/output ;\ncat __autograding/Max_Air_Speed__Take_Off_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Air_Speed__Take_Off_/expected __autograding/Max_Air_Speed__Take_Off_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Engine Power _Take Off_",
+      "setup": "mkdir -p __autograding/Average_Engine_Power__Take_Off_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgEnginePowerTakeOff testSuite/mono/fileName &>> __autograding/Average_Engine_Power__Take_Off_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgEnginePowerTakeOff testSuite/mono/fileName &>>  __autograding/Average_Engine_Power__Take_Off_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Engine_Power__Take_Off_/expected __autograding/Average_Engine_Power__Take_Off_/output ;\ncat __autograding/Average_Engine_Power__Take_Off_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Engine_Power__Take_Off_/expected __autograding/Average_Engine_Power__Take_Off_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Engine Power _Take Off_",
+      "setup": "mkdir -p __autograding/Max_Engine_Power__Take_Off_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxEnginePowerTakeOff testSuite/mono/fileName &>> __autograding/Max_Engine_Power__Take_Off_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxEnginePowerTakeOff testSuite/mono/fileName &>>  __autograding/Max_Engine_Power__Take_Off_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Engine_Power__Take_Off_/expected __autograding/Max_Engine_Power__Take_Off_/output ;\ncat __autograding/Max_Engine_Power__Take_Off_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Engine_Power__Take_Off_/expected __autograding/Max_Engine_Power__Take_Off_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Air Speed _Cruise_",
+      "setup": "mkdir -p __autograding/Average_Air_Speed__Cruise_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgAirSpeedCruise testSuite/mono/fileName &>> __autograding/Average_Air_Speed__Cruise_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgAirSpeedCruise testSuite/mono/fileName &>>  __autograding/Average_Air_Speed__Cruise_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Air_Speed__Cruise_/expected __autograding/Average_Air_Speed__Cruise_/output ;\ncat __autograding/Average_Air_Speed__Cruise_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Air_Speed__Cruise_/expected __autograding/Average_Air_Speed__Cruise_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Air Speed _Cruise_",
+      "setup": "mkdir -p __autograding/Max_Air_Speed__Cruise_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxAirSpeedCruise testSuite/mono/fileName &>> __autograding/Max_Air_Speed__Cruise_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxAirSpeedCruise testSuite/mono/fileName &>>  __autograding/Max_Air_Speed__Cruise_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Air_Speed__Cruise_/expected __autograding/Max_Air_Speed__Cruise_/output ;\ncat __autograding/Max_Air_Speed__Cruise_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Air_Speed__Cruise_/expected __autograding/Max_Air_Speed__Cruise_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Engine Power _Cruise_",
+      "setup": "mkdir -p __autograding/Average_Engine_Power__Cruise_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgEnginePowerCruise testSuite/mono/fileName &>> __autograding/Average_Engine_Power__Cruise_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgEnginePowerCruise testSuite/mono/fileName &>>  __autograding/Average_Engine_Power__Cruise_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Engine_Power__Cruise_/expected __autograding/Average_Engine_Power__Cruise_/output ;\ncat __autograding/Average_Engine_Power__Cruise_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Engine_Power__Cruise_/expected __autograding/Average_Engine_Power__Cruise_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Engine Power _Cruise_",
+      "setup": "mkdir -p __autograding/Max_Engine_Power__Cruise_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxEnginePowerCruise testSuite/mono/fileName &>> __autograding/Max_Engine_Power__Cruise_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxEnginePowerCruise testSuite/mono/fileName &>>  __autograding/Max_Engine_Power__Cruise_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Engine_Power__Cruise_/expected __autograding/Max_Engine_Power__Cruise_/output ;\ncat __autograding/Max_Engine_Power__Cruise_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Engine_Power__Cruise_/expected __autograding/Max_Engine_Power__Cruise_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Air Speed _Landing_",
+      "setup": "mkdir -p __autograding/Average_Air_Speed__Landing_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgAirSpeedLanding testSuite/mono/fileName &>> __autograding/Average_Air_Speed__Landing_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgAirSpeedLanding testSuite/mono/fileName &>>  __autograding/Average_Air_Speed__Landing_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Air_Speed__Landing_/expected __autograding/Average_Air_Speed__Landing_/output ;\ncat __autograding/Average_Air_Speed__Landing_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Air_Speed__Landing_/expected __autograding/Average_Air_Speed__Landing_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Air Speed _Landing_",
+      "setup": "mkdir -p __autograding/Max_Air_Speed__Landing_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxAirSpeedLanding testSuite/mono/fileName &>> __autograding/Max_Air_Speed__Landing_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxAirSpeedLanding testSuite/mono/fileName &>>  __autograding/Max_Air_Speed__Landing_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Air_Speed__Landing_/expected __autograding/Max_Air_Speed__Landing_/output ;\ncat __autograding/Max_Air_Speed__Landing_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Air_Speed__Landing_/expected __autograding/Max_Air_Speed__Landing_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Engine Power _Landing_",
+      "setup": "mkdir -p __autograding/Average_Engine_Power__Landing_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgEnginePowerLanding testSuite/mono/fileName &>> __autograding/Average_Engine_Power__Landing_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgEnginePowerLanding testSuite/mono/fileName &>>  __autograding/Average_Engine_Power__Landing_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Engine_Power__Landing_/expected __autograding/Average_Engine_Power__Landing_/output ;\ncat __autograding/Average_Engine_Power__Landing_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Engine_Power__Landing_/expected __autograding/Average_Engine_Power__Landing_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Engine Power _Landing_",
+      "setup": "mkdir -p __autograding/Max_Engine_Power__Landing_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxEnginePowerLanding testSuite/mono/fileName &>> __autograding/Max_Engine_Power__Landing_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxEnginePowerLanding testSuite/mono/fileName &>>  __autograding/Max_Engine_Power__Landing_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Engine_Power__Landing_/expected __autograding/Max_Engine_Power__Landing_/output ;\ncat __autograding/Max_Engine_Power__Landing_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Engine_Power__Landing_/expected __autograding/Max_Engine_Power__Landing_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Flight Distance _Take Off_",
+      "setup": "mkdir -p __autograding/Flight_Distance__Take_Off_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o flightDistanceTakeOff testSuite/mono/fileName &>> __autograding/Flight_Distance__Take_Off_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o flightDistanceTakeOff testSuite/mono/fileName &>>  __autograding/Flight_Distance__Take_Off_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Flight_Distance__Take_Off_/expected __autograding/Flight_Distance__Take_Off_/output ;\ncat __autograding/Flight_Distance__Take_Off_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Flight_Distance__Take_Off_/expected __autograding/Flight_Distance__Take_Off_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Acceleration _Take Off_",
+      "setup": "mkdir -p __autograding/Average_Acceleration__Take_Off_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgAccelerationTakeOff testSuite/mono/fileName &>> __autograding/Average_Acceleration__Take_Off_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgAccelerationTakeOff testSuite/mono/fileName &>>  __autograding/Average_Acceleration__Take_Off_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Acceleration__Take_Off_/expected __autograding/Average_Acceleration__Take_Off_/output ;\ncat __autograding/Average_Acceleration__Take_Off_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Acceleration__Take_Off_/expected __autograding/Average_Acceleration__Take_Off_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Acceleration _Take Off_",
+      "setup": "mkdir -p __autograding/Max_Acceleration__Take_Off_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxAccelerationTakeOff testSuite/mono/fileName &>> __autograding/Max_Acceleration__Take_Off_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxAccelerationTakeOff testSuite/mono/fileName &>>  __autograding/Max_Acceleration__Take_Off_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Acceleration__Take_Off_/expected __autograding/Max_Acceleration__Take_Off_/output ;\ncat __autograding/Max_Acceleration__Take_Off_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Acceleration__Take_Off_/expected __autograding/Max_Acceleration__Take_Off_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Wind Speed _Take Off_",
+      "setup": "mkdir -p __autograding/Wind_Speed__Take_Off_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o windSpeedTakeOff testSuite/mono/fileName &>> __autograding/Wind_Speed__Take_Off_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o windSpeedTakeOff testSuite/mono/fileName &>>  __autograding/Wind_Speed__Take_Off_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Wind_Speed__Take_Off_/expected __autograding/Wind_Speed__Take_Off_/output ;\ncat __autograding/Wind_Speed__Take_Off_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Wind_Speed__Take_Off_/expected __autograding/Wind_Speed__Take_Off_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Flight Distance _Cruise_",
+      "setup": "mkdir -p __autograding/Flight_Distance__Cruise_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o flightDistanceCruise testSuite/mono/fileName &>> __autograding/Flight_Distance__Cruise_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o flightDistanceCruise testSuite/mono/fileName &>>  __autograding/Flight_Distance__Cruise_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Flight_Distance__Cruise_/expected __autograding/Flight_Distance__Cruise_/output ;\ncat __autograding/Flight_Distance__Cruise_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Flight_Distance__Cruise_/expected __autograding/Flight_Distance__Cruise_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Acceleration _Cruise_",
+      "setup": "mkdir -p __autograding/Average_Acceleration__Cruise_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgAccelerationCruise testSuite/mono/fileName &>> __autograding/Average_Acceleration__Cruise_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgAccelerationCruise testSuite/mono/fileName &>>  __autograding/Average_Acceleration__Cruise_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Acceleration__Cruise_/expected __autograding/Average_Acceleration__Cruise_/output ;\ncat __autograding/Average_Acceleration__Cruise_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Acceleration__Cruise_/expected __autograding/Average_Acceleration__Cruise_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Acceleration _Cruise_",
+      "setup": "mkdir -p __autograding/Max_Acceleration__Cruise_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxAccelerationCruise testSuite/mono/fileName &>> __autograding/Max_Acceleration__Cruise_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxAccelerationCruise testSuite/mono/fileName &>>  __autograding/Max_Acceleration__Cruise_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Acceleration__Cruise_/expected __autograding/Max_Acceleration__Cruise_/output ;\ncat __autograding/Max_Acceleration__Cruise_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Acceleration__Cruise_/expected __autograding/Max_Acceleration__Cruise_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Wind Speed _Cruise_",
+      "setup": "mkdir -p __autograding/Wind_Speed__Cruise_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o windSpeedCruise testSuite/mono/fileName &>> __autograding/Wind_Speed__Cruise_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o windSpeedCruise testSuite/mono/fileName &>>  __autograding/Wind_Speed__Cruise_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Wind_Speed__Cruise_/expected __autograding/Wind_Speed__Cruise_/output ;\ncat __autograding/Wind_Speed__Cruise_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Wind_Speed__Cruise_/expected __autograding/Wind_Speed__Cruise_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Flight Distance _Landing_",
+      "setup": "mkdir -p __autograding/Flight_Distance__Landing_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o flightDistanceLanding testSuite/mono/fileName &>> __autograding/Flight_Distance__Landing_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o flightDistanceLanding testSuite/mono/fileName &>>  __autograding/Flight_Distance__Landing_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Flight_Distance__Landing_/expected __autograding/Flight_Distance__Landing_/output ;\ncat __autograding/Flight_Distance__Landing_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Flight_Distance__Landing_/expected __autograding/Flight_Distance__Landing_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Acceleration _Landing_",
+      "setup": "mkdir -p __autograding/Average_Acceleration__Landing_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgAccelerationLanding testSuite/mono/fileName &>> __autograding/Average_Acceleration__Landing_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgAccelerationLanding testSuite/mono/fileName &>>  __autograding/Average_Acceleration__Landing_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Acceleration__Landing_/expected __autograding/Average_Acceleration__Landing_/output ;\ncat __autograding/Average_Acceleration__Landing_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Acceleration__Landing_/expected __autograding/Average_Acceleration__Landing_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Max Acceleration _Landing_",
+      "setup": "mkdir -p __autograding/Max_Acceleration__Landing_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o maxAccelerationLanding testSuite/mono/fileName &>> __autograding/Max_Acceleration__Landing_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o maxAccelerationLanding testSuite/mono/fileName &>>  __autograding/Max_Acceleration__Landing_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Max_Acceleration__Landing_/expected __autograding/Max_Acceleration__Landing_/output ;\ncat __autograding/Max_Acceleration__Landing_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Max_Acceleration__Landing_/expected __autograding/Max_Acceleration__Landing_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Wind Speed _Landing_",
+      "setup": "mkdir -p __autograding/Wind_Speed__Landing_ ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o windSpeedLanding testSuite/mono/fileName &>> __autograding/Wind_Speed__Landing_/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o windSpeedLanding testSuite/mono/fileName &>>  __autograding/Wind_Speed__Landing_/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Wind_Speed__Landing_/expected __autograding/Wind_Speed__Landing_/output ;\ncat __autograding/Wind_Speed__Landing_/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Wind_Speed__Landing_/expected __autograding/Wind_Speed__Landing_/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Most Demanding Phase - Engine Power",
+      "setup": "mkdir -p __autograding/Most_Demanding_Phase_-_Engine_Power ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o mostPowerPhase testSuite/mono/fileName &>> __autograding/Most_Demanding_Phase_-_Engine_Power/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o mostPowerPhase testSuite/mono/fileName &>>  __autograding/Most_Demanding_Phase_-_Engine_Power/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Most_Demanding_Phase_-_Engine_Power/expected __autograding/Most_Demanding_Phase_-_Engine_Power/output ;\ncat __autograding/Most_Demanding_Phase_-_Engine_Power/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Most_Demanding_Phase_-_Engine_Power/expected __autograding/Most_Demanding_Phase_-_Engine_Power/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Most Demanding Phase - Stress",
+      "setup": "mkdir -p __autograding/Most_Demanding_Phase_-_Stress ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o mostStressPhase testSuite/mono/fileName &>> __autograding/Most_Demanding_Phase_-_Stress/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o mostStressPhase testSuite/mono/fileName &>>  __autograding/Most_Demanding_Phase_-_Stress/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Most_Demanding_Phase_-_Stress/expected __autograding/Most_Demanding_Phase_-_Stress/output ;\ncat __autograding/Most_Demanding_Phase_-_Stress/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Most_Demanding_Phase_-_Stress/expected __autograding/Most_Demanding_Phase_-_Stress/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Most Demanding Phase - Horizontal Acceleration",
+      "setup": "mkdir -p __autograding/Most_Demanding_Phase_-_Horizontal_Acceleration ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o mostAccelPhase testSuite/mono/fileName &>> __autograding/Most_Demanding_Phase_-_Horizontal_Acceleration/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o mostAccelPhase testSuite/mono/fileName &>>  __autograding/Most_Demanding_Phase_-_Horizontal_Acceleration/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Most_Demanding_Phase_-_Horizontal_Acceleration/expected __autograding/Most_Demanding_Phase_-_Horizontal_Acceleration/output ;\ncat __autograding/Most_Demanding_Phase_-_Horizontal_Acceleration/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Most_Demanding_Phase_-_Horizontal_Acceleration/expected __autograding/Most_Demanding_Phase_-_Horizontal_Acceleration/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Reaching 80% Max Altitude",
+      "setup": "mkdir -p __autograding/Reaching_80%_Max_Altitude ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o reachAlt testSuite/mono/fileName &>> __autograding/Reaching_80%_Max_Altitude/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o reachAlt testSuite/mono/fileName &>>  __autograding/Reaching_80%_Max_Altitude/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Reaching_80%_Max_Altitude/expected __autograding/Reaching_80%_Max_Altitude/output ;\ncat __autograding/Reaching_80%_Max_Altitude/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Reaching_80%_Max_Altitude/expected __autograding/Reaching_80%_Max_Altitude/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Reaching 80% Total Distance",
+      "setup": "mkdir -p __autograding/Reaching_80%_Total_Distance ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o reachDist testSuite/mono/fileName &>> __autograding/Reaching_80%_Total_Distance/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o reachDist testSuite/mono/fileName &>>  __autograding/Reaching_80%_Total_Distance/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Reaching_80%_Total_Distance/expected __autograding/Reaching_80%_Total_Distance/output ;\ncat __autograding/Reaching_80%_Total_Distance/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Reaching_80%_Total_Distance/expected __autograding/Reaching_80%_Total_Distance/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Altitude with Fastest Wind",
+      "setup": "mkdir -p __autograding/Altitude_with_Fastest_Wind ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o fastWindAlt testSuite/mono/fileName &>> __autograding/Altitude_with_Fastest_Wind/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o fastWindAlt testSuite/mono/fileName &>>  __autograding/Altitude_with_Fastest_Wind/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Altitude_with_Fastest_Wind/expected __autograding/Altitude_with_Fastest_Wind/output ;\ncat __autograding/Altitude_with_Fastest_Wind/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Altitude_with_Fastest_Wind/expected __autograding/Altitude_with_Fastest_Wind/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Altitude with Highest Aircraft Speed",
+      "setup": "mkdir -p __autograding/Altitude_with_Highest_Aircraft_Speed ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o fastJetAlt testSuite/mono/fileName &>> __autograding/Altitude_with_Highest_Aircraft_Speed/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o fastJetAlt testSuite/mono/fileName &>>  __autograding/Altitude_with_Highest_Aircraft_Speed/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Altitude_with_Highest_Aircraft_Speed/expected __autograding/Altitude_with_Highest_Aircraft_Speed/output ;\ncat __autograding/Altitude_with_Highest_Aircraft_Speed/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Altitude_with_Highest_Aircraft_Speed/expected __autograding/Altitude_with_Highest_Aircraft_Speed/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Noise of Temperature Sensors",
+      "setup": "mkdir -p __autograding/Noise_of_Temperature_Sensors ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o noiseTemp testSuite/mono/fileName &>> __autograding/Noise_of_Temperature_Sensors/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o noiseTemp testSuite/mono/fileName &>>  __autograding/Noise_of_Temperature_Sensors/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Noise_of_Temperature_Sensors/expected __autograding/Noise_of_Temperature_Sensors/output ;\ncat __autograding/Noise_of_Temperature_Sensors/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Noise_of_Temperature_Sensors/expected __autograding/Noise_of_Temperature_Sensors/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Stressed Pilot",
+      "setup": "mkdir -p __autograding/Stressed_Pilot ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o stressedPilot testSuite/mono/fileName &>> __autograding/Stressed_Pilot/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o stressedPilot testSuite/mono/fileName &>>  __autograding/Stressed_Pilot/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Stressed_Pilot/expected __autograding/Stressed_Pilot/output ;\ncat __autograding/Stressed_Pilot/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Stressed_Pilot/expected __autograding/Stressed_Pilot/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "50% Oxygen Phase",
+      "setup": "mkdir -p __autograding/50%_Oxygen_Phase ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o oxygenPhase testSuite/mono/fileName &>> __autograding/50%_Oxygen_Phase/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o oxygenPhase testSuite/mono/fileName &>>  __autograding/50%_Oxygen_Phase/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/50%_Oxygen_Phase/expected __autograding/50%_Oxygen_Phase/output ;\ncat __autograding/50%_Oxygen_Phase/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/50%_Oxygen_Phase/expected __autograding/50%_Oxygen_Phase/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Milestone 3 Full Report",
+      "setup": "mkdir -p __autograding/Milestone_3_Full_Report ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar  testSuite/mono/fileName &>> __autograding/Milestone_3_Full_Report/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar  testSuite/mono/fileName &>>  __autograding/Milestone_3_Full_Report/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Milestone_3_Full_Report/expected __autograding/Milestone_3_Full_Report/output ;\ncat __autograding/Milestone_3_Full_Report/output >> __autograding/result.txt\ndiff -qs -iBbd --strip-trailing-cr __autograding/Milestone_3_Full_Report/expected __autograding/Milestone_3_Full_Report/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
