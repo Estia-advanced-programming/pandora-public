@@ -1,0 +1,337 @@
+[
+   {
+      "name":"Average Altitude",
+      "optionLine":"-o avgALT",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Altitude",
+      "optionLine":"-o maxALT",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Air Speed",
+      "optionLine":"-o avgAirSpeed",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Air Speed",
+      "optionLine":"-o maxAirSpeed",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Engine Power",
+      "optionLine":"-o avgEnginePower",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Engine Power",
+      "optionLine":"-o maxEnginePower",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Temperature",
+      "optionLine":"-o avgTemp",
+      "testFile":"all"
+   },
+   {
+      "name":"Min Temperature",
+      "optionLine":"-o minTemp",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Temperature",
+      "optionLine":"-o avgTemp",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Pressure",
+      "optionLine":"-o avgPressure",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Pressure",
+      "optionLine":"-o maxPressure",
+      "testFile":"all"
+   },
+   {
+      "name":"Minimum Pressure",
+      "optionLine":"-o minPressure",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Relative Humidity",
+      "optionLine":"-o avgHumidity",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Relative Humidity",
+      "optionLine":"-o maxHumidity",
+      "testFile":"all"
+   },
+   {
+      "name":"Min Relative Humidity",
+      "optionLine":"-o minHumidity",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Heart Rate",
+      "optionLine":"-o avgHeartRate",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Heart Rate",
+      "optionLine":"-o maxHeartRate",
+      "testFile":"all"
+   },
+   {
+      "name":"Min Heart Rate",
+      "optionLine":"-o minHeartRate",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Oxygen Concentration",
+      "optionLine":"-o avgOxygen",
+      "testFile":"all"
+   },
+   {
+      "name":"Min Oxygen Concentration",
+      "optionLine":"-o minOxygen",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Oxygen Concentration",
+      "optionLine":"-o maxOxygen",
+      "testFile":"all"
+   },
+   {
+      "name":"Flight Duration",
+      "optionLine":"-o flightDuration",
+      "testFile":"all"
+   },
+   {
+      "name":"Flight Distance",
+      "optionLine":"-o flightDistance",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Acceleration",
+      "optionLine":"-o avgAcceleration",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Acceleration",
+      "optionLine":"-o maxAcceleration",
+      "testFile":"all"
+   },
+   {
+      "name":"Wind Speed",
+      "optionLine":"-o windSpeed",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Mach Speed",
+      "optionLine":"-o avgMachSpeed",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Mach Speed",
+      "optionLine":"-o maxMachSpeed",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Acceleration in G",
+      "optionLine":"-o maxAccelG",
+      "testFile":"all"
+   },
+   {
+      "name":"Take Off Phase Detection",
+      "optionLine":"-o takeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Cruise Phase Detection",
+      "optionLine":"-o cruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Landing Phase Detection",
+      "optionLine":"-o landing",
+      "testFile":"all"
+   },
+   {
+      "name":"Ratio Distance",
+      "optionLine":"-o ratioDistance",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Air Speed (Take Off)",
+      "optionLine":"-o avgAirSpeedTakeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Air Speed (Take Off)",
+      "optionLine":"-o maxAirSpeedTakeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Engine Power (Take Off)",
+      "optionLine":"-o avgEnginePowerTakeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Engine Power (Take Off)",
+      "optionLine":"-o maxEnginePowerTakeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Air Speed (Cruise)",
+      "optionLine":"-o avgAirSpeedCruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Air Speed (Cruise)",
+      "optionLine":"-o maxAirSpeedCruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Engine Power (Cruise)",
+      "optionLine":"-o avgEnginePowerCruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Engine Power (Cruise)",
+      "optionLine":"-o maxEnginePowerCruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Air Speed (Landing)",
+      "optionLine":"-o avgAirSpeedLanding",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Air Speed (Landing)",
+      "optionLine":"-o maxAirSpeedLanding",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Engine Power (Landing)",
+      "optionLine":"-o avgEnginePowerLanding",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Engine Power (Landing)",
+      "optionLine":"-o maxEnginePowerLanding",
+      "testFile":"all"
+   },
+   {
+      "name":"Flight Distance (Take Off)",
+      "optionLine":"-o flightDistanceTakeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Acceleration (Take Off)",
+      "optionLine":"-o avgAccelerationTakeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Acceleration (Take Off)",
+      "optionLine":"-o maxAccelerationTakeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Wind Speed (Take Off)",
+      "optionLine":"-o windSpeedTakeOff",
+      "testFile":"all"
+   },
+   {
+      "name":"Flight Distance (Cruise)",
+      "optionLine":"-o flightDistanceCruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Acceleration (Cruise)",
+      "optionLine":"-o avgAccelerationCruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Acceleration (Cruise)",
+      "optionLine":"-o maxAccelerationCruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Wind Speed (Cruise)",
+      "optionLine":"-o windSpeedCruise",
+      "testFile":"all"
+   },
+   {
+      "name":"Flight Distance (Landing)",
+      "optionLine":"-o flightDistanceLanding",
+      "testFile":"all"
+   },
+   {
+      "name":"Average Acceleration (Landing)",
+      "optionLine":"-o avgAccelerationLanding",
+      "testFile":"all"
+   },
+   {
+      "name":"Max Acceleration (Landing)",
+      "optionLine":"-o maxAccelerationLanding",
+      "testFile":"all"
+   },
+   {
+      "name":"Wind Speed (Landing)",
+      "optionLine":"-o windSpeedLanding",
+      "testFile":"all"
+   },
+   {
+      "name":"Most Demanding Phase - Engine Power",
+      "optionLine":"-o mostPowerPhase",
+      "testFile":"all"
+   },
+   {
+      "name":"Most Demanding Phase - Stress",
+      "optionLine":"-o mostStressPhase",
+      "testFile":"all"
+   },
+   {
+      "name":"Most Demanding Phase - Horizontal Acceleration",
+      "optionLine":"-o mostAccelPhase",
+      "testFile":"all"
+   },
+   {
+      "name":"Reaching 80% Max Altitude",
+      "optionLine":"-o reachAlt",
+      "testFile":"all"
+   },
+   {
+      "name":"Reaching 80% Total Distance",
+      "optionLine":"-o reachDist",
+      "testFile":"all"
+   },
+   {
+      "name":"Altitude with Fastest Wind",
+      "optionLine":"-o fastWindAlt",
+      "testFile":"all"
+   },
+   {
+      "name":"Altitude with Highest Aircraft Speed",
+      "optionLine":"-o fastJetAlt",
+      "testFile":"all"
+   },
+   {
+      "name":"Noise of Temperature Sensors",
+      "optionLine":"-o noiseTemp",
+      "testFile":"all"
+   },
+   {
+      "name":"Stressed Pilot",
+      "optionLine":"-o stressedPilot",
+      "testFile":"all"
+   },
+   {
+      "name":"50% Oxygen Phase",
+      "optionLine":"-o oxygenPhase",
+      "testFile":"all"
+   }
+]

@@ -27,8 +27,7 @@ from Utils import FileGenerator as fg
 
 
 
-if __name__ == '__main__':
-    
+def main():
     ## Take care of output folders
     if not os.path.exists(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER):
         os.mkdir(c.PATH_RESOURCES + "\\" + c.OUT_FOLDER)
@@ -57,3 +56,13 @@ if __name__ == '__main__':
         print("creating file for " + f_id + "_" + f_name)
         fg.GenerateFile(f_id, f_name, records, start_tstp)
         pass
+    
+    
+if __name__ == '__main__':
+    
+    conds = [c.NORMAL, c.BAD_WEATHER, c.MISSING_COLUMN, c.MISSING_HEADER, c.INCOMPLETE_HEADER, c.MISSING_COLNAMES, c.ONE_LINE, c.TWO_LINES, c.THREE_LINES, c.REVERSE, c.ASCII, c.CORRUPTED_BINARY]
+    
+    for cur_cond in conds:
+        c.CURRENT_CONDITION = cur_cond
+        c.ACMI_FILE = cur_cond[2] 
+        main()
