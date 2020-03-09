@@ -1,12 +1,12 @@
 [
    {
       "name":"Average Altitude",
-      "optionLine":"-o avgALT",
+      "optionLine":"-o avgAlt\n**Input**: a flight record file",
       "testFile":"all"
    },
    {
       "name":"Max Altitude",
-      "optionLine":"-o maxALT",
+      "optionLine":"-o maxAlt",
       "testFile":"all"
    },
    {
@@ -28,7 +28,8 @@
       "name":"Max Engine Power",
       "optionLine":"-o maxEnginePower",
       "testFile":"all"
-   },
+   }
+,
    {
       "name":"Average Temperature",
       "optionLine":"-o avgTemp",
@@ -103,7 +104,8 @@
       "name":"Max Oxygen Concentration",
       "optionLine":"-o maxOxygen",
       "testFile":"all"
-   },
+   }
+,
    {
       "name":"Flight Duration",
       "optionLine":"-o flightDuration",
@@ -143,7 +145,8 @@
       "name":"Max Acceleration in G",
       "optionLine":"-o maxAccelG",
       "testFile":"all"
-   },
+   }
+,
    {
       "name":"Take Off Phase Detection",
       "optionLine":"-o takeOff",
@@ -332,6 +335,11 @@
    {
       "name":"50% Oxygen Phase",
       "optionLine":"-o oxygenPhase",
+      "testFile":"all"
+   },
+   {
+      "name":"Milestone 3 Full Report",
+      "optionLine":"",
       "testFile":"all"
    }
 ]

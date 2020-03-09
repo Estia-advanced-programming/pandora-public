@@ -3,15 +3,6 @@
       "name":"Flight Closeness ",
       "optionLine":"-o closeFlight",
       "testFile":"multi"
-   },
-   {
-      "name":"Flight Closeness (Same origin)",
-      "optionLine":"-o closeFlightSameOri",
-      "testFile":"multi"
-   },
-   {
-      "name":"Flight Closeness (Different origin)",
-      "optionLine":"-o closeFlightDiffOri",
-      "testFile":"multi"
    }
+
 ]

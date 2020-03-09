@@ -1,9 +1,9 @@
 {
   "tests": [
     {
-      "name": "Average Altitude",
-      "setup": "mkdir -p __autograding/Average_Altitude ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgALT fileName &>> __autograding/Average_Altitude/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgALT fileName &>>  __autograding/Average_Altitude/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Altitude/expected __autograding/Average_Altitude/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Altitude/expected __autograding/Average_Altitude/output &>> __autograding/result.txt",
+      "name": "Invalid Command Line Options",
+      "setup": "mkdir -p __autograding/Invalid_Command_Line_Options ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Invalid_Command_Line_Options/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Invalid_Command_Line_Options/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Invalid_Command_Line_Options/expected __autograding/Invalid_Command_Line_Options/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Invalid_Command_Line_Options/expected __autograding/Invalid_Command_Line_Options/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",
@@ -11,9 +11,119 @@
       "points": 1
     },
     {
-      "name": "Average Altitude",
-      "setup": "mkdir -p __autograding/Average_Altitude ; ls testSuite/mono | xargs -I fileName java -jar target/referencePandora.jar -o avgALT fileName &>> __autograding/Average_Altitude/expected ; ls testSuite/mono | xargs -I fileName java -jar target/pandora.jar -o avgALT fileName &>>  __autograding/Average_Altitude/output",
-      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Altitude/expected __autograding/Average_Altitude/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Altitude/expected __autograding/Average_Altitude/output &>> __autograding/result.txt",
+      "name": "Missing Command Line Parameters",
+      "setup": "mkdir -p __autograding/Missing_Command_Line_Parameters ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Missing_Command_Line_Parameters/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Missing_Command_Line_Parameters/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Missing_Command_Line_Parameters/expected __autograding/Missing_Command_Line_Parameters/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Missing_Command_Line_Parameters/expected __autograding/Missing_Command_Line_Parameters/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Not Implemented Handling",
+      "setup": "mkdir -p __autograding/Not_Implemented_Handling ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Not_Implemented_Handling/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Not_Implemented_Handling/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Not_Implemented_Handling/expected __autograding/Not_Implemented_Handling/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Not_Implemented_Handling/expected __autograding/Not_Implemented_Handling/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Missing Files",
+      "setup": "mkdir -p __autograding/Missing_Files ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Missing_Files/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Missing_Files/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Missing_Files/expected __autograding/Missing_Files/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Missing_Files/expected __autograding/Missing_Files/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Encoding Problems",
+      "setup": "mkdir -p __autograding/Encoding_Problems ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Encoding_Problems/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Encoding_Problems/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Encoding_Problems/expected __autograding/Encoding_Problems/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Encoding_Problems/expected __autograding/Encoding_Problems/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Corrupted Files",
+      "setup": "mkdir -p __autograding/Corrupted_Files ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Corrupted_Files/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Corrupted_Files/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Corrupted_Files/expected __autograding/Corrupted_Files/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Corrupted_Files/expected __autograding/Corrupted_Files/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Missing Header",
+      "setup": "mkdir -p __autograding/Missing_Header ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Missing_Header/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Missing_Header/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Missing_Header/expected __autograding/Missing_Header/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Missing_Header/expected __autograding/Missing_Header/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Incomplete Header",
+      "setup": "mkdir -p __autograding/Incomplete_Header ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Incomplete_Header/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Incomplete_Header/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Incomplete_Header/expected __autograding/Incomplete_Header/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Incomplete_Header/expected __autograding/Incomplete_Header/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Missing Columns",
+      "setup": "mkdir -p __autograding/Missing_Columns ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Missing_Columns/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Missing_Columns/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Missing_Columns/expected __autograding/Missing_Columns/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Missing_Columns/expected __autograding/Missing_Columns/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Missing Column Names",
+      "setup": "mkdir -p __autograding/Missing_Column_Names ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Missing_Column_Names/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Missing_Column_Names/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Missing_Column_Names/expected __autograding/Missing_Column_Names/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Missing_Column_Names/expected __autograding/Missing_Column_Names/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Incorrect Timestamp Ordering",
+      "setup": "mkdir -p __autograding/Incorrect_Timestamp_Ordering ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Incorrect_Timestamp_Ordering/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Incorrect_Timestamp_Ordering/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Incorrect_Timestamp_Ordering/expected __autograding/Incorrect_Timestamp_Ordering/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Incorrect_Timestamp_Ordering/expected __autograding/Incorrect_Timestamp_Ordering/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Incorrect Input",
+      "setup": "mkdir -p __autograding/Incorrect_Input ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Incorrect_Input/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Incorrect_Input/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Incorrect_Input/expected __autograding/Incorrect_Input/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Incorrect_Input/expected __autograding/Incorrect_Input/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Milestone 5 Full Report",
+      "setup": "mkdir -p __autograding/Milestone_5_Full_Report ; ls testSuite/all | xargs -I fileName java -jar target/referencePandora.jar  testSuite/all/fileName &>> __autograding/Milestone_5_Full_Report/expected ; ls testSuite/all | xargs -I fileName java -jar target/pandora.jar  testSuite/all/fileName &>>  __autograding/Milestone_5_Full_Report/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Milestone_5_Full_Report/expected __autograding/Milestone_5_Full_Report/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Milestone_5_Full_Report/expected __autograding/Milestone_5_Full_Report/output &>> __autograding/result.txt",
       "input": "",
       "output": "identical",
       "comparison": "included",

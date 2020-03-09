@@ -88,5 +88,10 @@
       "name":"Lowest Average Heart Beat",
       "optionLine":"-o lowestHeartBeat",
       "testFile":"multi"
+   },
+   {
+      "name":"Milestone 6 Full Report",
+      "optionLine":"",
+      "testFile":"multi"
    }
 ]
