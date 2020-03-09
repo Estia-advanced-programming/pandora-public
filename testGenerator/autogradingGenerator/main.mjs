@@ -46,8 +46,8 @@ class AutoGradingTest {
     this.name = name ;
     this.setup = `\
 mkdir -p ${ destFolder } ; \
-ls testSuite/${testFile} | xargs -R1 -I fileName java -jar target/referencePandora.jar ${ optionLine } fileName &>> ${ destFolder }/expected ; \
-ls testSuite/${testFile} | xargs -R1 -I fileName java -jar target/pandora.jar ${ optionLine } fileName &>>  ${ destFolder }/output` ;
+ls testSuite/${testFile} | xargs -I fileName java -jar target/referencePandora.jar ${ optionLine } fileName &>> ${ destFolder }/expected ; \
+ls testSuite/${testFile} | xargs -I fileName java -jar target/pandora.jar ${ optionLine } fileName &>>  ${ destFolder }/output` ;
     this.run = `\
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output ;
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output &>> __autograding/result.txt` ;
