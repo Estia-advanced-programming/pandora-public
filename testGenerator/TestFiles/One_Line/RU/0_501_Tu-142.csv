@@ -1,0 +1,14 @@
+flight id:501
+flight code:Tu-142
+origin:RU
+date:2011-06-01
+from:kobuleti
+to:tbilissi-lochini
+motor(s):4
+mass aircraft:96000.025248
+mass fuel:96000.025248
+lift coef:1.5098032749390164
+drag coef:0.017311591591697872
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,heading,air_speed,engine_0,engine_1,engine_2,engine_3,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894373.12,5.935144,4.256843,464.32,0.1,0.5,102.6,-1.0,81.50630919416795,3959093.7167895674,3959093.7167895674,3959093.7167895674,3959093.7167895674,18.678695911516254,7.2940399673242675,24701.326314187805,93.20000000000002,30.273117823286626

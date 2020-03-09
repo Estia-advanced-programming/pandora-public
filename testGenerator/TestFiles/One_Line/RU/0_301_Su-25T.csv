@@ -1,0 +1,14 @@
+flight id:301
+flight code:Su-25T
+origin:RU
+date:2011-06-01
+from:kobuleti
+to:beslan
+motor(s):2
+mass aircraft:11495.835648
+mass fuel:11495.835648
+lift coef:1.1776856990315037
+drag coef:0.011020666513337473
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306896484.15,5.1290874,4.8621726,15.19,-0.0,3.5,311.4,-1.0,4.87574209566335,629.3369768415427,629.3369768415427,31.175786061610456,7.504901498018492,25452.512956297545,86.0,27.12717078701791

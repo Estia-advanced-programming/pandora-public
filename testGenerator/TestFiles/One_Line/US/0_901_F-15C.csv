@@ -1,0 +1,14 @@
+flight id:901
+flight code:F-15C
+origin:US
+date:2011-06-01
+from:nalchik
+to:krasnodar center
+motor(s):2
+mass aircraft:29498
+mass fuel:29498
+lift coef:1.408162940600709
+drag coef:0.016385370250972982
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,heading,air_speed,engine_0,engine_1,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+1306894744.04,8.6038611,5.2059788,1729.494806,-0.0,-0.5,116.5,-1.0,35.329368992433174,189.58599054147828,189.58599054147828,292.6859939862297,0.07129440586963633,3.5942100305663307,90.7,0.31866713934887936

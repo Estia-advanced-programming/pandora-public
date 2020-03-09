@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Average Altitude",
+      "setup": "mkdir -p __autograding/Average_Altitude ; ls testSuite/mono | xargs -R1 -I fileName java -jar target/referencePandora.jar -o avgALT fileName &>> __autograding/Average_Altitude/expected ; ls testSuite/mono | xargs -R1 -I fileName java -jar target/pandora.jar -o avgALT fileName &>>  __autograding/Average_Altitude/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Altitude/expected __autograding/Average_Altitude/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Altitude/expected __autograding/Average_Altitude/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Average Altitude",
+      "setup": "mkdir -p __autograding/Average_Altitude ; ls testSuite/mono | xargs -R1 -I fileName java -jar target/referencePandora.jar -o avgALT fileName &>> __autograding/Average_Altitude/expected ; ls testSuite/mono | xargs -R1 -I fileName java -jar target/pandora.jar -o avgALT fileName &>>  __autograding/Average_Altitude/output",
+      "run": "diff -qs -iBbd --strip-trailing-cr __autograding/Average_Altitude/expected __autograding/Average_Altitude/output ;\ndiff -qs -iBbd --strip-trailing-cr __autograding/Average_Altitude/expected __autograding/Average_Altitude/output &>> __autograding/result.txt",
+      "input": "",
+      "output": "identical",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
