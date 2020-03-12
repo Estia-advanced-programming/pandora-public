@@ -50,7 +50,7 @@ ls testSuite/${testFile} | xargs -I fileName java -jar target/referencePandora.j
 ls testSuite/${testFile} | xargs -I fileName java -jar target/pandora.jar ${ optionLine } testSuite/${testFile}/fileName &>>  ${ destFolder }/output` ;
     this.run = `\
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output ;
-cat ${ destFolder }/output >> __autograding/result.txt
+cat ${ destFolder }/output >> __autograding/result.txt ; 
 diff -qs -iBbd --strip-trailing-cr ${ destFolder }/expected ${ destFolder }/output &>> __autograding/result.txt` ;
     this.input = "" ;
     this.output = "identical" ;

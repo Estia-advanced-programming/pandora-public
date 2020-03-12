@@ -28,6 +28,7 @@ os.chdir(SCRIPT_DIR)
 
 from Resources import Data as d
 
+#load_dotenv("../Resources/.env")
 
 
 file_feature = None
@@ -44,7 +45,7 @@ def DisplayMDMilestones(dico_to_log):
 #         if issue['milestone'] not in dico_nb:
 #             dico_nb[issue['milestone']] = 0
 #         dico_nb[issue['milestone']] += 1
-# 
+#
 #     s = ""
 #     i = 0
 #     for m in d.milestones:
@@ -52,10 +53,10 @@ def DisplayMDMilestones(dico_to_log):
 #         s += "    * Number of issues: " + str(dico_nb[i]) + "\n"
 #         i += 1
 #     print(s)
-#     
-#     
+#
+#
     s = ""
-    
+
     for k,v in dico_to_log.items():
         m = d.milestones[d.mapping_milestones[str(k)]]
         s += "\n* **" + m['title'] + "**\n"
@@ -117,8 +118,8 @@ def main(argv):
     if len(git_repo) == 0:
         # this is running on a machine
         load_dotenv("../Resources/.env")
-        git_token = os.getenv("GIT_TOKEN")
-        git_repo = "Estia-advanced-programming/ttt4-dim2"
+        git_token = os.getenv("GITHUB_TOKEN")
+        git_repo = os.getenv("GITHUB_REPOSITORY")
         verbose = True
 
     g = Github(git_token)
@@ -162,7 +163,7 @@ def main(argv):
             print(pos)
             if pos not in dico_to_log:
                 dico_to_log[pos] = []
-            
+
             dico_to_log[pos].append({"name" : issue['title'], "optionLine":optionLine, "testFile": d.milestones[issue['milestone']]['file']})
 
     if verbose:
@@ -171,7 +172,7 @@ def main(argv):
             f = open(output_json + "milestone_" + str(k), "w+")
             f.write(str(v))
             f.close()
-            
+
 
     if verbose:
         DisplayMDMilestones(dico_to_log)
