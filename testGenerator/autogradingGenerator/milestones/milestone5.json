@@ -1,12 +1,12 @@
 [
    {
       "name":"Average Altitude",
-      "optionLine":"-o avgALT",
+      "optionLine":"-o avgAlt",
       "testFile":"all"
    },
    {
       "name":"Max Altitude",
-      "optionLine":"-o maxALT",
+      "optionLine":"-o maxAlt",
       "testFile":"all"
    },
    {
@@ -28,7 +28,8 @@
       "name":"Max Engine Power",
       "optionLine":"-o maxEnginePower",
       "testFile":"all"
-   },
+   }
+,
    {
       "name":"Average Temperature",
       "optionLine":"-o avgTemp",
@@ -103,7 +104,8 @@
       "name":"Max Oxygen Concentration",
       "optionLine":"-o maxOxygen",
       "testFile":"all"
-   },
+   }
+,
    {
       "name":"Flight Duration",
       "optionLine":"-o flightDuration",
@@ -143,7 +145,8 @@
       "name":"Max Acceleration in G",
       "optionLine":"-o maxAccelG",
       "testFile":"all"
-   },
+   }
+,
    {
       "name":"Take Off Phase Detection",
       "optionLine":"-o takeOff",
@@ -165,122 +168,122 @@
       "testFile":"all"
    },
    {
-      "name":"Average Air Speed (Take Off)",
+      "name":"Average Air Speed _Take Off_",
       "optionLine":"-o avgAirSpeedTakeOff",
       "testFile":"all"
    },
    {
-      "name":"Max Air Speed (Take Off)",
+      "name":"Max Air Speed _Take Off_",
       "optionLine":"-o maxAirSpeedTakeOff",
       "testFile":"all"
    },
    {
-      "name":"Average Engine Power (Take Off)",
+      "name":"Average Engine Power _Take Off_",
       "optionLine":"-o avgEnginePowerTakeOff",
       "testFile":"all"
    },
    {
-      "name":"Max Engine Power (Take Off)",
+      "name":"Max Engine Power _Take Off_",
       "optionLine":"-o maxEnginePowerTakeOff",
       "testFile":"all"
    },
    {
-      "name":"Average Air Speed (Cruise)",
+      "name":"Average Air Speed _Cruise_",
       "optionLine":"-o avgAirSpeedCruise",
       "testFile":"all"
    },
    {
-      "name":"Max Air Speed (Cruise)",
+      "name":"Max Air Speed _Cruise_",
       "optionLine":"-o maxAirSpeedCruise",
       "testFile":"all"
    },
    {
-      "name":"Average Engine Power (Cruise)",
+      "name":"Average Engine Power _Cruise_",
       "optionLine":"-o avgEnginePowerCruise",
       "testFile":"all"
    },
    {
-      "name":"Max Engine Power (Cruise)",
+      "name":"Max Engine Power _Cruise_",
       "optionLine":"-o maxEnginePowerCruise",
       "testFile":"all"
    },
    {
-      "name":"Average Air Speed (Landing)",
+      "name":"Average Air Speed _Landing_",
       "optionLine":"-o avgAirSpeedLanding",
       "testFile":"all"
    },
    {
-      "name":"Max Air Speed (Landing)",
+      "name":"Max Air Speed _Landing_",
       "optionLine":"-o maxAirSpeedLanding",
       "testFile":"all"
    },
    {
-      "name":"Average Engine Power (Landing)",
+      "name":"Average Engine Power _Landing_",
       "optionLine":"-o avgEnginePowerLanding",
       "testFile":"all"
    },
    {
-      "name":"Max Engine Power (Landing)",
+      "name":"Max Engine Power _Landing_",
       "optionLine":"-o maxEnginePowerLanding",
       "testFile":"all"
    },
    {
-      "name":"Flight Distance (Take Off)",
+      "name":"Flight Distance _Take Off_",
       "optionLine":"-o flightDistanceTakeOff",
       "testFile":"all"
    },
    {
-      "name":"Average Acceleration (Take Off)",
+      "name":"Average Acceleration _Take Off_",
       "optionLine":"-o avgAccelerationTakeOff",
       "testFile":"all"
    },
    {
-      "name":"Max Acceleration (Take Off)",
+      "name":"Max Acceleration _Take Off_",
       "optionLine":"-o maxAccelerationTakeOff",
       "testFile":"all"
    },
    {
-      "name":"Wind Speed (Take Off)",
+      "name":"Wind Speed _Take Off_",
       "optionLine":"-o windSpeedTakeOff",
       "testFile":"all"
    },
    {
-      "name":"Flight Distance (Cruise)",
+      "name":"Flight Distance _Cruise_",
       "optionLine":"-o flightDistanceCruise",
       "testFile":"all"
    },
    {
-      "name":"Average Acceleration (Cruise)",
+      "name":"Average Acceleration _Cruise_",
       "optionLine":"-o avgAccelerationCruise",
       "testFile":"all"
    },
    {
-      "name":"Max Acceleration (Cruise)",
+      "name":"Max Acceleration _Cruise_",
       "optionLine":"-o maxAccelerationCruise",
       "testFile":"all"
    },
    {
-      "name":"Wind Speed (Cruise)",
+      "name":"Wind Speed _Cruise_",
       "optionLine":"-o windSpeedCruise",
       "testFile":"all"
    },
    {
-      "name":"Flight Distance (Landing)",
+      "name":"Flight Distance _Landing_",
       "optionLine":"-o flightDistanceLanding",
       "testFile":"all"
    },
    {
-      "name":"Average Acceleration (Landing)",
+      "name":"Average Acceleration _Landing_",
       "optionLine":"-o avgAccelerationLanding",
       "testFile":"all"
    },
    {
-      "name":"Max Acceleration (Landing)",
+      "name":"Max Acceleration _Landing_",
       "optionLine":"-o maxAccelerationLanding",
       "testFile":"all"
    },
    {
-      "name":"Wind Speed (Landing)",
+      "name":"Wind Speed _Landing_",
       "optionLine":"-o windSpeedLanding",
       "testFile":"all"
    },
@@ -332,6 +335,11 @@
    {
       "name":"50% Oxygen Phase",
       "optionLine":"-o oxygenPhase",
+      "testFile":"all"
+   },
+   {
+      "name":"Milestone 3 Full Report",
+      "optionLine":"",
       "testFile":"all"
    }
 ]

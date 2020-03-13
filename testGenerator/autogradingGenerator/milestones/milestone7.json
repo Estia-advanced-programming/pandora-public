@@ -10,12 +10,12 @@
       "testFile":"multi"
    },
    {
-      "name":"Most Used Airport (Take Off)",
+      "name":"Most Used Airport _Take Off_",
       "optionLine":"-o airportTakeOff",
       "testFile":"multi"
    },
    {
-      "name":"Most Used Airport (Landing)",
+      "name":"Most Used Airport _Landing_",
       "optionLine":"-o airportLanding",
       "testFile":"multi"
    },
@@ -87,6 +87,11 @@
    {
       "name":"Lowest Average Heart Beat",
       "optionLine":"-o lowestHeartBeat",
+      "testFile":"multi"
+   },
+   {
+      "name":"Milestone 6 Full Report",
+      "optionLine":"",
       "testFile":"multi"
    }
 ]
