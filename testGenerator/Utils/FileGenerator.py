@@ -12,7 +12,7 @@ from _datetime import timedelta
 from Utils import Config as c
 from Utils import Regexp as r
 from Utils import DataGenerator as dg
-import struct
+from Utils import Plotter as plt
 
 
 
@@ -161,7 +161,7 @@ def GetHeader(f_id, f_name, start_tstp, meta):
 
 def GetDico(records, names, f_id, start_tstp):
     '''
-        Parse the ACMI file values and take care of missing date
+        Parse the ACMI file values and take care of missing data
         Create also the timestamp column according to the start_tstp previously parsed
     '''
     
@@ -185,7 +185,7 @@ def GetDico(records, names, f_id, start_tstp):
             for i in range(0, len(values)):
                 if values[i] == "":
                     values[i] = prev_values[i]
-            prev_values = values
+            prev_values = list(values)
             # log them
             # ...
             
@@ -263,10 +263,11 @@ def GenerateFile(f_id, f_name, records, start_tstp):
     names = ["longitude", "latitude", "altitude", "roll", "pitch", "yaw", "u", "v", "heading"]
     dico = GetDico(records, names, f_id, start_tstp)
     
+        
     # get speed
     # m / s
     #names.append("speed_uv")
-    dico['vx'], dico['vy'], dico['vz'], dico['speed_uv'] = dg.GetSpeedUV(dico)
+    dico['vx'], dico['vy'], dico['vz'], dico['speed_uv']= dg.GetSpeedUV(dico)
     
     # generate air speed 
     # m / s
@@ -278,6 +279,11 @@ def GenerateFile(f_id, f_name, records, start_tstp):
     engines, names, dico = dg.GetEnginePower2(names, dico, meta)
     
     
+    if c.CURRENT_CONDITION[0] == c.DISPLAY[0]:
+        plt.PlotDetection(dico['longitude'], dico['latitude'], dico['altitude'], values=dico['yaw'], tstp=dico['timestamp'], label=f_id + "--" + f_name)
+        
+        
+        
     # COCKPIT
     
     # celsius
@@ -367,6 +373,8 @@ def GenerateFile(f_id, f_name, records, start_tstp):
             f.write(head)
             LogDico(f, names2, dico2)
             f.close()
+        return
+    elif c.CURRENT_CONDITION[0] == c.DISPLAY[0]:
         return
 
     else:

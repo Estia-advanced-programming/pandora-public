@@ -39,6 +39,7 @@ REVERSE = [9, "Reverse", "..\\Samples\\10_normal_flights.txt.acmi"]
 BIG_INT = [10, "Big_Int", "..\\Samples\\10_normal_flights.txt.acmi"]
 ASCII = [11, "Ascii", "..\\Samples\\10_normal_flights.txt.acmi"]
 CORRUPTED_BINARY = [12, 'Corrupted_Binary', "..\\Samples\\10_normal_flights.txt.acmi"]
+DISPLAY = [13, 'Display', "..\\Samples\\10_normal_flights.txt.acmi"]
 
 CURRENT_CONDITION = NORMAL
 num_condition = CURRENT_CONDITION[0]

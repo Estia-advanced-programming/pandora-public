@@ -144,7 +144,7 @@ def GetSpeed(dico):
 
 def GetSpeedUV(dico):
     res = []
-    dx, dy, dz = np.diff(dico['u']), np.diff(dico['v']), np.diff(dico['altitude'])
+    dx, dy, dz = np.diff(dico['u']), np.diff(dico['v']), np.diff(dico['altitude'], axis=0)
     dt = np.diff(dico['timestamp'])
     vx, vy, vz = dx / dt, dy / dt, dz / dt
     
@@ -154,6 +154,7 @@ def GetSpeedUV(dico):
     
     res = np.sqrt(vx*vx + vy*vy + vz*vz)
     #res = np.concatenate(([res[0]], res), axis=0)
+    
     return vx, vy, vz, res
 
 
@@ -262,6 +263,8 @@ def GetEnginePower2(names, dico, meta):
     # ok
     ay = np.concatenate(([ay[0]], ay), axis=0)
     az = np.concatenate(([az[0]], az), axis=0)
+
+    dico['az'] = az
     
     # WEIGHT
     Wx = 0
@@ -289,7 +292,6 @@ def GetEnginePower2(names, dico, meta):
     Tx = (meta['mass_kg']+meta['mass_fuel_kg']) * ax - Wx - Dx - Lx
     Ty = (meta['mass_kg']+meta['mass_fuel_kg']) * ay - Wy - Dy - Ly
     Tz = (meta['mass_kg']+meta['mass_fuel_kg']) * az - Wz - Dz - Lz
-    
     for i in range(0, meta['nb_motor']):
         names.append("engine_" + str(i))
         engines.append("engine_" + str(i))
@@ -326,7 +328,6 @@ def GetEnginePower3(names, dico, meta):
     D = 0.5 * Ro * (speed+dico['air_speed']) * (speed+dico['air_speed']) * meta['surface_m2'] * meta['drag_coef']
     L = 0.5 * Ro * (speed+dico['air_speed']) * (speed+dico['air_speed']) * meta['surface_m2'] * meta['lift_coef']
     T = meta['mass_kg'] * accel - W - D - L
-    print(np.average(dico['altitude']))
     for i in range(0, meta['nb_motor']):
         names.append("engine" + str(i))
         dico['engine' + str(i)] = np.array(T * dico['speed']) / meta['nb_motor']

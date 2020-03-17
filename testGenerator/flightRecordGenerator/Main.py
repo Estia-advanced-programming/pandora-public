@@ -61,6 +61,7 @@ def main():
 if __name__ == '__main__':
     
     conds = [c.NORMAL, c.BAD_WEATHER, c.MISSING_COLUMN, c.MISSING_HEADER, c.INCOMPLETE_HEADER, c.MISSING_COLNAMES, c.ONE_LINE, c.TWO_LINES, c.THREE_LINES, c.REVERSE, c.ASCII, c.CORRUPTED_BINARY]
+    conds = [c.DISPLAY]
     
     for cur_cond in conds:
         c.CURRENT_CONDITION = cur_cond

@@ -21,7 +21,8 @@ def GetInitialTimestamp(s):
     return val
 
 
-re_records = re.compile("(^#\d*.*?)(?:^\#\d*|0,AuthenticationKey)", re.M | re.DOTALL)
+#re_records = re.compile("(^#\d*.*?)(?:^\#\d*|0,AuthenticationKey)", re.M | re.DOTALL)
+re_records = re.compile("(^#\d*.*?)(?:^\#\d*|^0,)", re.M | re.DOTALL)
 def GetRecords(s):
     recs = re.findall(re_records, s)
     # discard the first one
