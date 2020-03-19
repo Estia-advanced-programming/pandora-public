@@ -1,0 +1,17 @@
+flight id: 1
+flight code: test
+origin: RU
+date: 2020-03-17
+from: vaziani
+to: gelendzhik
+motor(s): 1
+mass aircraft: 100
+mass fuel: 120
+lift coef: 1.60
+drag coef: 0.01
+
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+0,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,100
+1,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,100
+2,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,100
+3,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,100
