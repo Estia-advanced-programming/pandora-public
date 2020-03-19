@@ -1,0 +1,1052 @@
+[
+  {
+    "id": 0,
+    "milestone": "milestone1",
+    "feature": "avgAlt",
+    "file": "testsFiles/milestone1/avgAlt_1.frd",
+    "result": 100
+  },
+  {
+    "id": 1,
+    "milestone": "milestone1",
+    "feature": "avgAlt",
+    "file": "testsFiles/milestone1/avgAlt_2.frd",
+    "result": 100
+  },
+  {
+    "id": 2,
+    "milestone": "milestone1",
+    "feature": "avgAlt",
+    "file": "testsFiles/milestone1/avgAlt_3.frd",
+    "result": 899.53
+  },
+  {
+    "id": 3,
+    "milestone": "milestone1",
+    "feature": "avgAlt",
+    "file": "testsFiles/milestone1/avgAlt_4.frd",
+    "result": 169.5
+  },
+  {
+    "id": 4,
+    "milestone": "milestone1",
+    "feature": "avgAlt",
+    "file": "testsFiles/milestone1/avgAlt_5.frd",
+    "result": 169.5
+  },
+  {
+    "id": 5,
+    "milestone": "milestone1",
+    "feature": "avgAlt",
+    "file": "testsFiles/milestone1/avgAlt_6.frd",
+    "result": 169.5
+  },
+  {
+    "id": 6,
+    "milestone": "milestone1",
+    "feature": "maxAlt",
+    "file": "testsFiles/milestone1/maxAlt_1.frd",
+    "result": 100
+  },
+  {
+    "id": 7,
+    "milestone": "milestone1",
+    "feature": "maxAlt",
+    "file": "testsFiles/milestone1/maxAlt_2.frd",
+    "result": 100
+  },
+  {
+    "id": 8,
+    "milestone": "milestone1",
+    "feature": "maxAlt",
+    "file": "testsFiles/milestone1/maxAlt_3.frd",
+    "result": 835.13
+  },
+  {
+    "id": 9,
+    "milestone": "milestone1",
+    "feature": "maxAlt",
+    "file": "testsFiles/milestone1/maxAlt_4.frd",
+    "result": 983.02
+  },
+  {
+    "id": 10,
+    "milestone": "milestone1",
+    "feature": "maxAlt",
+    "file": "testsFiles/milestone1/maxAlt_5.frd",
+    "result": 983.02
+  },
+  {
+    "id": 11,
+    "milestone": "milestone1",
+    "feature": "maxAlt",
+    "file": "testsFiles/milestone1/maxAlt_6.frd",
+    "result": 983.02
+  },
+  {
+    "id": 12,
+    "milestone": "milestone1",
+    "feature": "avgAirSpeed",
+    "file": "testsFiles/milestone1/avgAirSpeed_1.frd",
+    "result": 100
+  },
+  {
+    "id": 13,
+    "milestone": "milestone1",
+    "feature": "avgAirSpeed",
+    "file": "testsFiles/milestone1/avgAirSpeed_2.frd",
+    "result": 100
+  },
+  {
+    "id": 14,
+    "milestone": "milestone1",
+    "feature": "avgAirSpeed",
+    "file": "testsFiles/milestone1/avgAirSpeed_3.frd",
+    "result": 678.76
+  },
+  {
+    "id": 15,
+    "milestone": "milestone1",
+    "feature": "avgAirSpeed",
+    "file": "testsFiles/milestone1/avgAirSpeed_4.frd",
+    "result": 134.7875
+  },
+  {
+    "id": 16,
+    "milestone": "milestone1",
+    "feature": "avgAirSpeed",
+    "file": "testsFiles/milestone1/avgAirSpeed_5.frd",
+    "result": 134.7875
+  },
+  {
+    "id": 17,
+    "milestone": "milestone1",
+    "feature": "avgAirSpeed",
+    "file": "testsFiles/milestone1/avgAirSpeed_6.frd",
+    "result": 134.7875
+  },
+  {
+    "id": 18,
+    "milestone": "milestone1",
+    "feature": "maxAirSpeed",
+    "file": "testsFiles/milestone1/maxAirSpeed_1.frd",
+    "result": 100
+  },
+  {
+    "id": 19,
+    "milestone": "milestone1",
+    "feature": "maxAirSpeed",
+    "file": "testsFiles/milestone1/maxAirSpeed_2.frd",
+    "result": 100
+  },
+  {
+    "id": 20,
+    "milestone": "milestone1",
+    "feature": "maxAirSpeed",
+    "file": "testsFiles/milestone1/maxAirSpeed_3.frd",
+    "result": 696.62
+  },
+  {
+    "id": 21,
+    "milestone": "milestone1",
+    "feature": "maxAirSpeed",
+    "file": "testsFiles/milestone1/maxAirSpeed_4.frd",
+    "result": 816.66
+  },
+  {
+    "id": 22,
+    "milestone": "milestone1",
+    "feature": "maxAirSpeed",
+    "file": "testsFiles/milestone1/maxAirSpeed_5.frd",
+    "result": 816.66
+  },
+  {
+    "id": 23,
+    "milestone": "milestone1",
+    "feature": "maxAirSpeed",
+    "file": "testsFiles/milestone1/maxAirSpeed_6.frd",
+    "result": 816.66
+  },
+  {
+    "id": 24,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_1.frd",
+    "result": 100
+  },
+  {
+    "id": 25,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_2.frd",
+    "result": 100
+  },
+  {
+    "id": 26,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_3.frd",
+    "result": 810.68
+  },
+  {
+    "id": 27,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_4.frd",
+    "result": 23.0075
+  },
+  {
+    "id": 28,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_5.frd",
+    "result": 23.0075
+  },
+  {
+    "id": 29,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_6.frd",
+    "result": 23.0075
+  },
+  {
+    "id": 30,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_1.frd",
+    "result": 100
+  },
+  {
+    "id": 31,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_2.frd",
+    "result": 100
+  },
+  {
+    "id": 32,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_3.frd",
+    "result": 109.61
+  },
+  {
+    "id": 33,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_4.frd",
+    "result": 14.85
+  },
+  {
+    "id": 34,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_5.frd",
+    "result": 14.85
+  },
+  {
+    "id": 35,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_6.frd",
+    "result": 14.85
+  },
+  {
+    "id": 36,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_7.frd",
+    "result": 200
+  },
+  {
+    "id": 37,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_8.frd",
+    "result": 200
+  },
+  {
+    "id": 38,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_9.frd",
+    "result": 1601.92
+  },
+  {
+    "id": 39,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_10.frd",
+    "result": 299.175
+  },
+  {
+    "id": 40,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_11.frd",
+    "result": 299.175
+  },
+  {
+    "id": 41,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_12.frd",
+    "result": 299.175
+  },
+  {
+    "id": 42,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_7.frd",
+    "result": 200
+  },
+  {
+    "id": 43,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_8.frd",
+    "result": 200
+  },
+  {
+    "id": 44,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_9.frd",
+    "result": 152.94
+  },
+  {
+    "id": 45,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_10.frd",
+    "result": 871.2
+  },
+  {
+    "id": 46,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_11.frd",
+    "result": 871.2
+  },
+  {
+    "id": 47,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_12.frd",
+    "result": 871.2
+  },
+  {
+    "id": 48,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_13.frd",
+    "result": 400
+  },
+  {
+    "id": 49,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_14.frd",
+    "result": 400
+  },
+  {
+    "id": 50,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_15.frd",
+    "result": 3710
+  },
+  {
+    "id": 51,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_16.frd",
+    "result": 683.62
+  },
+  {
+    "id": 52,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_17.frd",
+    "result": 683.62
+  },
+  {
+    "id": 53,
+    "milestone": "milestone1",
+    "feature": "avgEnginePower",
+    "file": "testsFiles/milestone1/avgEnginePower_18.frd",
+    "result": 683.62
+  },
+  {
+    "id": 54,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_13.frd",
+    "result": 400
+  },
+  {
+    "id": 55,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_14.frd",
+    "result": 400
+  },
+  {
+    "id": 56,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_15.frd",
+    "result": 1508.16
+  },
+  {
+    "id": 57,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_16.frd",
+    "result": 2615.28
+  },
+  {
+    "id": 58,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_17.frd",
+    "result": 2615.28
+  },
+  {
+    "id": 59,
+    "milestone": "milestone1",
+    "feature": "maxEnginePower",
+    "file": "testsFiles/milestone1/maxEnginePower_18.frd",
+    "result": 2615.28
+  },
+  {
+    "id": 60,
+    "milestone": "milestone2",
+    "feature": "avgTemp",
+    "file": "testsFiles/milestone2/avgTemp_1.frd",
+    "result": 100
+  },
+  {
+    "id": 61,
+    "milestone": "milestone2",
+    "feature": "avgTemp",
+    "file": "testsFiles/milestone2/avgTemp_2.frd",
+    "result": 100
+  },
+  {
+    "id": 62,
+    "milestone": "milestone2",
+    "feature": "avgTemp",
+    "file": "testsFiles/milestone2/avgTemp_3.frd",
+    "result": 389.89
+  },
+  {
+    "id": 63,
+    "milestone": "milestone2",
+    "feature": "avgTemp",
+    "file": "testsFiles/milestone2/avgTemp_4.frd",
+    "result": 104.03
+  },
+  {
+    "id": 64,
+    "milestone": "milestone2",
+    "feature": "avgTemp",
+    "file": "testsFiles/milestone2/avgTemp_5.frd",
+    "result": 104.03
+  },
+  {
+    "id": 65,
+    "milestone": "milestone2",
+    "feature": "avgTemp",
+    "file": "testsFiles/milestone2/avgTemp_6.frd",
+    "result": 104.03
+  },
+  {
+    "id": 66,
+    "milestone": "milestone2",
+    "feature": "minTemp",
+    "file": "testsFiles/milestone2/minTemp_1.frd",
+    "result": 100
+  },
+  {
+    "id": 67,
+    "milestone": "milestone2",
+    "feature": "minTemp",
+    "file": "testsFiles/milestone2/minTemp_2.frd",
+    "result": 100
+  },
+  {
+    "id": 68,
+    "milestone": "milestone2",
+    "feature": "minTemp",
+    "file": "testsFiles/milestone2/minTemp_3.frd",
+    "result": 934.64
+  },
+  {
+    "id": 69,
+    "milestone": "milestone2",
+    "feature": "minTemp",
+    "file": "testsFiles/milestone2/minTemp_4.frd",
+    "result": 990.93
+  },
+  {
+    "id": 70,
+    "milestone": "milestone2",
+    "feature": "minTemp",
+    "file": "testsFiles/milestone2/minTemp_5.frd",
+    "result": 990.93
+  },
+  {
+    "id": 71,
+    "milestone": "milestone2",
+    "feature": "minTemp",
+    "file": "testsFiles/milestone2/minTemp_6.frd",
+    "result": 990.93
+  },
+  {
+    "id": 72,
+    "milestone": "milestone2",
+    "feature": "maxTemp",
+    "file": "testsFiles/milestone2/maxTemp_1.frd",
+    "result": 100
+  },
+  {
+    "id": 73,
+    "milestone": "milestone2",
+    "feature": "maxTemp",
+    "file": "testsFiles/milestone2/maxTemp_2.frd",
+    "result": 100
+  },
+  {
+    "id": 74,
+    "milestone": "milestone2",
+    "feature": "maxTemp",
+    "file": "testsFiles/milestone2/maxTemp_3.frd",
+    "result": 322.81
+  },
+  {
+    "id": 75,
+    "milestone": "milestone2",
+    "feature": "maxTemp",
+    "file": "testsFiles/milestone2/maxTemp_4.frd",
+    "result": 584.39
+  },
+  {
+    "id": 76,
+    "milestone": "milestone2",
+    "feature": "maxTemp",
+    "file": "testsFiles/milestone2/maxTemp_5.frd",
+    "result": 584.39
+  },
+  {
+    "id": 77,
+    "milestone": "milestone2",
+    "feature": "maxTemp",
+    "file": "testsFiles/milestone2/maxTemp_6.frd",
+    "result": 584.39
+  },
+  {
+    "id": 78,
+    "milestone": "milestone2",
+    "feature": "avgPressure",
+    "file": "testsFiles/milestone2/avgPressure_1.frd",
+    "result": 100
+  },
+  {
+    "id": 79,
+    "milestone": "milestone2",
+    "feature": "avgPressure",
+    "file": "testsFiles/milestone2/avgPressure_2.frd",
+    "result": 100
+  },
+  {
+    "id": 80,
+    "milestone": "milestone2",
+    "feature": "avgPressure",
+    "file": "testsFiles/milestone2/avgPressure_3.frd",
+    "result": 17
+  },
+  {
+    "id": 81,
+    "milestone": "milestone2",
+    "feature": "avgPressure",
+    "file": "testsFiles/milestone2/avgPressure_4.frd",
+    "result": 171.92
+  },
+  {
+    "id": 82,
+    "milestone": "milestone2",
+    "feature": "avgPressure",
+    "file": "testsFiles/milestone2/avgPressure_5.frd",
+    "result": 171.92
+  },
+  {
+    "id": 83,
+    "milestone": "milestone2",
+    "feature": "avgPressure",
+    "file": "testsFiles/milestone2/avgPressure_6.frd",
+    "result": 171.92
+  },
+  {
+    "id": 84,
+    "milestone": "milestone2",
+    "feature": "minPressure",
+    "file": "testsFiles/milestone2/minPressure_1.frd",
+    "result": 100
+  },
+  {
+    "id": 85,
+    "milestone": "milestone2",
+    "feature": "minPressure",
+    "file": "testsFiles/milestone2/minPressure_2.frd",
+    "result": 100
+  },
+  {
+    "id": 86,
+    "milestone": "milestone2",
+    "feature": "minPressure",
+    "file": "testsFiles/milestone2/minPressure_3.frd",
+    "result": 402.55
+  },
+  {
+    "id": 87,
+    "milestone": "milestone2",
+    "feature": "minPressure",
+    "file": "testsFiles/milestone2/minPressure_4.frd",
+    "result": 587.14
+  },
+  {
+    "id": 88,
+    "milestone": "milestone2",
+    "feature": "minPressure",
+    "file": "testsFiles/milestone2/minPressure_5.frd",
+    "result": 587.14
+  },
+  {
+    "id": 89,
+    "milestone": "milestone2",
+    "feature": "minPressure",
+    "file": "testsFiles/milestone2/minPressure_6.frd",
+    "result": 587.14
+  },
+  {
+    "id": 90,
+    "milestone": "milestone2",
+    "feature": "maxPressure",
+    "file": "testsFiles/milestone2/maxPressure_1.frd",
+    "result": 100
+  },
+  {
+    "id": 91,
+    "milestone": "milestone2",
+    "feature": "maxPressure",
+    "file": "testsFiles/milestone2/maxPressure_2.frd",
+    "result": 100
+  },
+  {
+    "id": 92,
+    "milestone": "milestone2",
+    "feature": "maxPressure",
+    "file": "testsFiles/milestone2/maxPressure_3.frd",
+    "result": 859.96
+  },
+  {
+    "id": 93,
+    "milestone": "milestone2",
+    "feature": "maxPressure",
+    "file": "testsFiles/milestone2/maxPressure_4.frd",
+    "result": 192.55
+  },
+  {
+    "id": 94,
+    "milestone": "milestone2",
+    "feature": "maxPressure",
+    "file": "testsFiles/milestone2/maxPressure_5.frd",
+    "result": 192.55
+  },
+  {
+    "id": 95,
+    "milestone": "milestone2",
+    "feature": "maxPressure",
+    "file": "testsFiles/milestone2/maxPressure_6.frd",
+    "result": 192.55
+  },
+  {
+    "id": 96,
+    "milestone": "milestone2",
+    "feature": "avgHumidity",
+    "file": "testsFiles/milestone2/avgHumidity_1.frd",
+    "result": 100
+  },
+  {
+    "id": 97,
+    "milestone": "milestone2",
+    "feature": "avgHumidity",
+    "file": "testsFiles/milestone2/avgHumidity_2.frd",
+    "result": 100
+  },
+  {
+    "id": 98,
+    "milestone": "milestone2",
+    "feature": "avgHumidity",
+    "file": "testsFiles/milestone2/avgHumidity_3.frd",
+    "result": 24.67
+  },
+  {
+    "id": 99,
+    "milestone": "milestone2",
+    "feature": "avgHumidity",
+    "file": "testsFiles/milestone2/avgHumidity_4.frd",
+    "result": 58.315
+  },
+  {
+    "id": 100,
+    "milestone": "milestone2",
+    "feature": "avgHumidity",
+    "file": "testsFiles/milestone2/avgHumidity_5.frd",
+    "result": 58.315
+  },
+  {
+    "id": 101,
+    "milestone": "milestone2",
+    "feature": "avgHumidity",
+    "file": "testsFiles/milestone2/avgHumidity_6.frd",
+    "result": 58.315
+  },
+  {
+    "id": 102,
+    "milestone": "milestone2",
+    "feature": "minHumidity",
+    "file": "testsFiles/milestone2/minHumidity_1.frd",
+    "result": 100
+  },
+  {
+    "id": 103,
+    "milestone": "milestone2",
+    "feature": "minHumidity",
+    "file": "testsFiles/milestone2/minHumidity_2.frd",
+    "result": 100
+  },
+  {
+    "id": 104,
+    "milestone": "milestone2",
+    "feature": "minHumidity",
+    "file": "testsFiles/milestone2/minHumidity_3.frd",
+    "result": 43.31
+  },
+  {
+    "id": 105,
+    "milestone": "milestone2",
+    "feature": "minHumidity",
+    "file": "testsFiles/milestone2/minHumidity_4.frd",
+    "result": 185.52
+  },
+  {
+    "id": 106,
+    "milestone": "milestone2",
+    "feature": "minHumidity",
+    "file": "testsFiles/milestone2/minHumidity_5.frd",
+    "result": 185.52
+  },
+  {
+    "id": 107,
+    "milestone": "milestone2",
+    "feature": "minHumidity",
+    "file": "testsFiles/milestone2/minHumidity_6.frd",
+    "result": 185.52
+  },
+  {
+    "id": 108,
+    "milestone": "milestone2",
+    "feature": "maxHumidity",
+    "file": "testsFiles/milestone2/maxHumidity_1.frd",
+    "result": 100
+  },
+  {
+    "id": 109,
+    "milestone": "milestone2",
+    "feature": "maxHumidity",
+    "file": "testsFiles/milestone2/maxHumidity_2.frd",
+    "result": 100
+  },
+  {
+    "id": 110,
+    "milestone": "milestone2",
+    "feature": "maxHumidity",
+    "file": "testsFiles/milestone2/maxHumidity_3.frd",
+    "result": 387.48
+  },
+  {
+    "id": 111,
+    "milestone": "milestone2",
+    "feature": "maxHumidity",
+    "file": "testsFiles/milestone2/maxHumidity_4.frd",
+    "result": 804.43
+  },
+  {
+    "id": 112,
+    "milestone": "milestone2",
+    "feature": "maxHumidity",
+    "file": "testsFiles/milestone2/maxHumidity_5.frd",
+    "result": 804.43
+  },
+  {
+    "id": 113,
+    "milestone": "milestone2",
+    "feature": "maxHumidity",
+    "file": "testsFiles/milestone2/maxHumidity_6.frd",
+    "result": 804.43
+  },
+  {
+    "id": 114,
+    "milestone": "milestone2",
+    "feature": "avgHeartRate",
+    "file": "testsFiles/milestone2/avgHeartRate_1.frd",
+    "result": 100
+  },
+  {
+    "id": 115,
+    "milestone": "milestone2",
+    "feature": "avgHeartRate",
+    "file": "testsFiles/milestone2/avgHeartRate_2.frd",
+    "result": 100
+  },
+  {
+    "id": 116,
+    "milestone": "milestone2",
+    "feature": "avgHeartRate",
+    "file": "testsFiles/milestone2/avgHeartRate_3.frd",
+    "result": 675.59
+  },
+  {
+    "id": 117,
+    "milestone": "milestone2",
+    "feature": "avgHeartRate",
+    "file": "testsFiles/milestone2/avgHeartRate_4.frd",
+    "result": 118.205
+  },
+  {
+    "id": 118,
+    "milestone": "milestone2",
+    "feature": "avgHeartRate",
+    "file": "testsFiles/milestone2/avgHeartRate_5.frd",
+    "result": 118.205
+  },
+  {
+    "id": 119,
+    "milestone": "milestone2",
+    "feature": "avgHeartRate",
+    "file": "testsFiles/milestone2/avgHeartRate_6.frd",
+    "result": 118.205
+  },
+  {
+    "id": 120,
+    "milestone": "milestone2",
+    "feature": "minHeartRate",
+    "file": "testsFiles/milestone2/minHeartRate_1.frd",
+    "result": 100
+  },
+  {
+    "id": 121,
+    "milestone": "milestone2",
+    "feature": "minHeartRate",
+    "file": "testsFiles/milestone2/minHeartRate_2.frd",
+    "result": 100
+  },
+  {
+    "id": 122,
+    "milestone": "milestone2",
+    "feature": "minHeartRate",
+    "file": "testsFiles/milestone2/minHeartRate_3.frd",
+    "result": 578.18
+  },
+  {
+    "id": 123,
+    "milestone": "milestone2",
+    "feature": "minHeartRate",
+    "file": "testsFiles/milestone2/minHeartRate_4.frd",
+    "result": 610.83
+  },
+  {
+    "id": 124,
+    "milestone": "milestone2",
+    "feature": "minHeartRate",
+    "file": "testsFiles/milestone2/minHeartRate_5.frd",
+    "result": 610.83
+  },
+  {
+    "id": 125,
+    "milestone": "milestone2",
+    "feature": "minHeartRate",
+    "file": "testsFiles/milestone2/minHeartRate_6.frd",
+    "result": 610.83
+  },
+  {
+    "id": 126,
+    "milestone": "milestone2",
+    "feature": "maxHeartRate",
+    "file": "testsFiles/milestone2/maxHeartRate_1.frd",
+    "result": 100
+  },
+  {
+    "id": 127,
+    "milestone": "milestone2",
+    "feature": "maxHeartRate",
+    "file": "testsFiles/milestone2/maxHeartRate_2.frd",
+    "result": 100
+  },
+  {
+    "id": 128,
+    "milestone": "milestone2",
+    "feature": "maxHeartRate",
+    "file": "testsFiles/milestone2/maxHeartRate_3.frd",
+    "result": 633.61
+  },
+  {
+    "id": 129,
+    "milestone": "milestone2",
+    "feature": "maxHeartRate",
+    "file": "testsFiles/milestone2/maxHeartRate_4.frd",
+    "result": 600.64
+  },
+  {
+    "id": 130,
+    "milestone": "milestone2",
+    "feature": "maxHeartRate",
+    "file": "testsFiles/milestone2/maxHeartRate_5.frd",
+    "result": 600.64
+  },
+  {
+    "id": 131,
+    "milestone": "milestone2",
+    "feature": "maxHeartRate",
+    "file": "testsFiles/milestone2/maxHeartRate_6.frd",
+    "result": 600.64
+  },
+  {
+    "id": 132,
+    "milestone": "milestone2",
+    "feature": "avgOxygen",
+    "file": "testsFiles/milestone2/avgOxygen_1.frd",
+    "result": 100
+  },
+  {
+    "id": 133,
+    "milestone": "milestone2",
+    "feature": "avgOxygen",
+    "file": "testsFiles/milestone2/avgOxygen_2.frd",
+    "result": 100
+  },
+  {
+    "id": 134,
+    "milestone": "milestone2",
+    "feature": "avgOxygen",
+    "file": "testsFiles/milestone2/avgOxygen_3.frd",
+    "result": 911.15
+  },
+  {
+    "id": 135,
+    "milestone": "milestone2",
+    "feature": "avgOxygen",
+    "file": "testsFiles/milestone2/avgOxygen_4.frd",
+    "result": 167.075
+  },
+  {
+    "id": 136,
+    "milestone": "milestone2",
+    "feature": "avgOxygen",
+    "file": "testsFiles/milestone2/avgOxygen_5.frd",
+    "result": 167.075
+  },
+  {
+    "id": 137,
+    "milestone": "milestone2",
+    "feature": "avgOxygen",
+    "file": "testsFiles/milestone2/avgOxygen_6.frd",
+    "result": 167.075
+  },
+  {
+    "id": 138,
+    "milestone": "milestone2",
+    "feature": "minOxygen",
+    "file": "testsFiles/milestone2/minOxygen_1.frd",
+    "result": 100
+  },
+  {
+    "id": 139,
+    "milestone": "milestone2",
+    "feature": "minOxygen",
+    "file": "testsFiles/milestone2/minOxygen_2.frd",
+    "result": 100
+  },
+  {
+    "id": 140,
+    "milestone": "milestone2",
+    "feature": "minOxygen",
+    "file": "testsFiles/milestone2/minOxygen_3.frd",
+    "result": 608.41
+  },
+  {
+    "id": 141,
+    "milestone": "milestone2",
+    "feature": "minOxygen",
+    "file": "testsFiles/milestone2/minOxygen_4.frd",
+    "result": 654.82
+  },
+  {
+    "id": 142,
+    "milestone": "milestone2",
+    "feature": "minOxygen",
+    "file": "testsFiles/milestone2/minOxygen_5.frd",
+    "result": 654.82
+  },
+  {
+    "id": 143,
+    "milestone": "milestone2",
+    "feature": "minOxygen",
+    "file": "testsFiles/milestone2/minOxygen_6.frd",
+    "result": 654.82
+  },
+  {
+    "id": 144,
+    "milestone": "milestone2",
+    "feature": "maxOxygen",
+    "file": "testsFiles/milestone2/maxOxygen_1.frd",
+    "result": 100
+  },
+  {
+    "id": 145,
+    "milestone": "milestone2",
+    "feature": "maxOxygen",
+    "file": "testsFiles/milestone2/maxOxygen_2.frd",
+    "result": 100
+  },
+  {
+    "id": 146,
+    "milestone": "milestone2",
+    "feature": "maxOxygen",
+    "file": "testsFiles/milestone2/maxOxygen_3.frd",
+    "result": 832.4
+  },
+  {
+    "id": 147,
+    "milestone": "milestone2",
+    "feature": "maxOxygen",
+    "file": "testsFiles/milestone2/maxOxygen_4.frd",
+    "result": 483.14
+  },
+  {
+    "id": 148,
+    "milestone": "milestone2",
+    "feature": "maxOxygen",
+    "file": "testsFiles/milestone2/maxOxygen_5.frd",
+    "result": 483.14
+  },
+  {
+    "id": 149,
+    "milestone": "milestone2",
+    "feature": "maxOxygen",
+    "file": "testsFiles/milestone2/maxOxygen_6.frd",
+    "result": 483.14
+  }
+]

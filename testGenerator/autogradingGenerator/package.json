@@ -9,7 +9,8 @@
   "author": "dhmmasson",
   "license": "MIT",
   "dependencies": {
-    "json-beautify": "^1.1.1"
+    "json-beautify": "^1.1.1",
+    "tree-kill": "^1.2.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
