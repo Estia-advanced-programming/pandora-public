@@ -9,7 +9,7 @@ let gid = 0 ;
 const tests =
 { milestones : {}
 , tests      : [] } ;
-
+generate() ;
 export default function generate() {
   for ( const index in toDo.milestones ) {
     const milestone = toDo.milestones[ index ] ;
@@ -23,9 +23,14 @@ export default function generate() {
   console.table( tests.tests ) ;
 }
 
-function createSuite( milestone, { suffix, types, input } ) {
-  for( const type of types ) {
-    createMinMaxSuite( milestone, type, suffix, input, ( type === "min" ) ? 1000 : 0 ) ;
+function createSuite( milestone, { suffix, types, values, result, input } ) {
+  if( types ) {
+    for( const type of types ) {
+      createMinMaxSuite( milestone, type, suffix, input, ( type === "min" ) ? 1000 : 0 ) ;
+    }
+  } else {
+    const id = registerTest( milestone, suffix, result ) ;
+    createTestFile( milestone, suffix, id, {}, createInput( input, values ), 0 ) ;
   }
 }
 
@@ -40,11 +45,11 @@ function createMinMaxSuite( milestone, type, _name, input, restValue = 0, metada
   let id = registerTest( milestone, name, resultat ) ;
   createTestFile( milestone, name, id, metadata, values, restValue ) ;
   // integer negative value
-  // r = -100 ;
-  // values = createInput( input, [ r, r, r, r ] ) ;
-  // resultat = computeResultat( type, input, values ) ;
-  // id = registerTest( milestone, name, resultat ) ;
-  // createTestFile( milestone, name, id, metadata, values, restValue ) ;
+  r = -100 ;
+  values = createInput( input, [ r, r, r, r ] ) ;
+  resultat = computeResultat( type, input, values ) ;
+  id = registerTest( milestone, name, resultat ) ;
+  createTestFile( milestone, name, id, metadata, values, restValue ) ;
   // one line
   r = 100 ;
   values = createInput( input, [ r ] ) ;
@@ -145,8 +150,18 @@ function createInput( input, values ) {
   const object = {} ;
   const inputs = Array.prototype.concat( input ) ;
   object.timestamp = [] ;
-  for( const i in values ) object.timestamp.push( i ) ;
-  for( const input of inputs ) object[ input ] = values ;
+
+  if( values instanceof Array ) {
+    for( const i in values ) object.timestamp.push( i ) ;
+    for( const input of inputs ) object[ input ] = values ;
+  } else if( typeof values === "object" ) {
+    let length = 0 ;
+    for( const input of inputs ) {
+      object[ input ] = values[ input ] ;
+      length = values[ input ].length ;
+    }
+    for( let i = 0 ; i < length ; i++ ) object.timestamp.push( i ) ;
+  }
 
   return object ;
 }

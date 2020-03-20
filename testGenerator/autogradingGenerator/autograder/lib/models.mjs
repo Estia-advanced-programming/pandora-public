@@ -39,7 +39,7 @@ export class Records {
    * @return {type}              description
    */
   constructor( values, motors = 1, defaultValue = 0 ) {
-    const header = [ "timestamp", "longitude", "latitude", "altitude", "roll", "pitch", "yaw", "u", "v", "heading", "air_speed", "temperature_in", "humidity_in", "pressure_in", "heart_rate", "oxygen_mask" ] ;
+    const header = [ "timestamp", "longitude", "latitude", "altitude", "roll", "pitch", "yaw", "heading", "air_speed", "temperature_in", "humidity_in", "pressure_in", "heart_rate", "oxygen_mask" ] ;
     const indiceEngine0 = header.indexOf( "temperature_in" ) ;
     for( let i = 0 ; i < motors ; i++ ) header.splice( indiceEngine0 + i, 0, `engine_${ i }` ) ;
 

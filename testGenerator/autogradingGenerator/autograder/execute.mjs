@@ -19,16 +19,33 @@ function handler( test ) {
   } ) ;
 }
 const options =
-{ batchSize : 20
+{ batchSize : 10
 , retry     : false
 } ;
 
+
+function score0( s ) {
+  const factor = 10 ;
+  return Math.floor( Math.pow( factor * factor, 1 - Math.abs( s ) ) / factor ) / factor ;
+}
 
 async function processTest( err, jsonFile ) {
   if( err ) { return console.error( err ) ; }
   const testSuite = JSON.parse( jsonFile ) ;
   try {
     await batchPromises( testSuite, handler, options ) ;
+    for( const test of testSuite ) {
+      delete test.id ;
+      if( typeof test.result === "number" ) {
+        if( test.result === 0 ) test.total = score0( test.student ) ;
+        test.total = score0( ( test.student - test.result ) / test.result ) ;
+      } else if( typeof test.reference === "number" ) {
+        if( test.result === 0 ) test.total = score0( test.student ) ;
+        test.total = score0( ( test.student - test.reference ) / test.reference ) ;
+      } else {
+        test.total = test.reference.match( test.student ) ? 1 : 0 ;
+      }
+    }
     console.table( testSuite ) ;
   } catch( e ) { console.log( e ) ; }
   return 0 ;
@@ -38,7 +55,7 @@ function reference( options, files ) {
   return constructCommand( "../../../release/pandora.jar", options, files ) ;
 }
 function pandora( options, files ) {
-  return constructCommand( "/Users/dimitri/Documents/workspace/enseignement/2020/advancedProg/Archives/pandora-student/blackvisionmirror/target/pandora.jar", options, files ) ;
+  return constructCommand( "/Users/dimitri/Documents/workspace/enseignement/2020/advancedProg/Archives/pandora-student/drt/target/pandora.jar", options, files ) ;
 }
 
 function constructCommand( jar, _option, _files ) {
@@ -49,7 +66,11 @@ function constructCommand( jar, _option, _files ) {
 
 function cleanOutput( string ) {
   // single line
-  if( string.match( /\d+ (?<out>\d+\.?\d*)\n*/ ) ) return +string.match( /\d+ (?<out>\d+\.?\d*)\n*/ ).groups.out ;
-  if( string.match( /(?<out>\d+\.?\d*)\n*/ ) ) return +string.match( /(?<out>\d+\.?\d*)\n*/ ).groups.out ;
+  let regex = /(?<out>\d\d:\d\d:\d\d)\n*/ ;
+  if( string.match( regex ) ) return string.match( regex ).groups.out ;
+  regex = /^\d+ (?<out>-?\d+\.?\d*)\n*/ ;
+  if( string.match( regex ) ) return +string.match( regex ).groups.out ;
+  regex = /(?<out>-?\d+\.?\d*)\n*/ ;
+  if( string.match( regex ) ) return +string.match( regex ).groups.out ;
   return string ;
 }
