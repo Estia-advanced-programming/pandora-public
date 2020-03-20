@@ -10,8 +10,8 @@ mass fuel: 120
 lift coef: 1.60
 drag coef: 0.01
 
-timestamp,longitude,latitude,altitude,roll,pitch,yaw,u,v,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,668.3
-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+timestamp,longitude,latitude,altitude,roll,pitch,yaw,heading,air_speed,engine_0,temperature_in,humidity_in,pressure_in,heart_rate,oxygen_mask
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,608.77
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,608.77
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,608.77
+3,0,0,0,0,0,0,0,0,0,0,0,0,0,608.77

@@ -14,7 +14,9 @@ export default function batchPromises( items, fn, options ) {
   function getCurrentItem( item ) {
     return fn( item )
       .then( function( result ) {
-        console.log( "." ) ;
+        process.stdout.write( Math.round( 100 * index / items.length ) + "% " ) ;
+        for( let i = 0 ; i < index % 3 ; i++ ) process.stdout.write( "." ) ;
+        process.stdout.write( "     \r" ) ;
         results.push( result ) ;
         return getNextItem() ;
       } )
@@ -26,6 +28,7 @@ export default function batchPromises( items, fn, options ) {
     return getCurrentItem( item ) ;
   } ) ;
   return Promise.all( promises ).then( function() {
+    process.stdout.write( "\n" ) ;
     return results ;
   } ) ;
 }
