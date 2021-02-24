@@ -1,8 +1,0 @@
-[
-   {
-      "name":"Flight Closeness ",
-      "optionLine":"-o closeFlight",
-      "testFile":"multi"
-   }
-
-]
