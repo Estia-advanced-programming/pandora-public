@@ -118,7 +118,7 @@ def main(argv):
         # this is running on a machine
         load_dotenv("../Resources/.env")
         git_token = os.getenv("GIT_TOKEN")
-        git_repo = "Estia-advanced-programming/ttt4-dim2"
+        git_repo = "Estia-advanced-programming/weekendtest-team3"
         verbose = True
 
     g = Github(git_token)
