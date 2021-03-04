@@ -410,7 +410,7 @@ issues = [
         , "body" : ""+
                 "**CLI Output Name**: -o flightDistance\n\n"+
                 "**Input**: a flight record file\n\n"+
-                "**Print**: the total flight distance (km)\n"
+                "**Print**: the total flight distance (m)\n"
         , "labels" : ['computing']
         , "milestone" : 2
     }
@@ -897,7 +897,7 @@ issues = [
         , "body" : ''+
             "**Description**: Instead of giving multiple file names in the parameter of the program, manage the **--batch** (or **-b**) option to give a folder (e.g., --batch testFilesMilestone1/)."+
             "The program will then run on each files individually in **alphabetical order**.\n\n"
-            "**Example**: The test/ folder contains 4 files. When running the program with '-o avgALT -b test', the output will be\n"+
+            "**Example**: The test/ folder contains 4 files. When running the program with '-o avgAlt -b test', the output will be\n"+
             "value1\n"+
             "value2\n"+
             "value3\n"+
