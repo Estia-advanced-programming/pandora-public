@@ -410,7 +410,7 @@ issues = [
         , "body" : ""+
                 "**CLI Output Name**: -o flightDistance\n\n"+
                 "**Input**: a flight record file\n\n"+
-                "**Print**: the total flight distance (km)\n"
+                "**Print**: the total flight distance (m)\n"
         , "labels" : ['computing']
         , "milestone" : 2
     }
