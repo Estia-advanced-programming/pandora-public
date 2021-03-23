@@ -268,7 +268,7 @@ issues = [
     ,{
         "title": "Max Temperature"
         , "body" : ""+
-                "**CLI Output Name**: -o avgTemp\n\n"
+                "**CLI Output Name**: -o maxTemp\n\n"
                 "**Input**: a flight record file\n\n"
                 "**Print**: the maximum temperature in the cockpit (℃) during the flight\n"
         , "labels" : ['reporting']
