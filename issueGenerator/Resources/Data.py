@@ -92,6 +92,12 @@ milestones = [
         "state":'open',
         "description":"Learn about Git and the Pandora project",
         "file": "none"
+    },
+    {
+        "title": "Milestone 9: Mono RU Flight Phases",
+        "state":'open',
+        "description":"Extrapolate flight phases from data",
+        "file": "mono"
     }
     ]
 
@@ -482,303 +488,7 @@ issues = [
 
 
     #region milestone 3 Mono RU Flight Analysis
-    ,{
-        "title": "Take Off Phase Detection"
-        , "body" : ""+
-                "**CLI Output Name**: -o takeOff\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the start and end time of the take off phase: start=HH:mm:ss / end=HH:mm:ss\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Cruise Phase Detection"
-        , "body" : ""+
-                "**CLI Output Name**: -o cruise\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the start and end time of the cruise phase: start=HH:mm:ss / end=HH:mm:ss\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Landing Phase Detection"
-        , "body" : ""+
-                "**CLI Output Name**: -o landing\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the start and end time of the landing phase: start=HH:mm:ss / end=HH:mm:ss\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Ratio Distance"
-        , "body" : ""+
-                "**CLI Output Name**: -o ratioDistance\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the ratio between the distance actually done and the point-to-point distance between the take off and landing\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-
-
-    ,{
-        "title": "Average Air Speed (Take Off)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgAirSpeedTakeOff\n\n"
-                "**Input**: a flight record file\n\n"
-                "**Print**: the average air speed (m/s) during the take off phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Air Speed (Take Off)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxAirSpeedTakeOff\n\n"
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum air speed (m/s) during the take off phase\n\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Average Engine Power (Take Off)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgEnginePowerTakeOff\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average total engine power (W) during the take off phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Engine Power (Take Off)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxEnginePowerTakeOff\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum total engine power (W) during the take off phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-    ,{
-        "title": "Average Air Speed (Cruise)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgAirSpeedCruise\n\n"
-                "**Input**: a flight record file\n\n"
-                "**Print**: the average air speed (m/s) during the cruise phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Air Speed (Cruise)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxAirSpeedCruise\n\n"
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum air speed (m/s) during the cruise phase\n\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Average Engine Power (Cruise)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgEnginePowerCruise\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average total engine power (W) during the cruise phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Engine Power (Cruise)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxEnginePowerCruise\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum total engine power (W) during the cruise phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-
-    ,{
-        "title": "Average Air Speed (Landing)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgAirSpeedLanding\n\n"
-                "**Input**: a flight record file\n\n"
-                "**Print**: the average air speed (m/s) during the landing phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Air Speed (Landing)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxAirSpeedLanding\n\n"
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum air speed (m/s) during the landing phase\n\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Average Engine Power (Landing)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgEnginePowerLanding\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average total engine power (W) during the landing phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Engine Power (Landing)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxEnginePowerLanding\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum total engine power (W) during the landing phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-
-
-
-    ,{
-        "title": "Flight Distance (Take Off)"
-        , "body" : ""+
-                "**CLI Output Name**: -o flightDistanceTakeOff\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the total flight distance (km) during the take off phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Average Acceleration (Take Off)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgAccelerationTakeOff\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average acceleration (m/s^2) during the take off phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Acceleration (Take Off)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxAccelerationTakeOff\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum acceleration (m/s^2) during the take off phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Wind Speed (Take Off)"
-        , "body" : ""+
-                "**CLI Output Name**: -o windSpeedTakeOff\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average wind speed (m/s) during the take off phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-
-    ,{
-        "title": "Flight Distance (Cruise)"
-        , "body" : ""+
-                "**CLI Output Name**: -o flightDistanceCruise\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the total flight distance (km) during the cruise phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Average Acceleration (Cruise)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgAccelerationCruise\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average acceleration (m/s^2) during the cruise phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Acceleration (Cruise)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxAccelerationCruise\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum acceleration (m/s^2) during the cruise phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Wind Speed (Cruise)"
-        , "body" : ""+
-                "**CLI Output Name**: -o windSpeedCruise\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average wind speed (m/s) during the cruise phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-
-    ,{
-        "title": "Flight Distance (Landing)"
-        , "body" : ""+
-                "**CLI Output Name**: -o flightDistanceLanding\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the total flight distance (km) during the landing phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Average Acceleration (Landing)"
-        , "body" : ""+
-                "**CLI Output Name**: -o avgAccelerationLanding\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average acceleration (m/s^2) during the landing phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Max Acceleration (Landing)"
-        , "body" : ""+
-                "**CLI Output Name**: -o maxAccelerationLanding\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the maximum acceleration (m/s^2) during the landing phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-    ,{
-        "title": "Wind Speed (Landing)"
-        , "body" : ""+
-                "**CLI Output Name**: -o windSpeedLanding\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the average wind speed (m/s) during the landing phase\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-
-    ,{
-        "title": "Most Demanding Phase - Engine Power"
-        , "body" : ""+
-                "**CLI Output Name**: -o mostPowerPhase\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the name of the phase which required the most average engine power: phase_name:Power (W)\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-    ,{
-        "title": "Most Demanding Phase - Stress"
-        , "body" : ""+
-                "**CLI Output Name**: -o mostStressPhase\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the name of the phase which provoked the highest average heart rate: phase_name:heart_beat (bpm)\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-    ,{
-        "title": "Most Demanding Phase - Horizontal Acceleration"
-        , "body" : ""+
-                "**CLI Output Name**: -o mostAccelPhase\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: the name of the phase with the highest average horizontal acceleration: phase_name:acceleration (m/s^2)\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
+    
 
     ,{
         "title": "Reaching 80% Max Altitude"
@@ -836,16 +546,6 @@ issues = [
                 "**CLI Output Name**: -o stressedPilot\n\n"+
                 "**Input**: a flight record file\n\n"+
                 "**Print**: Did the pilot had a stress attack: y/n\n"
-        , "labels" : ['analysis']
-        , "milestone" : 3
-    }
-
-    ,{
-        "title": "50% Oxygen Phase"
-        , "body" : ""+
-                "**CLI Output Name**: -o oxygenPhase\n\n"+
-                "**Input**: a flight record file\n\n"+
-                "**Print**: Which phase required more than 50% oxygen concentration in the mask: phase_name\n"
         , "labels" : ['analysis']
         , "milestone" : 3
     }
@@ -1234,4 +934,324 @@ issues = [
         , "milestone" : 7
     }
     #endregion
+
+
+    #region milestone phases
+
+    ,{
+        "title": "Take Off Phase Detection"
+        , "body" : ""+
+                "**CLI Output Name**: -o takeOff\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the start and end time of the take off phase: start=HH:mm:ss / end=HH:mm:ss\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Cruise Phase Detection"
+        , "body" : ""+
+                "**CLI Output Name**: -o cruise\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the start and end time of the cruise phase: start=HH:mm:ss / end=HH:mm:ss\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Landing Phase Detection"
+        , "body" : ""+
+                "**CLI Output Name**: -o landing\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the start and end time of the landing phase: start=HH:mm:ss / end=HH:mm:ss\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Ratio Distance"
+        , "body" : ""+
+                "**CLI Output Name**: -o ratioDistance\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the ratio between the distance actually done and the point-to-point distance between the take off and landing\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+
+
+    ,{
+        "title": "Average Air Speed (Take Off)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgAirSpeedTakeOff\n\n"
+                "**Input**: a flight record file\n\n"
+                "**Print**: the average air speed (m/s) during the take off phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Air Speed (Take Off)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxAirSpeedTakeOff\n\n"
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum air speed (m/s) during the take off phase\n\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Average Engine Power (Take Off)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgEnginePowerTakeOff\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average total engine power (W) during the take off phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Engine Power (Take Off)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxEnginePowerTakeOff\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum total engine power (W) during the take off phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+    ,{
+        "title": "Average Air Speed (Cruise)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgAirSpeedCruise\n\n"
+                "**Input**: a flight record file\n\n"
+                "**Print**: the average air speed (m/s) during the cruise phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Air Speed (Cruise)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxAirSpeedCruise\n\n"
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum air speed (m/s) during the cruise phase\n\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Average Engine Power (Cruise)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgEnginePowerCruise\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average total engine power (W) during the cruise phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Engine Power (Cruise)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxEnginePowerCruise\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum total engine power (W) during the cruise phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+
+    ,{
+        "title": "Average Air Speed (Landing)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgAirSpeedLanding\n\n"
+                "**Input**: a flight record file\n\n"
+                "**Print**: the average air speed (m/s) during the landing phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Air Speed (Landing)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxAirSpeedLanding\n\n"
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum air speed (m/s) during the landing phase\n\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Average Engine Power (Landing)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgEnginePowerLanding\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average total engine power (W) during the landing phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Engine Power (Landing)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxEnginePowerLanding\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum total engine power (W) during the landing phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+
+
+
+    ,{
+        "title": "Flight Distance (Take Off)"
+        , "body" : ""+
+                "**CLI Output Name**: -o flightDistanceTakeOff\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the total flight distance (km) during the take off phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Average Acceleration (Take Off)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgAccelerationTakeOff\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average acceleration (m/s^2) during the take off phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Acceleration (Take Off)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxAccelerationTakeOff\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum acceleration (m/s^2) during the take off phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Wind Speed (Take Off)"
+        , "body" : ""+
+                "**CLI Output Name**: -o windSpeedTakeOff\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average wind speed (m/s) during the take off phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+
+    ,{
+        "title": "Flight Distance (Cruise)"
+        , "body" : ""+
+                "**CLI Output Name**: -o flightDistanceCruise\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the total flight distance (km) during the cruise phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Average Acceleration (Cruise)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgAccelerationCruise\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average acceleration (m/s^2) during the cruise phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Acceleration (Cruise)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxAccelerationCruise\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum acceleration (m/s^2) during the cruise phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Wind Speed (Cruise)"
+        , "body" : ""+
+                "**CLI Output Name**: -o windSpeedCruise\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average wind speed (m/s) during the cruise phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+
+    ,{
+        "title": "Flight Distance (Landing)"
+        , "body" : ""+
+                "**CLI Output Name**: -o flightDistanceLanding\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the total flight distance (km) during the landing phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Average Acceleration (Landing)"
+        , "body" : ""+
+                "**CLI Output Name**: -o avgAccelerationLanding\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average acceleration (m/s^2) during the landing phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Max Acceleration (Landing)"
+        , "body" : ""+
+                "**CLI Output Name**: -o maxAccelerationLanding\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the maximum acceleration (m/s^2) during the landing phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Wind Speed (Landing)"
+        , "body" : ""+
+                "**CLI Output Name**: -o windSpeedLanding\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the average wind speed (m/s) during the landing phase\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+
+    ,{
+        "title": "Most Demanding Phase - Engine Power"
+        , "body" : ""+
+                "**CLI Output Name**: -o mostPowerPhase\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the name of the phase which required the most average engine power: phase_name:Power (W)\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+    ,{
+        "title": "Most Demanding Phase - Stress"
+        , "body" : ""+
+                "**CLI Output Name**: -o mostStressPhase\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the name of the phase which provoked the highest average heart rate: phase_name:heart_beat (bpm)\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+
+    ,{
+        "title": "Most Demanding Phase - Horizontal Acceleration"
+        , "body" : ""+
+                "**CLI Output Name**: -o mostAccelPhase\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: the name of the phase with the highest average horizontal acceleration: phase_name:acceleration (m/s^2)\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "50% Oxygen Phase"
+        , "body" : ""+
+                "**CLI Output Name**: -o oxygenPhase\n\n"+
+                "**Input**: a flight record file\n\n"+
+                "**Print**: Which phase required more than 50% oxygen concentration in the mask: phase_name\n"
+        , "labels" : ['analysis']
+        , "milestone" : 9
+    }
+    ,{
+        "title": "Milestone 9 Full Report"
+        , "body" : ""+
+                "**Description**: Without any option, the program outputs every milestone 9's issues at once.\n"+
+                "feature_cli_name:value\n"+
+                "One feature per line (ordered alphabetically)\n"
+        , "labels" : ['output']
+        , "milestone" : 1
+    }
+
     ]
