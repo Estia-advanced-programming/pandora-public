@@ -191,8 +191,9 @@ issues = [
         , "body" : "" +
                 "**CLI Output Name**: --version (or -v)\n\n" +
                 "**Input**: None\n\n" +
-                "**Print**: The current version of the Pandora program\n\n"+
-                "The version is a string of the form 'X.Y.Z' where X, Y and Z are integers.\n. You can read more about the versioning system [here](https://github.com/Estia-advanced-programming/pandora-public/wiki/Semantic-Versioning)\n"
+                "**Print**: The current version of the Pandora program with the form `pandora@1.2.5`\n\n"+
+                "The version is a string of the form 'X.Y.Z' where X, Y and Z are integers.\n"+
+                "You can read more about the versioning system [here](https://github.com/Estia-advanced-programming/pandora-public/wiki/Semantic-Versioning).\n"
         , "labels" : ['cli', "get started"]
         , "milestone" : 8
     }
@@ -211,7 +212,7 @@ issues = [
                 "|-h, --help |                Help - print this help message|\n" +
                 "|-m arg, --metadata arg    |  Metadata - Print the value of the specified metadata|\n"+
                 "|-o arg, --output arg |     Output - Print only the specified feature at the end|\n" +
-                "|-n, --number |            Number: the number of records in the flight record file|\n" +
+                "|-n, --number |            Number - the number of records in the flight record file|\n" +
                 "|-p, --parameters      |     Parameters - List in alphabetical order of the parameters presents in the source|\n"+
                 "|-v, --version |             Version - print the version of the application | \n\n" +
                 "FEATURES:\n"+

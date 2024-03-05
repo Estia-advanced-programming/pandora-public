@@ -153,6 +153,11 @@ def main(argv):
         if issue['title'] not in i_names:
             val = repo.create_issue(title = issue['title'], body = issue['body'], milestone=GetMilestone(issue['milestone'], gmilestones), labels=issue['labels'])
             print("creating " + val.title)
+        else:
+            # update issue if the body has changed, and add the label 'modified'
+            for gi in g_issues:
+                if gi.title == issue['title'] and gi.body != issue['body']:
+                    gi.edit(title = issue['title'], body = issue['body'], milestone=GetMilestone(issue['milestone'], gmilestones), labels=issue['labels'] + ['modified'], state='open')
 
         if verbose:
             optionLine = ""
