@@ -1340,7 +1340,7 @@ issues = [
                 "feature_cli_name:value\n"+
                 "One feature per line (ordered alphabetically)\n"
         , "labels" : ['output']
-        , "milestone" : 1
+        , "milestone" : 9
     }
 
     ]

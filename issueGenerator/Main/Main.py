@@ -162,7 +162,8 @@ def main(argv):
         if verbose:
             optionLine = ""
             # "**CLI Output Name**: -o flightDuration\n\n"
-            tab = re.findall(re.compile("CLI Output Name.*(\-o .*?)\n", re.DOTALL), issue['body'])
+            print(issue)
+            tab = re.findall(re.compile("CLI Output Name.*?(\: .*?)\n", re.DOTALL), issue['body'])
             if len(tab) > 0:
                 optionLine = tab[0]
             m_title = GetMilestone(issue['milestone'], gmilestones).title
