@@ -1,11 +1,15 @@
 
-* **Milestone 0: Initiation to Git**
-    * Description: Learn about Git and the Pandora project
-    * Number of features: 3
+* **Milestone 0: Getting Started and CLI Options**
+    * Description: Start exploring the CLI options and get started with the project
+    * Number of features: 7
     * List:
-        * Exercice 1: Project set up >> CLI option:  
-        * Exercice 2: Update team member information >> CLI option:  
-        * Exercice 3: Branch >> CLI option:  
+        * Version >> CLI option:  
+        * Help >> CLI option: -o option: (content of the manifest.json file) 
+        * Filenames >> CLI option: -o filenames 
+        * Metadata >> CLI option:  
+        * Parameters >> CLI option:  
+        * Number of records >> CLI option:  
+        * Starting time >> CLI option: -o start_time 
 
 * **Milestone 1: Mono RU Flight Description**
     * Description: Provide basic descriptive summary data of a Russian fighter jet flight
