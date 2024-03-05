@@ -117,6 +117,7 @@ def main(argv):
 
     if len(git_repo) == 0:
         # this is running on a machine
+        print("running on a machine")
         load_dotenv("../Resources/.env")
         git_token = os.getenv("GITHUB_TOKEN")
         git_repo = os.getenv("GITHUB_REPOSITORY")
@@ -124,6 +125,7 @@ def main(argv):
 
     g = Github(git_token)
     repo = g.get_repo(git_repo)
+
 
     for label in d.labels:
         try:
@@ -145,6 +147,7 @@ def main(argv):
     i_names = []
     for gi in g_issues:
         i_names.append(gi.title)
+        # TODO: manage to update issues (and re-open them if needed)
 
     for issue in d.issues:
         if issue['title'] not in i_names:

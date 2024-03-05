@@ -14,6 +14,8 @@ labels = [
     , {"name":'input', "color": "1b61fc"}
     , {"name": 'output', "color": "17c462"}
     , {"name": 'error', "color": "ed1758"}
+    , {"name": 'cli', "color": "3bafda"}
+    , {"name": 'get started', "color": "a3a3a3"}
     ]
 
 
@@ -88,90 +90,174 @@ milestones = [
     }
     ,
     {
-        "title": "Milestone 0: Initiation to Git",
+        "title": "Milestone 0: Getting Started and CLI Options",
         "state":'open',
-        "description":"Learn about Git and the Pandora project",
-        "file": "none"
+        "description":"Start exploring the CLI options and get started with the project",
+        "file": "start"
     }
     ]
 
 # https://pygithub.readthedocs.io/en/latest/github_objects/Issue.html
 issues = [
-	#region Initiation
+	# # region Initiation
+    # {
+    #     "title": "Exercice 1: Project set up"
+    #     , "body" : "" +
+    #                "# Description \n" +
+    #                "\n" +
+    #                "See the [wiki][wiki_Exercice1] to read more about this first exercice. \n" +
+    #                "\n" +
+    #                "# tasks : \n" +
+    #                "- [ ] Updated the readme to list your team members\n" +
+    #                "- [ ] Created a automated kanban project on github \n" +
+    #                "- [ ] Moved all issues from the Milestone Initiation to Git into todo\n" +
+    #                "- [ ] this Issue has been closed\n" +
+    #                "\n" +
+    #                "[wiki_Exercice1]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex1\n"
+    #     , "labels" : ['good first issue']
+    #     , "milestone" : 8
+    # }
+    # ,{
+    #     "title": "Exercice 2: Update team member information"
+    #     , "body" :  "" +
+    #                 "# Description \n" +
+    #                 "\n" +
+    #                 "In this exercice all member will edit the same file on their local repository to learn about conflict resolution. \n" +
+    #                 "See the [wiki][wiki_Exercice2] to read more about this first exercice. \n" +
+    #                 "\n" +
+    #                 "# Tasks\n" +
+    #                 "\n" +
+    #                 "- [ ] Member1 has modified `README.md` and created a commit locally\n" +
+    #                 "- [ ] Member2 has modified `README.md` and created a commit locally\n" +
+    #                 "- [ ] Member3 has modified `README.md` and created a commit locally\n" +
+    #                 "- [ ] Member1 has **push**ed their commit to the remote repository\n" +
+    #                 "- [ ] Member2 and 3 \n" +
+    #                 "      - have **Pull**ed the commit from member1\n" +
+    #                 "      - have **Merg**ed the modification into their local repository\n" +
+    #                 "      - have **Commit** the change locally \n" +
+    #                 "- [ ] Member2  *push* their commit to the remote repository\n" +
+    #                 "- [ ] Memberd3 \n" +
+    #                 "      - has **Pull**ed the commit from member2\n" +
+    #                 "      - has **Merg**ed the modification into their local repository\n" +
+    #                 "      - has **Commit** the change locally \n" +
+    #                 "- [ ] this Issue has been closed\n" +
+    #                 "[wiki_Exercice2]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex2\n"
+    #     , "labels" : ['good first issue']
+    #     , "milestone" : 8
+    # }
+    # ,{
+    #     "title": "Exercice 3: Branch"
+    #     , "body" :  "" +
+    #                 "# Description \n" +
+    #                 "\n" +
+    #                 "In this exercice you learn to create a branch for commiting your change before integrating it with the other. \n" +
+    #                 "\n" +
+    #                 "# Tasks \n" +
+    #                 "\n" +
+    #                 "- [ ] Member 1 has created a `dev_member1` branch locally and commited some change to it \n" +
+    #                 "- [ ] Member 2 has created a `dev_member2` branch locally and commited some change to it \n" +
+    #                 "- [ ] Member 3 has created a `dev_member3` branch locally and commited some change to it \n" +
+    #                 "* [ ] Member 1 has pushed its branch to the remote repository \n" +
+    #                 "* [ ] Member 2 has pushed its branch to the remote repository \n" +
+    #                 "* [ ] Member 3 has pushed its branch to the remote repository \n" +
+    #                 "- [ ] Member 1 has created a pull request and linked this issue to the pull request\n" +
+    #                 "- [ ] Member 2 has created a pull request and linked this issue to the pull request\n" +
+    #                 "- [ ] Member 3 has created a pull request and linked this issue to the pull request\n" +
+    #                 "* [ ] Member 2 and 3 comment on Member 1 pull request, \n" +
+    #                 "    - if the change is accepted, Merge the branch into master.  \n" +
+    #                 "* [ ] Member 2 pull request has been discussed\n" +
+    #                 "    - If there are conflicts, resolve them online, \n" +
+    #                 "    - if the change is accepted, Merge the branch into master.  \n" +
+    #                 "* [ ] Member 3 pull request has been discussed\n" +
+    #                 "    - If there are conflicts pull the change locally, merge them into `dev_member3`, push the new commit, and continue commenting and modifying until the pull request is accepted. \n" +
+    #                 "    - if the change is accepted, Merge the branch into master.  \n" +
+    #                 "- [ ] The issue have been closed\n" +
+    #                 "[wiki_Exercice3]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex3\n"
+    #     , "labels" : ['good first issue']
+    #     , "milestone" : 8
+    # }
+    # #endregion
+    #region CLI
     {
-        "title": "Exercice 1: Project set up"
+        "title": "Version"
         , "body" : "" +
-                   "# Description \n" +
-                   "\n" +
-                   "See the [wiki][wiki_Exercice1] to read more about this first exercice. \n" +
-                   "\n" +
-                   "# tasks : \n" +
-                   "- [ ] Updated the readme to list your team members\n" +
-                   "- [ ] Created a automated kanban project on github \n" +
-                   "- [ ] Moved all issues from the Milestone Initiation to Git into todo\n" +
-                   "- [ ] this Issue has been closed\n" +
-                   "\n" +
-                   "[wiki_Exercice1]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex1\n"
-        , "labels" : ['good first issue']
+                "**CLI Output Name**: --version (or -v)\n\n" +
+                "**Input**: None\n\n" +
+                "**Print**: The current version of the Pandora program\n\n"+
+                "The version is a string of the form 'X.Y.Z' where X, Y and Z are integers.\n. You can read more about the versioning system [here](https://github.com/Estia-advanced-programming/pandora-public/wiki/Semantic-Versioning)\n"
+        , "labels" : ['cli', "get started"]
         , "milestone" : 8
     }
-    ,{
-        "title": "Exercice 2: Update team member information"
-        , "body" :  "" +
-                    "# Description \n" +
-                    "\n" +
-                    "In this exercice all member will edit the same file on their local repository to learn about conflict resolution. \n" +
-                    "See the [wiki][wiki_Exercice2] to read more about this first exercice. \n" +
-                    "\n" +
-                    "# Tasks\n" +
-                    "\n" +
-                    "- [ ] Member1 has modified `README.md` and created a commit locally\n" +
-                    "- [ ] Member2 has modified `README.md` and created a commit locally\n" +
-                    "- [ ] Member3 has modified `README.md` and created a commit locally\n" +
-                    "- [ ] Member1 has **push**ed their commit to the remote repository\n" +
-                    "- [ ] Member2 and 3 \n" +
-                    "      - have **Pull**ed the commit from member1\n" +
-                    "      - have **Merg**ed the modification into their local repository\n" +
-                    "      - have **Commit** the change locally \n" +
-                    "- [ ] Member2  *push* their commit to the remote repository\n" +
-                    "- [ ] Memberd3 \n" +
-                    "      - has **Pull**ed the commit from member2\n" +
-                    "      - has **Merg**ed the modification into their local repository\n" +
-                    "      - has **Commit** the change locally \n" +
-                    "- [ ] this Issue has been closed\n" +
-                    "[wiki_Exercice2]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex2\n"
-        , "labels" : ['good first issue']
+    , {
+        "title": "Help"
+        , "body" : "" +
+                "**CLI Output Name**: --help (or -h)\n\n" +
+                "**Input**: None\n\n" +
+                "**Print**: The help message below:\n\n"+
+                "`java -jar pandora.jar [OPTIONS] ...source\n`" + 
+                "...source - path to flightRecord files or folder containing flightRecord files\n\n" +
+                "OPTIONS o:m:hvdpn\n" +
+                "| Option | Description |\n" +
+                "|:-------:|:------------:|\n" +
+                "|-d, --debug |             | Debug - print additional debug information on Unhandled |\n"+ 
+                "|-h, --help |                Help - print this help message|\n" +
+                "|-m arg, --metadata arg    |  Metadata - Print the value of the specified metadata|\n"+
+                "|-o arg, --output arg |     Output - Print only the specified feature at the end|\n" +
+                "|-n, --number |            Number: the number of records in the flight record file|\n" +
+                "|-p, --parameters      |     Parameters - List in alphabetical order of the parameters presents in the source|\n"+
+                "|-v, --version |             Version - print the version of the application | \n\n" +
+                "FEATURES:\n"+
+                "The following features are available for the -o option: (content of the manifest.json file)\n"+
+                "startTime\navgAlt\nmaxAlt\navgAirSpeed\nmaxAirSpeed\navgEnginePower\nmaxEnginePower\netc.\n"
+        , "labels" : ['cli', "get started"]
         , "milestone" : 8
     }
-    ,{
-        "title": "Exercice 3: Branch"
-        , "body" :  "" +
-                    "# Description \n" +
-                    "\n" +
-                    "In this exercice you learn to create a branch for commiting your change before integrating it with the other. \n" +
-                    "\n" +
-                    "# Tasks \n" +
-                    "\n" +
-                    "- [ ] Member 1 has created a `dev_member1` branch locally and commited some change to it \n" +
-                    "- [ ] Member 2 has created a `dev_member2` branch locally and commited some change to it \n" +
-                    "- [ ] Member 3 has created a `dev_member3` branch locally and commited some change to it \n" +
-                    "* [ ] Member 1 has pushed its branch to the remote repository \n" +
-                    "* [ ] Member 2 has pushed its branch to the remote repository \n" +
-                    "* [ ] Member 3 has pushed its branch to the remote repository \n" +
-                    "- [ ] Member 1 has created a pull request and linked this issue to the pull request\n" +
-                    "- [ ] Member 2 has created a pull request and linked this issue to the pull request\n" +
-                    "- [ ] Member 3 has created a pull request and linked this issue to the pull request\n" +
-                    "* [ ] Member 2 and 3 comment on Member 1 pull request, \n" +
-                    "    - if the change is accepted, Merge the branch into master.  \n" +
-                    "* [ ] Member 2 pull request has been discussed\n" +
-                    "    - If there are conflicts, resolve them online, \n" +
-                    "    - if the change is accepted, Merge the branch into master.  \n" +
-                    "* [ ] Member 3 pull request has been discussed\n" +
-                    "    - If there are conflicts pull the change locally, merge them into `dev_member3`, push the new commit, and continue commenting and modifying until the pull request is accepted. \n" +
-                    "    - if the change is accepted, Merge the branch into master.  \n" +
-                    "- [ ] The issue have been closed\n" +
-                    "[wiki_Exercice3]: https://github.com/Estia-advanced-programming/pandora-public/wiki/Assignements»-Ex3\n"
-        , "labels" : ['good first issue']
+    , {
+        "title": "Filenames"
+        , "body" : "" +
+                "**CLI Output Name**: -o filenames arg(s)\n\n" +
+                "**Input**: One or more flight record files\n\n" +
+                "**Print**: The name(s) of the file(s) received in argument in alphabetical order\n"
+        , "labels" : ['cli', "get started"]
+        , "milestone" : 8
+    }
+    , {
+        "title": "Metadata"
+        , "body" : "" +
+                "**CLI Output Name**: -m metadata_name\n\n" +
+                "**Input**: A flight record file\n\n" +
+                "**Print**: The value of the metadata `metadata_name` from the flight record file\n\n"+
+                "A list of available metadata variables can be found [here](https://github.com/Estia-advanced-programming/pandora-public/wiki/Flight-Records#list-of-metadata-fields). Note that some can be optional and may not be present in all files [here](https://github.com/Estia-advanced-programming/pandora-public/wiki/Pandora-Instructions#metadata).\n\n"+
+                "*Important*: Metadata names with spaces (e.g., flight id) should replace spaces with underscores (e.g., flight_id) when used as an argument to the -m option.\n"
+        , "labels" : ['cli', "get started"]
+        , "milestone" : 8
+    }
+    , {
+        "title": "Parameters"
+        , "body" : "" +
+                "**CLI Output Name**: --parameters (or -p)\n\n" +
+                "**Input**: A flight record file\n\n" +
+                "**Print**: The column names of the data record section in alphabetical order.\n"+
+                "A list of available parameters can be found [here](https://github.com/Estia-advanced-programming/pandora-public/wiki/Flight-Records#parameters-list).\n\n"
+        , "labels" : ['cli', "get started"]
+        , "milestone" : 8
+    }
+    , {
+        "title": "Number of records"
+        , "body" : "" +
+                "**CLI Output Name**: --number, -n\n\n" +
+                "**Input**: A flight record file\n\n" +
+                "**Print**: The number of records regarding the given flight record file.\n"
+        , "labels" : ['cli', "get started"]
+        , "milestone" : 8
+    }
+    , {
+        "title": "Starting time"
+        , "body" : "" +
+                "**CLI Output Name**: -o start_time\n\n" +
+                "**Input**: A flight record file\n\n" +
+                "**Print**: The time at which the aircraft started logging data with the format HH:mm:ss.\n"
+        , "labels" : ['cli', "get started"]
         , "milestone" : 8
     }
     #endregion
