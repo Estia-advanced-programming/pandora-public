@@ -9,6 +9,7 @@ import re
 import os
 import sys
 import getopt
+import time
 
 # https://pygithub.readthedocs.io/en/latest/introduction.html
 from github import Github
@@ -150,6 +151,7 @@ def main(argv):
         # TODO: manage to update issues (and re-open them if needed)
 
     for issue in d.issues:
+        time.sleep(1)
         if issue['title'] not in i_names:
             val = repo.create_issue(title = issue['title'], body = issue['body'], milestone=GetMilestone(issue['milestone'], gmilestones), labels=issue['labels'])
             print("creating " + val.title)
@@ -163,7 +165,7 @@ def main(argv):
             optionLine = ""
             # "**CLI Output Name**: -o flightDuration\n\n"
             print(issue)
-            tab = re.findall(re.compile("CLI Output Name.*?(\: .*?)\n", re.DOTALL), issue['body'])
+            tab = re.findall(re.compile("CLI Output Name.*?(: .*?)\n", re.DOTALL), issue['body'])
             if len(tab) > 0:
                 optionLine = tab[0]
             m_title = GetMilestone(issue['milestone'], gmilestones).title
